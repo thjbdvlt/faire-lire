@@ -1,1 +1,538 @@
-[{"n": 4, "mot": "courtier·ère"}, {"n": 5, "mot": "attrape"}, {"n": 5, "mot": "crotter"}, {"n": 7, "mot": "mécher"}, {"n": 11, "mot": "parolier·ère"}, {"n": 14, "mot": "brigand"}, {"n": 15, "mot": "documentaliste"}, {"n": 15, "mot": "spadassin"}, {"n": 16, "mot": "schizo"}, {"n": 16, "mot": "multi"}, {"n": 18, "mot": "surhomme"}, {"n": 19, "mot": "autodafé"}, {"n": 23, "mot": "essayiste"}, {"n": 26, "mot": "typographe"}, {"n": 29, "mot": "vedette"}, {"n": 31, "mot": "gourou"}, {"n": 35, "mot": "techno"}, {"n": 36, "mot": "gamer"}, {"n": 36, "mot": "diva"}, {"n": 39, "mot": "interprète"}, {"n": 43, "mot": "chouchou"}, {"n": 47, "mot": "explorateur·rice"}, {"n": 51, "mot": "baby"}, {"n": 54, "mot": "bouquiniste"}, {"n": 56, "mot": "associé·e"}, {"n": 59, "mot": "compositeur·rice"}, {"n": 62, "mot": "auditeur·rice"}, {"n": 65, "mot": "informaticien·ne"}, {"n": 68, "mot": "contributeur·rice"}, {"n": 71, "mot": "collaborateur·rice"}, {"n": 79, "mot": "tatoueur·euse"}, {"n": 80, "mot": "clone"}, {"n": 81, "mot": "aspirant·e"}, {"n": 85, "mot": "formateur·rice"}, {"n": 88, "mot": "entrepreneur·euse"}, {"n": 88, "mot": "destinataire"}, {"n": 92, "mot": "logistique"}, {"n": 93, "mot": "linguiste"}, {"n": 94, "mot": "photographe"}, {"n": 100, "mot": "people"}, {"n": 106, "mot": "néo"}, {"n": 108, "mot": "anti"}, {"n": 108, "mot": "autoéditer"}, {"n": 113, "mot": "han"}, {"n": 124, "mot": "short"}, {"n": 125, "mot": "co"}, {"n": 126, "mot": "primo"}, {"n": 149, "mot": "dessinateur·rice"}, {"n": 153, "mot": "héro"}, {"n": 154, "mot": "relecteur·rice"}, {"n": 156, "mot": "phare"}, {"n": 175, "mot": "mi"}, {"n": 181, "mot": "apprenti·e"}, {"n": 192, "mot": "micro"}, {"n": 197, "mot": "geek"}, {"n": 205, "mot": "scénariste"}, {"n": 211, "mot": "blogueur·euse"}, {"n": 213, "mot": "femelle"}, {"n": 218, "mot": "homo"}, {"n": 227, "mot": "voyageur·euse"}, {"n": 228, "mot": "historien·ne"}, {"n": 273, "mot": "propriétaire"}, {"n": 277, "mot": "peintre"}, {"n": 335, "mot": "fantôme"}, {"n": 345, "mot": "traducteur·rice"}, {"n": 349, "mot": "marchand·e"}, {"n": 361, "mot": "harmattan"}, {"n": 392, "mot": "spectateur·rice"}, {"n": 400, "mot": "romancier·ère"}, {"n": 446, "mot": "graphiste"}, {"n": 466, "mot": "remise"}, {"n": 531, "mot": "créateur·rice"}, {"n": 562, "mot": "star"}, {"n": 578, "mot": "bébé"}, {"n": 579, "mot": "amateur·rice"}, {"n": 580, "mot": "loisir"}, {"n": 580, "mot": "distributeur·rice"}, {"n": 617, "mot": "cible"}, {"n": 617, "mot": "professeur·e"}, {"n": 622, "mot": "participatif·ve"}, {"n": 639, "mot": "bêta"}, {"n": 679, "mot": "prince·sse"}, {"n": 689, "mot": "imprimeur·euse"}, {"n": 692, "mot": "web"}, {"n": 753, "mot": "diffuseur·euse"}, {"n": 815, "mot": "auto"}, {"n": 908, "mot": "illustrateur·rice"}, {"n": 971, "mot": "lectorat"}, {"n": 1076, "mot": "policier·ère"}, {"n": 1154, "mot": "ex"}, {"n": 1170, "mot": "poète·sse"}, {"n": 1394, "mot": "pro"}, {"n": 1398, "mot": "narrateur·rice"}, {"n": 1457, "mot": "pseudo"}, {"n": 1506, "mot": "chef·fe"}, {"n": 1542, "mot": "gentil·le"}, {"n": 1583, "mot": "employer"}, {"n": 1668, "mot": "fiche"}, {"n": 1699, "mot": "inconnu·e"}, {"n": 1827, "mot": "artiste"}, {"n": 1845, "mot": "blog"}, {"n": 2034, "mot": "relation"}, {"n": 2035, "mot": "féminin·e"}, {"n": 2110, "mot": "libraire"}, {"n": 2120, "mot": "faux·sse"}, {"n": 2127, "mot": "dieu"}, {"n": 2293, "mot": "vidéo"}, {"n": 2311, "mot": "présentation"}, {"n": 2392, "mot": "e"}, {"n": 2837, "mot": "info"}, {"n": 3098, "mot": "héros"}, {"n": 3110, "mot": "service"}, {"n": 3177, "mot": "public"}, {"n": 3228, "mot": "noir·e"}, {"n": 3591, "mot": "ouvrage"}, {"n": 3600, "mot": "correcteur·rice"}, {"n": 5287, "mot": "prix"}, {"n": 5630, "mot": "ami·e"}, {"n": 6280, "mot": "titre"}, {"n": 6611, "mot": "écrivain·e"}, {"n": 7315, "mot": "devenir"}, {"n": 7896, "mot": "sous"}, {"n": 8505, "mot": "homme"}, {"n": 8767, "mot": "femme"}, {"n": 10164, "mot": "nom"}, {"n": 12511, "mot": "toi"}, {"n": 13099, "mot": "compte"}, {"n": 13750, "mot": "lecteur·rice"}, {"n": 13918, "mot": "page"}, {"n": 17632, "mot": "maison"}, {"n": 20685, "mot": "édition"}, {"n": 23717, "mot": "personnage"}, {"n": 26650, "mot": "éditeur·rice"}, {"n": 30030, "mot": "non"}, {"n": 32882, "mot": "moi"}, {"n": 39054, "mot": "auteur·rice"}]
+[
+  {
+    "n": 4,
+    "mot": "courtier·ère"
+  },
+  {
+    "n": 5,
+    "mot": "crotter"
+  },
+  {
+    "n": 5,
+    "mot": "attrape"
+  },
+  {
+    "n": 7,
+    "mot": "mécher"
+  },
+  {
+    "n": 11,
+    "mot": "parolier·ère"
+  },
+  {
+    "n": 14,
+    "mot": "brigand"
+  },
+  {
+    "n": 15,
+    "mot": "documentaliste"
+  },
+  {
+    "n": 15,
+    "mot": "spadassin"
+  },
+  {
+    "n": 16,
+    "mot": "multi"
+  },
+  {
+    "n": 16,
+    "mot": "schizo"
+  },
+  {
+    "n": 18,
+    "mot": "surhomme"
+  },
+  {
+    "n": 19,
+    "mot": "autodafé"
+  },
+  {
+    "n": 23,
+    "mot": "essayiste"
+  },
+  {
+    "n": 26,
+    "mot": "typographe"
+  },
+  {
+    "n": 29,
+    "mot": "vedette"
+  },
+  {
+    "n": 31,
+    "mot": "gourou"
+  },
+  {
+    "n": 35,
+    "mot": "techno"
+  },
+  {
+    "n": 36,
+    "mot": "gamer"
+  },
+  {
+    "n": 36,
+    "mot": "diva"
+  },
+  {
+    "n": 39,
+    "mot": "interprète"
+  },
+  {
+    "n": 43,
+    "mot": "chouchou"
+  },
+  {
+    "n": 47,
+    "mot": "explorateur·rice"
+  },
+  {
+    "n": 51,
+    "mot": "baby"
+  },
+  {
+    "n": 54,
+    "mot": "bouquiniste"
+  },
+  {
+    "n": 56,
+    "mot": "associé·e"
+  },
+  {
+    "n": 59,
+    "mot": "compositeur·rice"
+  },
+  {
+    "n": 62,
+    "mot": "auditeur·rice"
+  },
+  {
+    "n": 65,
+    "mot": "informaticien·ne"
+  },
+  {
+    "n": 68,
+    "mot": "contributeur·rice"
+  },
+  {
+    "n": 71,
+    "mot": "collaborateur·rice"
+  },
+  {
+    "n": 79,
+    "mot": "tatoueur·euse"
+  },
+  {
+    "n": 80,
+    "mot": "clone"
+  },
+  {
+    "n": 81,
+    "mot": "aspirant·e"
+  },
+  {
+    "n": 85,
+    "mot": "formateur·rice"
+  },
+  {
+    "n": 88,
+    "mot": "destinataire"
+  },
+  {
+    "n": 88,
+    "mot": "entrepreneur·euse"
+  },
+  {
+    "n": 92,
+    "mot": "logistique"
+  },
+  {
+    "n": 93,
+    "mot": "linguiste"
+  },
+  {
+    "n": 94,
+    "mot": "photographe"
+  },
+  {
+    "n": 100,
+    "mot": "people"
+  },
+  {
+    "n": 106,
+    "mot": "néo"
+  },
+  {
+    "n": 108,
+    "mot": "autoéditer"
+  },
+  {
+    "n": 108,
+    "mot": "anti"
+  },
+  {
+    "n": 113,
+    "mot": "han"
+  },
+  {
+    "n": 124,
+    "mot": "short"
+  },
+  {
+    "n": 125,
+    "mot": "co"
+  },
+  {
+    "n": 126,
+    "mot": "primo"
+  },
+  {
+    "n": 149,
+    "mot": "dessinateur·rice"
+  },
+  {
+    "n": 153,
+    "mot": "héro"
+  },
+  {
+    "n": 154,
+    "mot": "relecteur·rice"
+  },
+  {
+    "n": 156,
+    "mot": "phare"
+  },
+  {
+    "n": 175,
+    "mot": "mi"
+  },
+  {
+    "n": 181,
+    "mot": "apprenti·e"
+  },
+  {
+    "n": 192,
+    "mot": "micro"
+  },
+  {
+    "n": 197,
+    "mot": "geek"
+  },
+  {
+    "n": 205,
+    "mot": "scénariste"
+  },
+  {
+    "n": 211,
+    "mot": "blogueur·euse"
+  },
+  {
+    "n": 213,
+    "mot": "femelle"
+  },
+  {
+    "n": 218,
+    "mot": "homo"
+  },
+  {
+    "n": 227,
+    "mot": "voyageur·euse"
+  },
+  {
+    "n": 228,
+    "mot": "historien·ne"
+  },
+  {
+    "n": 273,
+    "mot": "propriétaire"
+  },
+  {
+    "n": 277,
+    "mot": "peintre"
+  },
+  {
+    "n": 335,
+    "mot": "fantôme"
+  },
+  {
+    "n": 345,
+    "mot": "traducteur·rice"
+  },
+  {
+    "n": 349,
+    "mot": "marchand·e"
+  },
+  {
+    "n": 361,
+    "mot": "harmattan"
+  },
+  {
+    "n": 392,
+    "mot": "spectateur·rice"
+  },
+  {
+    "n": 400,
+    "mot": "romancier·ère"
+  },
+  {
+    "n": 446,
+    "mot": "graphiste"
+  },
+  {
+    "n": 466,
+    "mot": "remise"
+  },
+  {
+    "n": 531,
+    "mot": "créateur·rice"
+  },
+  {
+    "n": 562,
+    "mot": "star"
+  },
+  {
+    "n": 578,
+    "mot": "bébé"
+  },
+  {
+    "n": 579,
+    "mot": "amateur·rice"
+  },
+  {
+    "n": 580,
+    "mot": "distributeur·rice"
+  },
+  {
+    "n": 580,
+    "mot": "loisir"
+  },
+  {
+    "n": 617,
+    "mot": "cible"
+  },
+  {
+    "n": 617,
+    "mot": "professeur·e"
+  },
+  {
+    "n": 622,
+    "mot": "participatif·ve"
+  },
+  {
+    "n": 639,
+    "mot": "bêta"
+  },
+  {
+    "n": 679,
+    "mot": "prince·sse"
+  },
+  {
+    "n": 689,
+    "mot": "imprimeur·euse"
+  },
+  {
+    "n": 692,
+    "mot": "web"
+  },
+  {
+    "n": 753,
+    "mot": "diffuseur·euse"
+  },
+  {
+    "n": 815,
+    "mot": "auto"
+  },
+  {
+    "n": 908,
+    "mot": "illustrateur·rice"
+  },
+  {
+    "n": 971,
+    "mot": "lectorat"
+  },
+  {
+    "n": 1076,
+    "mot": "policier·ère"
+  },
+  {
+    "n": 1154,
+    "mot": "ex"
+  },
+  {
+    "n": 1170,
+    "mot": "poète·sse"
+  },
+  {
+    "n": 1394,
+    "mot": "pro"
+  },
+  {
+    "n": 1398,
+    "mot": "narrateur·rice"
+  },
+  {
+    "n": 1457,
+    "mot": "pseudo"
+  },
+  {
+    "n": 1506,
+    "mot": "chef·fe"
+  },
+  {
+    "n": 1542,
+    "mot": "gentil·le"
+  },
+  {
+    "n": 1583,
+    "mot": "employer"
+  },
+  {
+    "n": 1668,
+    "mot": "fiche"
+  },
+  {
+    "n": 1699,
+    "mot": "inconnu·e"
+  },
+  {
+    "n": 1827,
+    "mot": "artiste"
+  },
+  {
+    "n": 2034,
+    "mot": "relation"
+  },
+  {
+    "n": 2035,
+    "mot": "féminin·e"
+  },
+  {
+    "n": 2110,
+    "mot": "libraire"
+  },
+  {
+    "n": 2120,
+    "mot": "faux·sse"
+  },
+  {
+    "n": 2127,
+    "mot": "dieu"
+  },
+  {
+    "n": 2293,
+    "mot": "vidéo"
+  },
+  {
+    "n": 2311,
+    "mot": "présentation"
+  },
+  {
+    "n": 2392,
+    "mot": "e"
+  },
+  {
+    "n": 2837,
+    "mot": "info"
+  },
+  {
+    "n": 3098,
+    "mot": "héros"
+  },
+  {
+    "n": 3110,
+    "mot": "service"
+  },
+  {
+    "n": 3177,
+    "mot": "public"
+  },
+  {
+    "n": 3228,
+    "mot": "noir·e"
+  },
+  {
+    "n": 3591,
+    "mot": "ouvrage"
+  },
+  {
+    "n": 3600,
+    "mot": "correcteur·rice"
+  },
+  {
+    "n": 5287,
+    "mot": "prix"
+  },
+  {
+    "n": 6280,
+    "mot": "titre"
+  },
+  {
+    "n": 6611,
+    "mot": "écrivain·e"
+  },
+  {
+    "n": 7315,
+    "mot": "devenir"
+  },
+  {
+    "n": 7896,
+    "mot": "sous"
+  },
+  {
+    "n": 8505,
+    "mot": "homme"
+  },
+  {
+    "n": 8767,
+    "mot": "femme"
+  },
+  {
+    "n": 10164,
+    "mot": "nom"
+  },
+  {
+    "n": 12511,
+    "mot": "toi"
+  },
+  {
+    "n": 13099,
+    "mot": "compte"
+  },
+  {
+    "n": 13750,
+    "mot": "lecteur·rice"
+  },
+  {
+    "n": 13918,
+    "mot": "page"
+  },
+  {
+    "n": 17632,
+    "mot": "maison"
+  },
+  {
+    "n": 20685,
+    "mot": "édition"
+  },
+  {
+    "n": 23717,
+    "mot": "personnage"
+  },
+  {
+    "n": 26650,
+    "mot": "éditeur·rice"
+  },
+  {
+    "n": 30030,
+    "mot": "non"
+  },
+  {
+    "n": 32882,
+    "mot": "moi"
+  },
+  {
+    "n": 39054,
+    "mot": "auteur·rice"
+  }
+]

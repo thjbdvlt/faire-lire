@@ -2,7 +2,7 @@
 const container = d3.select("#container").node()
 
 /* le json contenant les données */
-const path_data = './data/composition-role-quelques.json';
+const path_data = './data/mots_composes.json';
 
 d3.json(path_data).then(data => {
 
