@@ -4,7 +4,10 @@
 # https://pandoc.org/
 # (le CSL pour le style de citation provient de l'archive zotero.)
 
+d=./pandoc
+
 pandoc -i activites.md -o activites.html \
-    --citeproc --bibliography=./bibliography.json --csl=./unige-ll-fr-mod.csl \
-    --standalone --css=./style.css --template=./template.html \
+    --citeproc --bibliography=${d}/bibliography.json \
+    --csl=${d}/unige-ll-fr-mod.csl \
+    --standalone --css=${d}/style.css --template=${d}template.html \
     --html-q-tags=true
