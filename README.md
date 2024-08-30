@@ -2,7 +2,7 @@
 
 [^enseignement]: Le présent dépôt présente un travail réalisé dans le cadre d'un [enseignement](https://github.com/ipante/ressources_visualisation_de_donnees) dispensé à l'université de Lausanne par Isaac Pante et intitulé _Visualisation de données_.
 
-usage (inutile?):
+usage {inutile?}:
 
 ```bash
 # cloner le dépôt
