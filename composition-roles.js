@@ -1,13 +1,18 @@
-// var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], tr;
-//
-// array.forEach((v, i) => {
-//     var td = document.createElement('td');
-//     
-//     if (!(i % 5)) {
-//         tr = document.createElement('tr');
-//         document.getElementById('table0').appendChild(tr);
-//     }
-//     td.appendChild(document.createTextNode(v));
-//     tr.appendChild(td);
-// });
-d3.
+/* première visualisation (si un tableau est une visualisation): 
+* les verbes avec lesquels le verbe 'lire' a le plus de cooccurrence. */
+d3.csv("./data/cooccurrence_lire.csv").then(data=> {
+    for (let i of data) {
+        let tr = d3.select("#lire").append("tr");
+        tr.append("td").text(i.verbe)
+        tr.append('td').text(i.cooccurrence)
+    }
+})
+
+/* deuxième visualisation: deuxième tableau (écrire) */
+d3.csv("./data/cooccurrence_ecrire.csv").then(data=> {
+    for (let i of data) {
+        let tr = d3.select("#ecrire").append("tr");
+        tr.append("td").text(i.verbe)
+        tr.append('td').text(i.cooccurrence)
+    }
+})
