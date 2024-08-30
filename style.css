@@ -13,10 +13,3 @@ h2 {
     margin:0;
     padding:0;
 }
-
-table#lire {
-    display: inline-block;
-}
-table#ecrire {
-    display: inline-block;
-}

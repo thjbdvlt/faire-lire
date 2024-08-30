@@ -1,18 +1,34 @@
-/* première visualisation (si un tableau est une visualisation): 
-* les verbes avec lesquels le verbe 'lire' a le plus de cooccurrence. */
-d3.csv("./data/cooccurrence_lire.csv").then(data=> {
-    for (let i of data) {
-        let tr = d3.select("#lire").append("tr");
-        tr.append("td").text(i.verbe)
-        tr.append('td').text(i.cooccurrence)
-    }
-})
+/* premières visualisations (si un tableau est une visualisation): les 
+ * verbes avec lesquels les verbes 'lire' et 'écrire' ont le plus 
+ * de cooccurrence. il y a deux tableaux: un pour 'lire' et l'autre
+ * pour 'écrire'. */
 
-/* deuxième visualisation: deuxième tableau (écrire) */
-d3.csv("./data/cooccurrence_ecrire.csv").then(data=> {
-    for (let i of data) {
-        let tr = d3.select("#ecrire").append("tr");
-        tr.append("td").text(i.verbe)
-        tr.append('td').text(i.cooccurrence)
-    }
-})
+const elem = d3.select("#cooccurrence")
+
+for (let word of ["lire", "ecrire"]) {
+
+    /* une table pour chaque mot dans l'array */
+    let table = elem.append("table")
+
+    /* à chaque mot dans l'array correspond un fichier */
+    let path = "./data/cooccurrence/";
+    path += word;
+    path += ".csv";
+
+    d3.csv(path).then(data => {
+
+        for (let i of data) {
+
+            /* une ligne dans le tableau pour chaque ligne dans le csv */
+            let tr = table.append("tr");
+
+            /* deux colonnes:
+             * 1) le verbe;
+             * 2) le nombre de cooccurrences
+             * */
+            tr.append("td").text(i.verbe)
+            tr.append('td').text(i.cooccurrence)
+        }
+
+    })
+}

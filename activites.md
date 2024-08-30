@@ -24,11 +24,7 @@ Quelles sont donc ces activités littéraires, et quelles sont leurs relations?
 
 Parmi les première activités littéraires auxquelles on est susceptible de penser il y a, il me semble, _lire_ et _écrire_. Une première manière, très simple, d'explorer les relations qu'ont d'autres activités avec celle-ci est de regarder les cooccurrences les plus fréquentes. Les tableaux suivants montrent verbes qu'on retrouve le plus souvent dans une même phrase que les verbes _lire_ ou _écrire_?
 
-<p id="plire"></p>
-
-<table id="lire"></table>
-
-<table id="ecrire"></table>
+<div id="cooccurrence"></div>
 
 {...}
 
