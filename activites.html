@@ -9,7 +9,7 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-<p>On conçoit souvent la littérature comme un <em>corpus</em>. C’est la
+<p>On conçoit souvent la littérature comme un corpus. C’est la
 définition qu’on trouve sur <a
 href="https://fr.wikipedia.org/wiki/Littérature">Wikipedia</a>:</p>
 <blockquote>
@@ -20,9 +20,9 @@ orales auxquelles on reconnaît une valeur esthétique</p>
 class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, ou
 plus exactement, comme <q>un réseau d’activité<span class="citation"
 data-cites="becker2013a"><a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a></span></q>: <em>lire</em>,
-<em>traduire</em>, <em>écrire</em>, mais aussi <em>acheter</em>,
-<em>recommander</em>, <em>corriger</em>, <em>commenter</em>, etc.</p>
+role="doc-noteref"><sup>2</sup></a></span></q>: <q>lire</q>,
+<q>traduire</q>, <q>écrire</q>, mais aussi <q>acheter</q>,
+<q>recommander</q>, <q>corriger</q>, <q>commenter</q>, etc.</p>
 <p>Dans ce dépôt, je vais explorer ces activités, leurs proximités et
 leurs relations sur la base de l’analyse lexicale d’un corpus de textes
 que j’ai constitué et annoté dans le cadre de mon mémoire de master: les
@@ -67,54 +67,55 @@ href="./sql">sql</a>.</p>
 <p>Quelles sont donc ces activités littéraires, et quelles sont leurs
 relations?</p>
 <p>Parmi les première activités littéraires auxquelles on est
-susceptible de penser il y a, il me semble, <em>lire</em> et
-<em>écrire</em>. Une première manière, très simple, d’explorer les
-relations qu’ont d’autres activités avec celle-ci est de regarder les
-cooccurrences les plus fréquentes. Les tableaux suivants montrent les
-verbes qu’on retrouve le plus souvent dans une même phrase que les
-verbes <em>lire</em> ou <em>écrire</em>. (Ce sont les lemmes qui sont
-pris en compte: <q>je lirai ce que tu as écris</q> et <q>nous préférons
-lire qu’écrire</q> sont donc équivalents.)</p>
+susceptible de penser il y a, il me semble, <q>lire</q> et
+<q>écrire</q>. Une première manière, très simple, d’explorer les
+relations qu’ont d’autres activités avec celle-ci consiste à regarder
+les cooccurrences les plus fréquentes. Les tableaux suivants montrent
+les verbes qu’on retrouve le plus souvent dans une même phrase que les
+verbes <q>lire</q> ou <q>écrire</q>. (Ce sont les lemmes qui sont pris
+en compte: <q>je lirai ce que tu as écris</q> et <q>nous préférons lire
+qu’écrire</q> sont donc équivalents.)</p>
 <div id="cooccurrence">
 
 </div>
 <script src="./js/cooccurrence.js"></script>
 <p>Les première lignes de chaque tableaux peuvent sembler assez
 insignifiantes: le verbe le plus fréquemment employé dans une même
-phrase que <em>lire</em> est… <em>lire</em> (<q>j’ai lu Wittgenstein
-avant de lire Weil</q>); idem pour écrire. Le second est <em>écrire</em>
+phrase que <q>lire</q> est… <q>lire</q> (<q>j’ai lu Wittgenstein avant
+de lire Weil</q>); idem pour écrire. Le second est <q>écrire</q>
 (<q>lire et écrire</q>). Les lignes qui suivent montrent des verbes qui
 sont tout simplement très fréquents en français (dans le tableau, les
-cooccurrences ne sont pas relatives mais absolues): <em>savoir</em>,
-<em>aimer</em>, <em>mettre</em>, <em>prendre</em>, etc. Pourtant, il y a
-des variations: <em>savoir</em>, <em>trouver</em>, <em>prendre</em> sont
-aux mêmes positions pour <em>lire</em> et <em>écrire</em>, mais les
-positions de <em>aimer</em> et <em>penser</em> sont inversées. On
-<q>aime lire</q> et on <q>pense écrire</q>, moins l’inverse.</p>
+cooccurrences ne sont pas relatives mais absolues): <q>savoir</q>,
+<q>aimer</q>, <q>mettre</q>, <q>prendre</q>, etc. Pourtant, il y a des
+variations: <q>savoir</q>, <q>trouver</q>, <q>prendre</q> sont aux mêmes
+positions pour <q>lire</q> et <q>écrire</q>, mais les positions de
+<q>aimer</q> et <q>penser</q> sont inversées. On <q>aime lire</q> et on
+<q>pense écrire</q>, moins l’inverse.</p>
 <p>La position de <q>commencer</q> est aussi très différente dans les
 deux tableaux: <q>commencer à écrire</q> est beaucoup plus fréquent que
 <q>commencer à lire</q>. On peut, je crois, sans mal le comprendre, car
 écrire un roman (la forme dominante sur le forum) prend bien davantage
 de temps que le lire (plus un processus est long, et plus il apparait
-naturel de dire qu’on l’a <q>commencé</q>: <q>commencé une série</q>
-mais pas vraiment <q>commencé un morceau de musique</q>, etc.).
-Certaines variations sont moins liées au sens d’un mot qu’à des
-locutions particulières. Ainsi, <q>donner</q> est beaucoup plus fréquent
-avec <q>lire</q> qu’avec <q>écrire</q> probablement en raison de
-l’expression <q>donner à lire</q>.</p>
-<p>Presque tout en bas de ces tableaux on trouve <em>publier</em>. C’est
-le premier verbe qui semble vraiment en lien directe avec <em>lire</em>
-et <em>écrire</em>. Sur le forum, il y a en effet beaucoup de
-discussions consacrées à la publication (dont on imagine sans mal le
-rapport à l’écriture). Mais il y en a encore beaucoup plus consacrées au
-processus d’écriture lui-même, au sujet duquel on demande des conseils.
-Or, <em>publier</em> a peu de synonyme (tout au plus <q>éditer</q>),
-contrairement, par exemple, à <em>conseiller</em> (suggérer,
-recommander, proposer, …). C’est là un des inconvénients à travailler
-avec des simples cooccurrences. Un autre inconvénient, c’est
-l’importance, évoquée plus haut, que prennent les verbes qui sont tout
-simplement très fréquents (mais comme solution à cela, il y a la
-pondération par la fréquence totale).</p>
+naturel de dire qu’on l’a <q>commencé</q>: on dit souvent <q>j’ai
+commencé une série</q> mais plus rarement <q>j’ai commencé un morceau de
+musique</q>, etc.). Certaines variations sont moins liées au sens d’un
+mot qu’à des locutions particulières. Ainsi, <q>donner</q> est beaucoup
+plus fréquent avec <q>lire</q> qu’avec <q>écrire</q> probablement en
+raison de l’expression <q>donner à lire</q>.</p>
+<p>Presque tout en bas de ces tableaux on trouve <q>publier</q>. C’est
+le premier verbe qui semble vraiment en lien directe avec <q>lire</q> et
+<q>écrire</q>. Sur le forum, il y a en effet beaucoup de discussions
+consacrées à la publication (dont on imagine sans mal le rapport à
+l’écriture). Mais il y en a encore beaucoup plus consacrées au processus
+d’écriture lui-même, au sujet duquel on demande des conseils. Or,
+<q>publier</q> a peu de synonyme (tout au plus <q>éditer</q>),
+contrairement, par exemple, à <q>conseiller</q> (suggérer, recommander,
+proposer, …). C’est là un des inconvénients à travailler avec des
+simples cooccurrences. Un autre inconvénient, c’est l’importance,
+évoquée plus haut, que prennent les verbes qui sont tout simplement très
+fréquents (mais comme solution à cela, il y a la pondération par la
+fréquence totale). Au reste, on ne voit pas vraiment ici des
+<q>activités</q> littéraires.</p>
 <p>Une solution alternative qui ne pose pas ces mêmes problèmes, ou pas
 tous (qui en pose bien sûr d’autres) et l’utilisation de <a
 href="https://en.wikipedia.org/wiki/Word_embedding"><em>word
@@ -126,9 +127,9 @@ proche d’un autre et plus il est <strong>sémantiquement</strong> proche.
 Ou plutôt, d’un point de vue algorithmique: plus il a tendance à être
 utilisé dans des contextes similaires. Selon une conception figurative
 (représentationnelle) du langage, cela n’a rien à voir avec <q>être
-sémantiquement proche</q>. Mais si l’on adopte une conception
-wittgensteinienne du langage, cette idée n’est pas sans fondement. Selon
-Wittgenstein, la signification d’un mot est moins définie par une
+sémantiquement proche</q>. Mais si l’on adopte une perspective
+wittgensteinienne sur le langage, cette idée n’est pas sans fondement.
+Selon Wittgenstein, la signification d’un mot est moins définie par une
 <q>chose</q> à laquelle ce mot ferait référence ou à un <q>concept</q>
 qu’il contiendrait qu’aux <q>jeux de langage<span class="citation"
 data-cites="wittgenstein2014"><a href="#fn4" class="footnote-ref"
@@ -145,33 +146,34 @@ role="doc-noteref"><sup>6</sup></a></span>). <q>Vrai</q> et <q>faux</q>
 sont sémantiquement très proches parce qu’on réalise avec eux le même
 genre d’actions dans le même genre de situations. Wittgenstein dirait:
 leurs <q>grammaires</q> sont similaires. Leurs <em>word embeddings</em>
-seraient très proches.</p>
-<p>Une représentation minimale d’une tout petit modèle de <em>word
-embeddings</em> pourrait représenter à ceci:</p>
+seraient par conséquent très proches (et le sont souvent).</p>
+<p>Une représentation minimale d’un tout petit modèle de <em>word
+embeddings</em> pourrait ressembler à ceci:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode txt"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lire    [ 0.3, -0.2,   -1,  0.1]</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>écrire  [ 0.1, -0.4,    1,  -0.7]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>écrire  [ 0.1, -0.4,    1, -0.7]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>parler  [-0.4,  0.1, -0.4,    1]</span></code></pre></div>
 <p>Les dimensions (les axes géométriques) ne correspondent pas à une
 chose tangible, mais on pourrait se les représenter comme des axes
-sémantiques ou d’usage: la première dimension pourrait être la dimension
-<em>négative</em> pour <em>positive</em>, la deuxième dimension serait
-la dimension <em>active</em> ou <em>passive</em> la troisième dimension
-serait la dimension <em>familière</em> ou <em>soutenue</em>, etc. On
-pourrait alors imaginer que les <em>word embeddings</em> de <q>vrai</q>
-et de <q>faux</q> sont absolument identique à l’exception d’une seule
-dimension (la dimension de <q>vérité</q>) pour laquelle <q>vrai</q>
-aurait la valeur <code>1</code> et <q>faux</q> la valeur
-<code>-1</code>. En réalité, il s’agit juste de dimensions <em>ad
-hoc</em> initiées aléatoirement avec lesquelles construire un modèle
-statistique, mais les percevoir ainsi nous permet de comprendre
-certaines des choses qu’on peut faire avec. L’une des tâches
-d’évaluations auxquelles les <em>word embeddings</em> sont parfois
-soumis est dite <em>d’analogie</em>. Elle consiste à prendre un mot
-<code>A1</code>, par exemple <q>France</q> auquel on soustrait un mot
-<code>A2</code>, <q>Paris</q>. <q>Soustraire</q>, parce que l’avantage
-réel des <em>word embeddings</em> est la possibilité de réaliser des
-opérations mathématiques sur des mots. On soustrait donc <code>A2</code>
+sémantiques ou contextuels: la première dimension pourrait être la
+dimension <em>négative</em>-<em>positive</em>, la deuxième dimension
+serait la dimension <em>active</em>-<em>passive</em>, la troisième
+dimension serait la dimension <em>familière</em>-<em>soutenue</em>, etc.
+On pourrait alors imaginer que les <em>word embeddings</em> de
+<q>vrai</q> et de <q>faux</q> sont absolument identique à l’exception
+d’une seule dimension (la dimension <em>vérité</em>-<em>fausseté</em>)
+pour laquelle <q>vrai</q> aurait la valeur <code>1</code> et <q>faux</q>
+la valeur <code>-1</code>. En réalité, il s’agit juste de dimensions
+<em>ad hoc</em> initiées aléatoirement avec lesquelles construire un
+modèle statistique, mais les percevoir ainsi nous permet de comprendre
+certaines des choses qu’on peut faire avec.</p>
+<p>L’une des tâches d’évaluations auxquelles les <em>word
+embeddings</em> sont parfois soumis est dite <em>d’analogie</em>. Elle
+consiste à prendre un mot <code>A1</code>, par exemple <q>France</q>
+auquel on soustrait un mot <code>A2</code>, <q>Paris</q>.
+<q>Soustraire</q>, parce que l’avantage réel des <em>word
+embeddings</em> est la possibilité de réaliser des opérations
+mathématiques sur des mots. On soustrait donc <code>A2</code>
 (<q>Paris</q>) à <code>A1</code> (<q>France</q>), et on obtient un
 vecteur <code>v</code>. On additionne ensuite ce vecteur <code>v</code>
 à un point <code>B1</code>, disons <q>Allemagne</q> et l’on doit pouvoir
@@ -181,14 +183,39 @@ prévoir le point <code>B2 = B1 + v</code>: <q>Berlin</q>. <q>Berlin</q>
 <q>France</q> (<code>A1</code>) car le vecteur qui relie <q>Paris</q> à
 <q>France</q> est (devrait être) identique au vecteur qui relie
 <q>Berlin</q> à <q>Allemagne</q> (ce sont des vecteurs parallèles de
-mêmes longueur): c’est le vecteur <q>être la capitale de</q>.</p>
-<p>{…}</p>
+mêmes longueur): c’est le vecteur <q>être la capitale de</q><a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>. Naturellement, ce n’est jamais
+vraiment le cas, précisément parce que le sens d’un mot n’est pas un
+concept contenu dans le mot, mais réside dans les choses que l’on fait
+avec ces mots, et l’on ne fait les mêmes choses avec les mots
+<q>France</q> ou <q>Allemagne</q>, <q>Paris</q> ou <q>Berlin</q>.</p>
+<p>Quels sont, ainsi compris, les 10 mots les plus proches de
+<q>écrire</q> dans mon corpus? <q>lire</q>, <q>rédiger</q>,
+<q>pondre</q>, <q>débuter</q>, <q>réécrire</q>, <q>relire</q>,
+<q>terminer</q>, <q>travailler</q>, <q>corriger</q>. Évidemment, cette
+liste est spécifique au forum de littérature, car <q>pondre</q>, par
+exemple, est, dans d’autres corpus, beaucoup moins fortement associé à
+l’écriture. En fait, c’est précisément à ces écarts entre un
+corpus-objet et un corpus de référence qu’on peut s’intéresser. En
+raison du nombre élevé de dimensions, il n’est pas évident de
+représenter des <em>word embeddings</em>. On ne peut en représenter
+qu’un aspect, qu’une portion. La visualisation qui suit représente le
+degré de proximité d’un petit groupe de mots avec les mots <q>lire</q>
+(axe horizontal) et <q>écrire</q> (axe vertical).</p>
+<div id="vecteurs">
+
+</div>
+<script src="./js/vecteurs.js"></script>
+<p>{– visualisation vecteurs –}</p>
 <p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
 (ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
 sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span
-class="citation" data-cites="becker2017"><a href="#fn7"
-class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a></span></q>).</p>
+class="citation" data-cites="becker2017"><a href="#fn8"
+class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></span></q>).</p>
+<p>{– visualisation composition rôles –}</p>
+<p>{– visualisation verbes personnes –}</p>
 <script src="./js/composition-roles.js"></script>
 <h1 id="annotation">annotation</h1>
 <p>L’annotation de texte avec <strong>spaCy</strong> se fait en
@@ -268,8 +295,8 @@ href="https://www.ortolang.fr/">Ortolang</a>, mais aussi de romans
 humaines dans le domaine public (Weil, Wittgenstein, Mauss, entre autres
 choses) et de romans contemporains sous licence compatible avec la <a
 href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC
-BY-NC-SA</a>. La lemmatisation et la normalisation du <em>corpus</em> a
-été réalisé avec <strong>spaCy</strong> et l’entraînement avec <a
+BY-NC-SA</a>. La lemmatisation et la normalisation du corpus a été
+réalisé avec <strong>spaCy</strong> et l’entraînement avec <a
 href="https://radimrehurek.com/gensim/">Gensim</a> avec l’algorithme <a
 href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>
 (CBOW).</p>
@@ -339,9 +366,11 @@ role="doc-backlink">↩︎</a></p></li>
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p><em>Ibid.</em><a href="#fnref6" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<li id="fn7"><p>C’est un exemple très souvent cité.<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><span class="smallcaps">Becker</span>, Howard Saul,
 <em>Les mondes de l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris,
-Flammarion, coll. Champs, 2017.<a href="#fnref7" class="footnote-back"
+Flammarion, coll. Champs, 2017.<a href="#fnref8" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

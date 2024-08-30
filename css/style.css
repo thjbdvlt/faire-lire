@@ -24,9 +24,23 @@ th {
 }
 
 .mot {
-    color: yellow;
+    color: #bbffbb;
 }
 
 .nombre {
     color: grey;
+}
+
+q {
+    color: #bbffbb;
+}
+blockquote {
+    color: #bbffbb;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background-color: red;
+  color: #fff;
 }
