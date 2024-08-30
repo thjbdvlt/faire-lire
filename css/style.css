@@ -16,4 +16,17 @@ h2 {
 
 table {
     display: inline-block;
+    margin: 10px;
+}
+
+th {
+    color: green;
+}
+
+.mot {
+    color: yellow;
+}
+
+.nombre {
+    color: grey;
 }

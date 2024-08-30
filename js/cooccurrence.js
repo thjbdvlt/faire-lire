@@ -5,6 +5,8 @@
 
 const elem = d3.select("#cooccurrence")
 
+const groups = {mot: 'mot', nombre: 'nombre'}
+
 for (let word of ["lire", "ecrire"]) {
 
     /* une table pour chaque mot dans l'array */
@@ -28,8 +30,13 @@ for (let word of ["lire", "ecrire"]) {
              * 1) le verbe;
              * 2) le nombre de cooccurrences
              * */
-            tr.append("td").text(i.verbe)
-            tr.append('td').text(i.cooccurrence)
+            let td = tr.append("td")
+            td.text(i.verbe)
+            td.attr('class', groups.mot)
+            
+            td = tr.append("td")
+            td.text(i.cooccurrence)
+            td.attr('class', groups.nombre)
         }
 
     })
