@@ -9,5 +9,5 @@ d=./pandoc/
 pandoc -i activites.md -o activites.html \
     --citeproc --bibliography=${d}bibliography.json \
     --csl=${d}unige-ll-fr-mod.csl \
-    --standalone --css=${d}style.css --template=${d}template.html \
+    --standalone --css=css/style.css --template=${d}template.html \
     --html-q-tags=true

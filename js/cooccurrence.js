@@ -15,6 +15,8 @@ for (let word of ["lire", "ecrire"]) {
     path += word;
     path += ".csv";
 
+    table.append('th').text(word);
+
     d3.csv(path).then(data => {
 
         for (let i of data) {

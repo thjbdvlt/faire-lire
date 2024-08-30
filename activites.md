@@ -13,18 +13,27 @@ On peut préférer la considérer comme une activité[^1], ou plus exactement, c
 Dans ce dépôt, je vais explorer ces activités, leurs proximités et leurs relations sur la base de l'analyse lexicale d'un corpus de textes que j'ai constitué et annoté dans le cadre de mon mémoire de master: les fils de discussions publiquement accessibles du forum [Jeunes Écrivain·es](https://www.jeunesecrivains.com/), un forum d'entraide consacré à la littérature.
 
 Le corpus est constitué de 133040 messages (_posts_) répartis dans 6118 fils de discussions (_topics_).
-L'annotation a été réalisée en utilisant [spaCy](https://spacy.io/), une libraire (python) d'analyse du langage naturel (_NLP_). __spaCy__ propose des modèles d'analyses pour le français mais ceux-ci n'étant pas adaptés à mon corpus (en fait, à mon avis, assez peu adapté à n'importe quel corpus[^spacy_fr]), j'ai écris plusieurs modules (et entraîné quelques modèles) permettant de réaliser les différentes tâches nécessaires à l'annotation de textes: un [_tokenizer_](https://github.com/thjbdvlt/quelquhui), un [_normalizer_](https://github.com/thjbdvlt/presque), un [_morphologizer_](https://github.com/thjbdvlt/turlututu), un [_lemmatizer_](https://github.com/thjbdvlt/viceverser) et un [_dependency parser_](https://github.com/thjbdvlt/french-dependency-parser) qui reposent, pour certains sur des [_word vectors_](https://github.com/thjbdvlt/french-word-vectors). Je ne rentre pas dans les détails de ces opérations, qui sont décrites [plus bas](#annotation), au besoin.
+L'annotation a été réalisée en utilisant [spaCy](https://spacy.io/), une libraire (python) d'analyse du langage naturel (_NLP_). __spaCy__ propose des modèles d'analyses pour le français mais ceux-ci n'étant pas adaptés à mon corpus (en fait, à mon avis, assez peu adapté à n'importe quel corpus[^spacy_fr]), j'ai écris plusieurs modules (et entraîné quelques modèles) permettant de réaliser les différentes tâches nécessaires à l'annotation de textes: un [_tokenizer_](https://github.com/thjbdvlt/quelquhui), un [_normalizer_](https://github.com/thjbdvlt/presque), un [_morphologizer_](https://github.com/thjbdvlt/turlututu), un [_lemmatizer_](https://github.com/thjbdvlt/viceverser) et un [_syntactic dependency parser_](https://github.com/thjbdvlt/french-dependency-parser) qui reposent, pour certains sur des [_word vectors_](https://github.com/thjbdvlt/french-word-vectors). Je ne rentre pas dans les détails de ces opérations, qui sont décrites [plus bas](#annotation), au besoin.
 
 Le corpus est stocké sous la forme d'une base de données [Postgresql](https://www.postgresql.org/) dans un schéma qui implémente un modèle [EAV](https://en.wikipedia.org/wiki/Entity–attribute–value_model) hybride et que j'ai conçu pour l'analyse de textes en français (le code et la documentation du schéma sont disponibles [ici](https://github.com/thjbdvlt/litteralement)).
-Les données utilisées dans les visualisations qui vont suivre ont (plus ou moins simplement) été récupérées de cette base de données _via_ des courts scripts SQL disponibles dans le dossier [sql](./sql).
+Les données utilisées dans les visualisations qui vont suivre ont (plus ou moins) simplement été récupérées de cette base de données _via_ des courts scripts SQL disponibles dans le dossier [sql](./sql).
 
 # deux tableaux
 
 Quelles sont donc ces activités littéraires, et quelles sont leurs relations?
 
-Parmi les première activités littéraires auxquelles on est susceptible de penser il y a, il me semble, _lire_ et _écrire_. Une première manière, très simple, d'explorer les relations qu'ont d'autres activités avec celle-ci est de regarder les cooccurrences les plus fréquentes. Les tableaux suivants montrent verbes qu'on retrouve le plus souvent dans une même phrase que les verbes _lire_ ou _écrire_?
+Parmi les première activités littéraires auxquelles on est susceptible de penser il y a, il me semble, _lire_ et _écrire_. Une première manière, très simple, d'explorer les relations qu'ont d'autres activités avec celle-ci est de regarder les cooccurrences les plus fréquentes. Les tableaux suivants montrent les verbes qu'on retrouve le plus souvent dans une même phrase que les verbes _lire_ ou _écrire_. (Ce sont les lemmes qui sont pris en compte: "je lirai ce que tu as écris" et "nous préférons lire qu'écrire" sont donc équivalents.)
 
 <div id="cooccurrence"></div>
+<script src="./js/cooccurrence.js"></script>
+
+Les première lignes de chaque tableaux peuvent sembler assez insignifiantes: le verbe le plus fréquemment employé dans une même phrase que _lire_ est... _lire_ ("j'ai lu Wittgenstein avant de lire Weil"); idem pour écrire. Le second est _écrire_ ("lire et écrire"). Les lignes qui suivent montrent des verbes qui sont tout simplement très fréquents en français (dans le tableau, les cooccurrences ne sont pas relatives mais absolues): _savoir_, _aimer_, _mettre_, _prendre_, etc. Pourtant, il y a des variations: _savoir_, _trouver_, _prendre_ sont aux mêmes positions pour _lire_ et _écrire_, mais les positions de _aimer_ et _penser_ sont inversées. On "aime lire" et on "pense écrire", et moins l'inverse. Dans le tableau des cooccurrences de _lire_, _prendre_ est avant _mettre_, et dans le tableau des cooccurrences d'_écrire_, après (ce qui semble cohérent avec une idée de la lecture comme réception et de l'écriture comme production).
+
+La position de "commencer" est aussi très différente dans les deux tableaux: "commencer à écrire" est beaucoup plus fréquent que "commencer à lire". On peut, je crois, sans mal le comprendre, car écrire un roman (la forme dominante sur le forum) prend bien davantage de temps que le lire (plus un processus est long, et plus il apparait naturel de dire qu'on l'a "commencé": "commencé une série" mais pas vraiment "commencé un morceau de musique", etc.).
+
+Presque tout en bas de ces tableaux on trouve _publier_. C'est le premier verbe qui semble vraiment en lien directe avec _lire_ et _écrire_. Sur le forum, il y a en effet beaucoup de discussions consacrées à la publication (dont on imagine sans mal le rapport à l'écriture). Mais il y en a encore beaucoup plus consacrées au processus d'écriture lui-même, au sujet duquel on demande des conseils. Or, _publier_ a peu de synonyme (tout au plus "éditer"), contrairement, par exemple, à _conseiller_ (suggérer, recommander, proposer, ...). C'est là un des inconvénients à travailler avec des simples cooccurrences. L'autre, c'est l'importance, évoquée plus haut, que prennent les verbes qui sont tout simplement très fréquents (mais comme solution à cela, il y a la pondération par la fréquence totale).
+
+Une manière alternative: les _word vectors_ ou _word embeddings_.
 
 {...}
 
@@ -34,7 +43,7 @@ ce réseau d'activité est aussi, naturellement, un réseau de personnes (ou plu
 
 [^spacy_fr]: Les modèles proposés par __spaCy__ pour le français ont été entraînés sur des données extrêmement incomplètes. Un mot, entre autre, y est par exemple totalement absent (et est toujours systématiquement annoté de façon aléatoire): le pronom _tu_ (le corpus d'entraînement est uniquement constitué de textes issus de la presse écrite).
 
-<script src="./composition-roles.js"></script>
+<script src="./js/composition-roles.js"></script>
 
 # annotation
 

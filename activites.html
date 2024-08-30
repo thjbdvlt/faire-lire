@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>visualisation de relations lexicales entre activités littéraires</title>
-  <link rel="stylesheet" href="./pandoc/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -47,8 +47,8 @@ href="https://github.com/thjbdvlt/turlututu"><em>morphologizer</em></a>,
 un <a
 href="https://github.com/thjbdvlt/viceverser"><em>lemmatizer</em></a> et
 un <a
-href="https://github.com/thjbdvlt/french-dependency-parser"><em>dependency
-parser</em></a> qui reposent, pour certains sur des <a
+href="https://github.com/thjbdvlt/french-dependency-parser"><em>syntactic
+dependency parser</em></a> qui reposent, pour certains sur des <a
 href="https://github.com/thjbdvlt/french-word-vectors"><em>word
 vectors</em></a>. Je ne rentre pas dans les détails de ces opérations,
 qui sont décrites <a href="#annotation">plus bas</a>, au besoin.</p>
@@ -70,12 +70,49 @@ relations?</p>
 susceptible de penser il y a, il me semble, <em>lire</em> et
 <em>écrire</em>. Une première manière, très simple, d’explorer les
 relations qu’ont d’autres activités avec celle-ci est de regarder les
-cooccurrences les plus fréquentes. Les tableaux suivants montrent verbes
-qu’on retrouve le plus souvent dans une même phrase que les verbes
-<em>lire</em> ou <em>écrire</em>?</p>
+cooccurrences les plus fréquentes. Les tableaux suivants montrent les
+verbes qu’on retrouve le plus souvent dans une même phrase que les
+verbes <em>lire</em> ou <em>écrire</em>. (Ce sont les lemmes qui sont
+pris en compte: <q>je lirai ce que tu as écris</q> et <q>nous préférons
+lire qu’écrire</q> sont donc équivalents.)</p>
 <div id="cooccurrence">
 
 </div>
+<script src="./js/cooccurrence.js"></script>
+<p>Les première lignes de chaque tableaux peuvent sembler assez
+insignifiante: le verbe le plus fréquemment employé dans une même phrase
+que <em>lire</em> est… <em>lire</em> (<q>j’ai lu Wittgenstein avant de
+lire Weil</q>); idem pour écrire. Le second est <em>écrire</em> (<q>lire
+et écrire</q>). Les lignes qui suivent montrent des verbes qui sont tout
+simplement très fréquents en français (dans le tableau, les
+cooccurrences ne sont pas relatives mais absolues): <em>savoir</em>,
+<em>aimer</em>, <em>mettre</em>, <em>prendre</em>, etc. Pourtant, il y a
+des variations: <em>savoir</em>, <em>trouver</em>, <em>prendre</em> sont
+aux mêmes positions pour <em>lire</em> et <em>écrire</em>, mais les
+positions de <em>aimer</em> et <em>penser</em> sont inversées. On
+<q>aime lire</q> et on <q>pense écrire</q>, et moins l’inverse.</p>
+<p>La position de <q>commencer</q> est aussi très différente dans les
+deux tableaux: <q>commencer à écrire</q> est beaucoup plus fréquent que
+<q>commencer à lire</q>. On peut, je crois, sans mal le comprendre, car
+écrire un roman (la forme dominante sur le forum) prend bien davantage
+de temps que le lire (plus un processus est long, et plus il apparait
+naturel de dire qu’on l’a <q>commencé</q>: <q>commencé une série</q>
+mais pas vraiment <q>commencé un morceau de musique</q>, etc.).</p>
+<p>Presque tout en bas de ces tableaux on trouve <em>publier</em>. C’est
+le premier verbe qui semble vraiment en lien directe avec <em>lire</em>
+et <em>écrire</em>. Sur le forum, il y a en effet beaucoup de
+discussions consacrées à la publication (dont on imagine sans mal le
+rapport à l’écriture). Mais il y en a encore beaucoup plus consacrées au
+processus d’écriture lui-même, au sujet duquel on demande des conseils.
+Or, <em>publier</em> a peu de synonyme (tout au plus <q>éditer</q>),
+contrairement, par exemple, à <em>conseiller</em> (suggérer,
+recommander, proposer, …). C’est là un des inconvénients à travailler
+avec des simples cooccurrences. L’autre, c’est l’importance, évoquée
+plus haut, que prennent les verbes qui sont tout simplement très
+fréquents (mais comme solution à cela, il y a la pondération par la
+fréquence totale).</p>
+<p>Une manière alternative: les <em>word vectors</em> ou <em>word
+embeddings</em>.</p>
 <p>{…}</p>
 <p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
 (ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
@@ -83,7 +120,7 @@ sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span
 class="citation" data-cites="becker2017"><a href="#fn4"
 class="footnote-ref" id="fnref4"
 role="doc-noteref"><sup>4</sup></a></span></q>).</p>
-<script src="./composition-roles.js"></script>
+<script src="./js/composition-roles.js"></script>
 <h1 id="annotation">annotation</h1>
 <p>L’annotation de texte avec <strong>spaCy</strong> se fait en
 définissant une <em>pipeline</em>, une succession de fonction appliqué à
