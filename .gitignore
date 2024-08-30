@@ -5,3 +5,5 @@ sql
 vectors.bin
 test
 .tags
+send.sh
+Makefile

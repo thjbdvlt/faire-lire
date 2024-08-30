@@ -6,4 +6,5 @@
 
 pandoc -i activites.md -o activites.html \
     --citeproc --bibliography=./bibliography.json --csl=./unige-ll-fr-mod.csl \
-    --standalone --css=./style.css --template=./template.html
+    --standalone --css=./style.css --template=./template.html \
+    --html-q-tags=true

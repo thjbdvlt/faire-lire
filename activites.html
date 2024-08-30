@@ -6,36 +6,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>visualisation de relations lexicales entre activités littéraires</title>
   <link rel="stylesheet" href="./style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-<p>percevoir la littérature comme une “activité”.</p>
+<p>On conçoit souvent la littérature comme un <em>corpus</em>. C’est la
+définition qu’on trouve sur <a
+href="https://fr.wikipedia.org/wiki/Littérature">Wikipedia</a>:</p>
 <blockquote>
-<p>ici une citation de becker sur construction représentations
-sociales<span class="citation" data-cites="becker2009"><a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></span></p>
+<p>La <strong>littérature</strong> est l’ensemble des oeuvres écrites ou
+orales auxquelles on reconnaît une valeur esthétique</p>
 </blockquote>
-<div id="container">
-
-</div>
-<script src="./composition-roles.js"> aei </script>
-<p>…</p>
+<p>On peut préférer la considérer comme une activité<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, ou
+plus exactement, comme <q>un réseau d’activité<span class="citation"
+data-cites="becker2013a"><a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></span></q>: <em>lire</em>,
+<em>traduire</em>, <em>écrire</em>, mais aussi <em>acheter</em>,
+<em>recommander</em>, <em>corriger</em>, <em>commenter</em>, etc.</p>
+<p>Dans ce dépôt, je vais explorer ces activités, leurs proximités et
+leurs relations sur la base de l’analyse lexicale d’un corpus de textes
+que j’ai constitué et annoté dans le cadre de mon mémoire de master: les
+fils de discussions publiquement accessibles du forum <a
+href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a>, un forum
+d’entraide consacré à la littérature.</p>
+<p>Le corpus est constitué de 133040 messages (<em>posts</em>) répartis
+dans 6118 fils de discussions (<em>topics</em>). L’annotation a été
+réalisé via des scripts python en utilisant <a
+href="https://spacy.io/">spaCy</a>, une libraire d’analyse du langage
+naturel (<em>NLP</em>). <strong>spaCy</strong> propose des modèles
+d’analyses pour le français mais ceux-ci n’étaient pas adaptés à mon
+corpus (en fait, à mon avis, assez peu adapté à n’importe quel corpus<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>) et j’ai donc écris un certains
+nombre de modules python (et entraîné quelques modèles) permettant de
+réaliser les différentes tâches nécessaires à l’annotation de textes: un
+<em>tokenizer</em>, un <em>normalizer</em>, un <em>morphologizer</em>,
+un <em>lemmatizer</em> et un <em>dependency parser</em> qui reposent,
+pour certains sur des <em>word vectors</em>. Je ne rentre pas dans les
+détails de ces opérations, qui sont décrites <a href="#annotation">plus
+bas</a>, au besoin.</p>
+<p>Le corpus est stocké sous la forme d’une base de données <a
+href="https://www.postgresql.org/">Postgresql</a> dans un schéma qui
+implémente un modèle <a
+href="https://en.wikipedia.org/wiki/Entity–attribute–value_model">EAV</a>
+hybride que j’ai conçu pour l’analyse de textes en français (le code et
+la documentation du schéma est disponible <a
+href="https://github.com/thjbdvlt/litteralement">ici</a>).</p>
+<p>quelles sont ces activités et quelles sont leurs relations?</p>
+<table id="lire">
+</table>
+<p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
+(ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
+sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span
+class="citation" data-cites="becker2017"><a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></span></q>).</p>
+<script src="./composition-roles.js"></script>
+<h1 id="annotation">annotation</h1>
+<p>L’annotation de texte avec <strong>spaCy</strong> se fait en
+définissant une <em>pipeline</em>, une succession de fonction appliqué à
+un <a href="https://spacy.io/api/doc">document</a>. Un document est une
+liste de mots et des informations les concernant: leur nature
+grammaticale (<em>part-of-speech</em> – par exemple <q>verbe</q>), leur
+position dans le texte, leur noyau (<em>head</em>), leur fonction
+(<em>dependency</em> – par exemple <q>sujet</q>), leur lemme
+(<em>lemma</em> – le mot infléchi, par exemple <q>être</q> pour
+<q>êtes</q>), etc.</p>
+<ul class="incremental">
+<li>Au tout début de cette <em>pipeline</em> se trouve une opération qui
+peut sembler assez simple mais est en réalité assez délicate: la
+<em>tokenization</em>, le découpage d’une chaîne de caractère (texte) en
+<em>tokens</em> (mots, ponctuation, etc.). Si un texte comme <q>cette
+partie est merveilleuse.</q> est facile à réaliser, il en va déjà
+autrement pour un texte comme <q>les étudiant.e.s s’informent auprès de
+A. pour le(s) dossier(s).</q>. Les modèles proposés par
+<strong>spaCy</strong> ne parviennent pas à correctement découper un
+texte comme celui-ci, parce que les parenthèses <q>intra-mots</q>
+(<q>dossier(s)</q>) seront toujours séparées du mot lui-même, produisant
+un <em>token</em> isolé (<q>s</q>) qui sera alors analysé comme un
+pronom réflexif (<q>se</q>, <q>s’</q>). Par ailleurs, ils ne parviennent
+pas à correctement découper les différentes formes d’écriture inclusive,
+et ont un comportement aléatoire en ce qui concerne les traits d’unions.
+J’ai donc écrit un <em>tokenizer</em>, <a
+href="https://github.com/thjbdvlt/quelquhui">quelquhui</a>, pour
+réaliser cette tâche.</li>
+<li>Comme beaucoup de textes, les textes de mon corpus contiennent des
+formes dysorthographiques (<q>vous etes</q>) et des variations
+typographiques (<q>J’AAAARRIIIVVVE</q>). Pour pouvoir analyser
+correctement le sens de ces expressions, j’ai écrit un
+<em>normalizer</em>, <a
+href="https://github.com/thjbdvlt/presque">presque</a> qui ramène ces
+expressions vers leurs forme canoniques (<q>vous êtes</q>,
+<q>j’arrive</q>). Cette opération ne modifie pas le texte, mais assigne
+à valeur à la propriété <code>norme</code> de chaque <em>token</em>.
+Toutes les opérations suivantes feront la même chose: assigner, pour
+chaque <em>token</em> une valeur à une propriété.</li>
+<li>Le <em>morphologizer</em> <a
+href="https://github.com/thjbdvlt/turlututu">turlututu</a> assigne les
+<em>part-of-speech</em> (<q>noun</q>, <q>verb</q>, <q>adj</q>, …) et les
+caractéristiques <em>morphologies</em> (<q>Number</q>, <q>Tense</q>,
+<q>Person</q>, etc.) au format FEATS. Il s’agit d’un modèle neuronal
+entraîné sur un corpus que j’ai annoté de façon semi-automatique.</li>
+<li>Le <em>lemmatizer</em> <a
+href="https://github.com/thjbdvlt/viceverser">viceverser</a> détermine
+les <em>lemmes</em>, les formes non-fléchies des mots (<q>parcourir</q>
+pour <q>parcourions</q>) en utilisant un lexique au format <a
+href="http://hunspell.github.io/">Hunspell</a> (un programme de
+correction orthographique et de d’analyse morphologique) que j’ai
+fabriqué à partir des fichiers du logiciel <a
+href="https://grammalecte.net/">Grammalecte</a> et qui est disponible <a
+href="https://github.com/thjbdvlt/spell-fr.vim">ici</a> (il s’agissait à
+la base, pour moi, de réaliser un correcteur orthographique pour
+l’éditeur de texte <a href="https://www.vim.org/">Vim</a> qui soit
+décent pour le français).</li>
+<li>Le <em>parser</em> <a
+href="https://github.com/thjbdvlt/french-dependency-parser">french-dependency-parser</a>
+effectue le <em>syntactic dependency parsing</em>: l’analyse des
+relations syntaxiques entre les mots et assigne des valeurs à deux
+propriétés: <code>head</code> (le noyau du mot) et <code>dep</code> (la
+fonction syntaxique relative au noyau).</li>
+</ul>
+<p>Une partie de l’efficacité des modèles statistiques
+(<em>morphologizer</em> et <em>parser</em>) repose sur l’usage de
+<em>word vectors</em> de bonne qualité. Ceux que j’ai entraînés et qui
+sont disponibles <a
+href="https://github.com/thjbdvlt/french-word-vectors">ici</a> ont été
+entraînés sur un corpus d’environ 500M de <em>tokens</em> que j’ai
+obtenu par l’aggrégation de <em>corpora</em> linguistiques sous licence
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC
+BY-NC-SA</a> provenant notamment de <a
+href="https://www.ortolang.fr/">Ortolang</a>, mais aussi de romans
+(traductions de Jack London, par exemple), de textes de sciences
+humaines dans le domaine public (Weil, Wittgenstein, Mauss, entre autres
+choses) et de romans contemporains sous licence compatible avec la <a
+href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC
+BY-NC-SA</a>. La lemmatisation et la normalisation du <em>corpus</em> a
+été réalisé avec <strong>spaCy</strong> et l’entraînement avec <a
+href="https://radimrehurek.com/gensim/">Gensim</a> avec l’algorithme <a
+href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>
+(CBOW).</p>
+<h1 class="unnumbered" id="bibliographie">bibliographie</h1>
 <div id="refs" class="references csl-bib-body" role="list">
-<div id="ref-becker2009" class="csl-entry" role="listitem">
-<span class="smallcaps">Becker</span>, Howard Saul, <em>Comment parler
-de la société: artistes, écrivains, chercheurs et représentations
-sociales</em>, Paris, La Découverte, coll. Grands repères / Guides,
-2009.
+<div id="ref-becker2017" class="csl-entry" role="listitem">
+<span class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
+l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris, Flammarion, coll.
+Champs, 2017.
+</div>
+<div id="ref-becker2013a" class="csl-entry" role="listitem">
+─, <em>Propos sur l’art</em>, Paris, L’Harmattan, 2013.
+</div>
+<div id="ref-coste2017a" class="csl-entry" role="listitem">
+<span class="smallcaps">Coste</span>, Florent, <em>Explore</em>, Paris,
+Questions Théoriques, 2017.
+</div>
+<div id="ref-meizoz2016" class="csl-entry" role="listitem">
+<span class="smallcaps">Meizoz</span>, Jérôme, <em>La littérature en
+personne - scène médiatique et formes d’incarnation</em>, Genève,
+Slatkine, 2016.
 </div>
 </div>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p><span class="smallcaps">Becker</span>, Howard Saul,
-<em>Comment parler de la société: artistes, écrivains, chercheurs et
-représentations sociales</em>, Paris, La Découverte, coll. Grands
-repères / Guides, 2009.<a href="#fnref1" class="footnote-back"
+<li id="fn1"><p>voir, par exemple, les textes de Florent Coste<span
+class="citation" data-cites="coste2017a"> (<span
+class="smallcaps">Coste</span>, Florent, <em>Explore</em>, Paris,
+Questions Théoriques, 2017)</span>, ou dans une certaine mesure de
+Jérôme Meizoz <span class="citation" data-cites="meizoz2016"> (<span
+class="smallcaps">Meizoz</span>, Jérôme, <em>La littérature en personne
+- scène médiatique et formes d’incarnation</em>, Genève, Slatkine,
+2016)</span>. le deuxième paragraphe de l’article Wikipedia
+<q>Littérature</q> ajoute à la définition de la littérature comme corpus
+la définition de la littérature comme activité (mais uniquement comme
+activité de <em>création</em>, excluant donc par exemple la lecture); au
+reste, cette définition n’est pas la définition que donne l’article,
+mais uniquement une précision sur l’évolution de la notion de
+littérature.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<em>Propos sur l’art</em>, Paris, L’Harmattan, 2013, 81. La citation de
+Becker n’est pas spécifique à la littérature et concerne n’importe que
+”monde de l’art”.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Les modèles proposés par <strong>spaCy</strong> pour le
+français ont été entraînés sur des données extrêmement incomplètes. Un
+mot, entre autre, y est par exemple totalement absent (et est toujours
+systématiquement annoté de façon aléatoire): le pronom <em>tu</em> (le
+corpus d’entraînement est uniquement constitué de textes issus de la
+presse écrite).<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<em>Les mondes de l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris,
+Flammarion, coll. Champs, 2017.<a href="#fnref4" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
