@@ -38,13 +38,13 @@ d’entraide consacré à la littérature.</p>
 dans 6’118 fils de discussions (<em>topics</em>). L’annotation a été
 réalisée en utilisant <a href="https://spacy.io/">spaCy</a>, une
 libraire (python) d’analyse du langage naturel (<em>NLP</em>).
-<strong>spaCy</strong> propose des modèles d’analyses pour le français
-mais ceux-ci n’étant pas adaptés à mon corpus (en fait, à mon avis,
-assez peu adapté à n’importe quel corpus<a href="#fn3"
-class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>),
-j’ai écris plusieurs modules (et entraîné quelques modèles) permettant
-de réaliser les différentes tâches nécessaires à l’annotation de textes:
-un <a
+<strong>spaCy</strong> propose des <a
+href="https://spacy.io/models/fr">modèles</a> pour le français mais
+ceux-ci n’étant pas adaptés à mon corpus (en fait, à mon avis, assez peu
+adapté à n’importe quel corpus<a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a>), j’ai écris plusieurs
+modules (et entraîné quelques modèles) permettant de réaliser les
+différentes tâches nécessaires à l’annotation de textes: un <a
 href="https://github.com/thjbdvlt/quelquhui"><em>tokenizer</em></a>, un
 <a href="https://github.com/thjbdvlt/presque"><em>normalizer</em></a>,
 un <a
@@ -56,12 +56,8 @@ href="https://github.com/thjbdvlt/french-dependency-parser"><em>syntactic
 dependency parser</em></a> qui reposent, pour certains sur des <a
 href="https://github.com/thjbdvlt/french-word-vectors"><em>word
 vectors</em></a>. Je ne rentre pas dans les détails de ces opérations
-(elles sont, au besoin, décrites <a href="./annotations.html">ici</a>,
-mais leur lecture n’est pas du tout nécessaire). Le corpus annoté
-représente un peu plus de 14M de mots (14’787’715) et 40K lemmes
-appartenant au lexique français contemporain (un lemme est la forme
-non-fléchie d’un mot: <q>être</q> est le lemme de <q>soyons</q>,
-<q>fussent</q>, <q>es</q>, etc.).</p>
+(elles sont, au besoin, décrites <a href="./annotations.html">ici</a>).
+Le corpus annoté représente un peu plus de 14M de mots (14’787’715).</p>
 <p>Le corpus est stocké sous la forme d’une base de données <a
 href="https://www.postgresql.org/">Postgresql</a> dans un schéma que
 j’ai conçu pour l’analyse de textes en français (une implémentation d’un
@@ -82,9 +78,10 @@ susceptible de penser il y a, il me semble, <q>lire</q> et
 relations qu’ont d’autres activités avec celle-ci consiste à regarder
 les cooccurrences les plus fréquentes. Les tableaux suivants montrent
 les verbes qu’on retrouve le plus souvent dans une même phrase que les
-verbes <q>lire</q> ou <q>écrire</q>. (Ce sont les lemmes qui sont pris
-en compte: <q>je lirai ce que tu as écris</q> et <q>nous préférons lire
-qu’écrire</q> sont donc équivalents.)</p>
+verbes <q>lire</q> ou <q>écrire</q>. (Ce sont les <a
+href="https://universaldependencies.org/u/overview/morphology.html#lemmas">lemmes</a>
+qui sont pris en compte: <q>je lirai ce que tu as écris</q> et <q>nous
+préférons lire qu’écrire</q> sont donc équivalents.)</p>
 <div id="cooccurrence">
 
 </div>
@@ -99,8 +96,7 @@ cooccurrences ne sont pas relatives mais absolues): <q>savoir</q>,
 <q>aimer</q>, <q>mettre</q>, <q>prendre</q>, etc. Pourtant, il y a des
 variations: <q>savoir</q>, <q>trouver</q>, <q>prendre</q> sont aux mêmes
 positions pour <q>lire</q> et <q>écrire</q>, mais les positions de
-<q>aimer</q> et <q>penser</q> sont inversées. On <q>aime lire</q> et on
-<q>pense écrire</q>, moins l’inverse.</p>
+<q>aimer</q> et <q>penser</q> sont inversées.</p>
 <p>La position de <q>commencer</q> est aussi très différente dans les
 deux tableaux: <q>commencer à écrire</q> est beaucoup plus fréquent que
 <q>commencer à lire</q>. On peut, je crois, sans mal le comprendre, car
@@ -108,24 +104,25 @@ deux tableaux: <q>commencer à écrire</q> est beaucoup plus fréquent que
 de temps que le lire (plus un processus est long, et plus il apparait
 naturel de dire qu’on l’a <q>commencé</q>: on dit souvent <q>j’ai
 commencé une série</q> mais plus rarement <q>j’ai commencé un morceau de
-musique</q>, etc.). Certaines variations sont moins liées au sens d’un
-mot qu’à des locutions particulières. Ainsi, <q>donner</q> est beaucoup
-plus fréquent avec <q>lire</q> qu’avec <q>écrire</q> probablement en
-raison de l’expression <q>donner à lire</q>.</p>
+musique</q>, etc.). Plus probablement encore, cela fait référence au
+début, non de l’écriture de telle ou telle texte (processus), mais de
+l’écriture comme activité. Certaines variations sont moins liées au sens
+d’un mot qu’à des locutions particulières. Ainsi, <q>donner</q> est
+beaucoup plus fréquent avec <q>lire</q> qu’avec <q>écrire</q>
+probablement en raison de l’expression <q>donner à lire</q>.</p>
 <p>Presque tout en bas de ces tableaux on trouve <q>publier</q>. C’est
-le premier verbe qui semble vraiment en lien directe avec <q>lire</q> et
+le premier verbe semble vraiment en lien directe avec <q>lire</q> et
 <q>écrire</q>. Sur le forum, il y a en effet beaucoup de discussions
-consacrées à la publication (dont on imagine sans mal le rapport à
-l’écriture). Mais il y en a encore beaucoup plus consacrées au processus
-d’écriture lui-même, au sujet duquel on demande des conseils. Or,
-<q>publier</q> a peu de synonyme (tout au plus <q>éditer</q>),
-contrairement, par exemple, à <q>conseiller</q> (suggérer, recommander,
-proposer, …). C’est là un des inconvénients à travailler avec des
-simples cooccurrences. Un autre inconvénient, c’est l’importance,
-évoquée plus haut, que prennent les verbes qui sont tout simplement très
-fréquents (mais comme solution à cela, il y a la pondération par la
-fréquence totale). Au reste, on ne voit pas vraiment ici des
-<q>activités</q> littéraires.</p>
+consacrées à la publication, mais il y en a encore beaucoup plus
+consacrées au processus d’écriture lui-même, au sujet duquel on demande
+des conseils. Or, <q>publier</q> a peu de synonyme (tout au plus
+<q>éditer</q>), contrairement, par exemple, à <q>conseiller</q>
+(suggérer, recommander, proposer, …). C’est là un des inconvénients à
+travailler avec des simples cooccurrences. Un autre inconvénient, c’est
+l’importance, évoquée plus haut, que prennent les verbes qui sont tout
+simplement très fréquents (mais comme solution à cela, il y a la
+pondération par la fréquence totale). Au reste, on ne voit pas vraiment
+ici des <q>activités</q> littéraires.</p>
 <h1 id="word-embeddings"><em>word embeddings</em></h1>
 <p>Une solution alternative qui ne pose pas ces mêmes problèmes, ou pas
 tous (qui en pose bien sûr d’autres) et l’utilisation de <a
@@ -221,18 +218,16 @@ produire/consommer}</p>
 <h2 id="la-composition-des-rôles">la composition des rôles</h2>
 <p>Ce réseau d’activités est aussi, naturellement, un réseau de
 personnes (d’acteur·rices): auteur·rices, relecteur·rices,
-éditeur·rices, critique, lecteur·rices, etc. qui, ensemble, constituent
-ce que le sociologue Howard Becker appelle un <q>monde de l’art</q>
-(toutes les personnes qui participent, d’une manière ou d’une autre, à
-la production, la diffusion et la réception des oeuvres d’art<span
-class="citation" data-cites="becker2017"><a href="#fn9"
-class="footnote-ref" id="fnref9"
-role="doc-noteref"><sup>9</sup></a></span>)<a href="#fn10"
-class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.
-Ce qui est constitutif d’un <q>monde de l’art</q>, c’est tout d’abord
-les activités, les conventions, les normes et les savoirs partagés.
-C’est ensuite non les personnes qui exercent ces activités, mais les
-<em>rôles</em> (ou fonctions) que leurs délimitations définissent.</p>
+éditeur·rices, critique, lecteur·rices, etc. qui, toutes, participent à
+ce que le sociologue Howard Becker appelle un <q>monde de l’art<a
+href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a></q>. Un <q>monde de l’art</q>, c’est
+tout d’abord un ensemble d’<q>activités</q>, de <q>conventions</q> et de
+<q>savoirs partagés</q><span class="citation" data-cites="becker2017"><a
+href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a></span>. C’est, ensuite, non les
+personnes qui exercent ces activités, mais les <em>rôles</em> (ou
+fonctions) que les délimitations entre ces activités définissent.</p>
 <p>Dans les <q>mondes de l’art</q> (plus que dans d’autres mondes
 socioprofessionnels), il courant qu’une personne remplissent plusieurs
 rôles. C’est par exemple le cas des artistes les plus précaires, qui
@@ -244,17 +239,19 @@ href="#fn11" class="footnote-ref" id="fnref11"
 role="doc-noteref"><sup>11</sup></a></span>. Sur le forum <a
 href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a> personne
 n’est uniquement correcteur·rice ou relecteur·rice, ni uniquement
-auteur·rice.</p>
+auteur·rice. Or, ces <em>rôles multiples</em> ne se combinent pas
+aléatoirement: certains rôles sont, en quelques sortes, très
+<em>pérméables</em>, d’autres nécessitent des compétences spécifiques et
+ne peuvent se combiner qu’avec certains rôles, etc.</p>
 <p>Dans la visualisation qui suit, j’essaie de représenter le réseau que
 constitue ces rôles en utilisant les mots-composés désignant des rôles
-littéraires comme <q>auteur·rice-compositeur·rice-interprète</q>.</p>
+littéraires comme <q>auteur·rice-compositeur·rice-interprète</q>. On y
+voit par exemple que même</p>
 <div id="composition-roles">
 
 </div>
 <script type="module" src="./js/composition-roles.js"></script>
-<!-- écrivain très connecté, mais peu d'occurrences total, car écrivain vraiment un statut, et surtout c'est sans valence (on est pas l'écrivain de qqch) -->
-<!-- lecteur·rice: très peu connectée, mais aussi assez peu présent, comparé à la fréquence du verbe 'lire' -->
-<p>{– visualisation composition rôles –}</p>
+<p>{– introduire et motiver la visualisation sur les personnes –}</p>
 <p>{– visualisation verbes personnes –}</p>
 <script src="./js/composition-roles.js"></script>
 <h1 class="unnumbered" id="bibliographie">bibliographie</h1>
@@ -304,7 +301,7 @@ Questions Théoriques, 2017)</span>, ou dans une certaine mesure de
 Jérôme Meizoz <span class="citation" data-cites="meizoz2016"> (<span
 class="smallcaps">Meizoz</span>, Jérôme, <em>La littérature en personne
 - scène médiatique et formes d’incarnation</em>, Genève, Slatkine,
-2016)</span>. le deuxième paragraphe de l’article Wikipedia
+2016)</span>. Le deuxième paragraphe de l’article Wikipedia
 <q>Littérature</q> ajoute à la définition de la littérature comme corpus
 la définition de la littérature comme activité (mais uniquement comme
 activité de <em>création</em>, excluant donc par exemple la lecture); au
@@ -318,11 +315,11 @@ Becker n’est pas spécifique à la littérature et concerne n’importe que
 ”monde de l’art”.<a href="#fnref2" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Les modèles proposés par <strong>spaCy</strong> pour le
-français ont été entraînés sur des données extrêmement incomplètes. Un
-mot, entre autre, y est par exemple totalement absent (et est toujours
-systématiquement annoté de façon aléatoire): le pronom <em>tu</em> (le
-corpus d’entraînement est uniquement constitué de textes issus de la
-presse écrite).<a href="#fnref3" class="footnote-back"
+français ont été entraînés sur des données extrêmement incomplètes. Le
+pronom <em>tu</em>, entre autre, y est par exemple totalement absent et
+est donc systématiquement annoté de façon aléatoire (le corpus
+d’entraînement est uniquement constitué de textes issus de la presse
+écrite).<a href="#fnref3" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>En fait, ne s’agit bien sûr pas de <em>point</em> mais
 de <em>vecteur</em>; mais parler de <em>points</em> aide à mon avis à se
@@ -347,20 +344,22 @@ avec les mots <q>France</q> ou <q>Allemagne</q>, <q>Paris</q> ou
 <q>Berlin</q>. La pertinence de cette tâche est d’ailleurs, parfois
 débattue.<a href="#fnref8" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p><span class="smallcaps">Becker</span>, Howard Saul,
-<em>Les mondes de l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris,
-Flammarion, coll. Champs, 2017.<a href="#fnref9" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>C’est vraiment comme d’un réseau que Becker parle des
+<li id="fn9"><p>C’est vraiment comme d’un réseau que Becker parle des
 mondes de l’art: <q>réseau de personnes qui coopèrent<span
-class="citation" data-cites="becker2017"> (<em>Ibid.</em>,
-59)</span></q>, <q>réseau d’activités<span class="citation"
-data-cites="becker2013a"> (<span class="smallcaps">Becker</span>, Howard
-Saul, <em>Propos sur l’art</em>, <em>op. cit.</em>, 81)</span></q> ou
-encore <q>réseau de coopération<span class="citation"
-data-cites="becker2017"> (<span class="smallcaps">Becker</span>, Howard
-Saul, <em>Les mondes de l’art</em>, <em>op. cit.</em>, 49)</span></q>.<a
-href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+class="citation" data-cites="becker2017"> (<span
+class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
+l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris, Flammarion, coll.
+Champs, 2017, 59)</span></q>, <q>réseau d’activités<span
+class="citation" data-cites="becker2013a"> (<span
+class="smallcaps">Becker</span>, Howard Saul, <em>Propos sur l’art</em>,
+<em>op. cit.</em>, 81)</span></q> ou encore <q>réseau de
+coopération<span class="citation" data-cites="becker2017"> (<span
+class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
+l’art</em>, <em>op. cit.</em>, 49)</span></q>.<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<em>Les mondes de l’art</em>, <em>op. cit.</em><a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11"><p><em>L’art et l’argent</em>, Paris, Éditions Amsterdam,
 2017.<a href="#fnref11" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
