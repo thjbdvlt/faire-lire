@@ -68,12 +68,15 @@ En raison du nombre élevé de dimensions, il n'est pas évident de représenter
 
 ## la composition des rôles
 
-Un réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices). C'est, pour reprendre la terminologie du sociologue Howard Becker, un "monde de l'art[@becker2017]". Un monde de l'art est un ensemble de personnes réelles, mais c'est surtout un réseau de rôles, de pratiques, de normes, d'idées et d'activités. Ce réseau organise la fabrication et, la diffusion et la réception des oeuvres d'art dans des "chaînes de coopération[@becker2017]" auxquelles participent de nombreuses personnes:
+Un réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices). C'est, pour reprendre la terminologie du sociologue Howard Becker, un "monde de l'art[@becker2017]". Sous ce terme, Becker regroupe toutes les personnes qui participent, d'une manière ou d'une autre, à la production, la diffusion et la réception des oeuvres d'art: artiste, relecteur·rice, gardien·ne de musée, éditeur·rice, critique, spectateur·rice, etc.
+
+Un monde de l'art est un réseau: "réseau de personnes qui coopèrent[@becker2017, p.59]", "réseau d'activités[@becker2013a, p.81]" ou encore "réseau de coopération[@becker2017, p.49]". Mais aussi d'idées, de pratiques, de normes.
+Ce réseau organise la production-distribution des oeuvres dans des "chaînes de coopération[@becker2017, p.59]" auxquelles participent de nombreuses personnes:
 
 > Un éditeur, un correcteur, des amis, des parents ou collègues de l'auteur prennent des décisions ou donnent des conseils qui aboutissent à la version définitive de l'oeuvre. Ils ajoutent ici, retranchent là, modifient une formulation, restructurent des passages entiers. Tous ces remaniements donnent à l'oeuvre son aspect définitif. […] Au vrai, on s'aperçoit qu'il n'est pas excessif de dire que c'est le monde de l'art plutôt que l'artiste lui-même qui réalise l'oeuvre. [@becker2017, p.209]
 
 Les mots "correcteur" ou "amis" désignent ici à la fois des rôles (des positions dans le réseau) et des activités (des opération dans la chaîne de coopération). Elles désignent aussi des personnes réelles, qui remplissent souvent plusieurs rôles. Sur le forum, par exemple, personne n'est uniquement correcteur·rice ou relecteur·rice.
-Au reste, comme le montre Pierre-Michel Menger[@menger2002, voir surtout ses cours au collège de France], les artistes, surtout les plus précaires, remplissent souvent plusieurs rôles, ont des activités multiples.
+Au reste, comme le montre Pierre-Michel Menger[@menger2002, voir surtout ses cours au collège de France], les artistes, surtout les plus précaires, remplissent souvent plusieurs rôles, que ce soit pour leurs propres oeuvres (création, diffusion, commentaire) ou exposition que pour celles des autres (employé·es dans des institutions artistiques).
 
 Dans la visualisation qui suit, j'essaie de représenter le réseau de ces activités en utilisant les mots-composés désignant des rôles littéraires comme "auteur·rice-compositeur·rice-interprète".
 
