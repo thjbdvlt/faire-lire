@@ -64,12 +64,12 @@ function make_scatterplot_embeddings(datapath, corpora, mots, id) {
       .call(d3.axisLeft(y));
 
     /* ajouter les titres des axes */
-    svg.append("text").attr("x", x(0)).attr("y", y(1)).text(
+    svg.append("text").attr("x", x(0)).attr("y", y(1)-10).text(
         "similarité avec " + mots[1])
       .style("text-anchor", "middle")
       .style("fill", color.axistitle).attr("transform",
         "rotate(90)");
-    svg.append("text").attr("x", x(0)).attr("y", y(-1)).text(
+    svg.append("text").attr("x", x(0)).attr("y", y(-1)-10).text(
         "similarité avec " + mots[0])
       .style("text-anchor", "middle")
       .style("fill", color.axistitle);

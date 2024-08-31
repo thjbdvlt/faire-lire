@@ -28,12 +28,12 @@ role="doc-noteref"><sup>2</sup></a></span></q> dans lequel se trouvent
 <em>lire</em>, <em>écrire</em>, <em>traduire</em>, mais aussi
 <em>acheter</em>, <em>recommander</em>, <em>corriger</em>,
 <em>commenter</em>, etc.</p>
-<p>Dans ce dépôt, je vais explorer ces activités, leurs proximités et
-leurs relations sur la base de l’analyse lexicale d’un corpus de textes
-que j’ai constitué et annoté dans le cadre de mon mémoire de master: les
-fils de discussions publiquement accessibles du forum <a
-href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a>, un forum
-d’entraide consacré à la littérature.</p>
+<p>Dans ce dépôt, je me propose d’explorer ces activités, leurs
+proximités et leurs relations sur la base de l’analyse lexicale d’un
+corpus de textes que j’ai constitué et annoté dans le cadre de mon
+mémoire de master: les fils de discussions publiquement accessibles du
+forum <a href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a>,
+un forum d’entraide consacré à la littérature.</p>
 <p>Le corpus est constitué de 133’040 messages (<em>posts</em>) répartis
 dans 6’118 fils de discussions (<em>topics</em>). L’annotation a été
 réalisée en utilisant <a href="https://spacy.io/">spaCy</a>, une
@@ -215,7 +215,7 @@ générique</a> que j’ai constitué.</p>
 <p>{même visualisation mais avec production/consommation ou
 produire/consommer}</p>
 <p>{même visualisation mais avec fabriquer/utiliser?}</p>
-<h2 id="la-composition-des-rôles">la composition des rôles</h2>
+<h1 id="la-composition-des-rôles">la composition des rôles</h1>
 <p>Ce réseau d’activités est aussi, naturellement, un réseau de
 personnes (d’acteur·rices): auteur·rices, relecteur·rices,
 éditeur·rices, critique, lecteur·rices, etc. qui, toutes, participent à
@@ -245,14 +245,32 @@ aléatoirement: certains rôles sont, en quelques sortes, très
 ne peuvent se combiner qu’avec certains rôles, etc.</p>
 <p>Dans la visualisation qui suit, j’essaie de représenter le réseau que
 constitue ces rôles en utilisant les mots-composés désignant des rôles
-littéraires comme <q>auteur·rice-compositeur·rice-interprète</q>. On y
-voit par exemple que même</p>
+littéraires comme <q>auteur·rice-compositeur·rice</q>,
+<q>auteur·rice-lecteur·rice</q> ou <q>relecteur·rice-typographe</q>.
+Chaque <em>edge</em> du graphie représente un mot composé présent dans
+le corpus (<q>écrivain·e-entrepreneur·euse</q>) et chaque <em>node</em>
+un mot-composant. La dimension des <em>nodes</em> (mot) correspond à
+leur fréquence dans le corpus, et l’épaisseur des <em>edges</em> à la
+fréquence des mot composés.</p>
 <div id="composition-roles">
 
 </div>
 <script type="module" src="./js/composition-roles.js"></script>
 <p>{– introduire et motiver la visualisation sur les personnes –}</p>
-<p>{– visualisation verbes personnes –}</p>
+<h1 id="personnes">personnes</h1>
+<p>La dernière visualisation que je propose dans cette exploration des
+activités littéraires sur le forum concerne le sens grammatical du mot
+<em>personne</em>. Il s’agit de se demander s’il y a des activités qui,
+dans les textes du forum, apparaissent comme fondamentalement
+<em>collective</em> (usages pluriels très fréquent) ou comme
+fondamentalement <em>ancrés dans la conversation</em> (usage très
+fréquent des pronoms déictique pure – 1ère et 2ème personne) et
+manifestant ainsi, par exemple, une forme de coopération littéraire par
+l’échange.</p>
+<div id="personnes-grammaires">
+
+</div>
+<script type="module" src="./js/personne-grammaire.js"></script>
 <script src="./js/composition-roles.js"></script>
 <h1 class="unnumbered" id="bibliographie">bibliographie</h1>
 <div id="refs" class="references csl-bib-body" role="list">

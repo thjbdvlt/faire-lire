@@ -11,7 +11,7 @@ On conçoit souvent la littérature comme un corpus. C'est la définition qu'on 
 On peut préférer la considérer comme une activité[^1], ou plus exactement, comme "un réseau d'activité[@becker2013a, p.81. La citation de Becker n'est pas spécifique à la littérature et concerne n'importe que "monde de l'art".]" dans lequel se trouvent
 _lire_, _écrire_, _traduire_, mais aussi _acheter_, _recommander_, _corriger_, _commenter_, etc.
 
-Dans ce dépôt, je vais explorer ces activités, leurs proximités et leurs relations sur la base de l'analyse lexicale d'un corpus de textes que j'ai constitué et annoté dans le cadre de mon mémoire de master: les fils de discussions publiquement accessibles du forum [Jeunes Écrivain·es](https://www.jeunesecrivains.com/), un forum d'entraide consacré à la littérature.
+Dans ce dépôt, je me propose d'explorer ces activités, leurs proximités et leurs relations sur la base de l'analyse lexicale d'un corpus de textes que j'ai constitué et annoté dans le cadre de mon mémoire de master: les fils de discussions publiquement accessibles du forum [Jeunes Écrivain·es](https://www.jeunesecrivains.com/), un forum d'entraide consacré à la littérature.
 
 Le corpus est constitué de 133'040 messages (_posts_) répartis dans 6'118 fils de discussions (_topics_).
 L'annotation a été réalisée en utilisant [spaCy](https://spacy.io/), une libraire (python) d'analyse du langage naturel (_NLP_). __spaCy__ propose des [modèles](https://spacy.io/models/fr) pour le français mais ceux-ci n'étant pas adaptés à mon corpus (en fait, à mon avis, assez peu adapté à n'importe quel corpus[^spacy_fr]), j'ai écris plusieurs modules (et entraîné quelques modèles) permettant de réaliser les différentes tâches nécessaires à l'annotation de textes: un [_tokenizer_](https://github.com/thjbdvlt/quelquhui), un [_normalizer_](https://github.com/thjbdvlt/presque), un [_morphologizer_](https://github.com/thjbdvlt/turlututu), un [_lemmatizer_](https://github.com/thjbdvlt/viceverser) et un [_syntactic dependency parser_](https://github.com/thjbdvlt/french-dependency-parser) qui reposent, pour certains sur des [_word vectors_](https://github.com/thjbdvlt/french-word-vectors). Je ne rentre pas dans les détails de ces opérations (elles sont, au besoin, décrites [ici](./annotations.html)). Le corpus annoté représente un peu plus de 14M de mots (14'787'715).
@@ -66,7 +66,7 @@ En raison du nombre élevé de dimensions, il n'est pas évident de représenter
 
 {même visualisation mais avec fabriquer/utiliser?}
 
-## la composition des rôles
+# la composition des rôles
 
 Ce réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices): auteur·rices, relecteur·rices, éditeur·rices, critique, lecteur·rices, etc. qui, toutes, participent à ce que le sociologue Howard Becker appelle un "monde de l'art[^becker_reseau]". Un "monde de l'art", c'est tout d'abord un ensemble d'"activités", de "conventions" et de "savoirs partagés"[@becker2017]. C'est, ensuite, non les personnes qui exercent ces activités, mais les _rôles_ (ou fonctions) que les délimitations entre ces activités définissent.
 
@@ -76,16 +76,19 @@ Dans les "mondes de l'art" (plus que dans d'autres mondes socioprofessionnels), 
 Sur le forum [Jeunes Écrivain·es](https://www.jeunesecrivains.com/) personne n'est uniquement correcteur·rice ou relecteur·rice, ni uniquement auteur·rice.
 Or, ces _rôles multiples_ ne se combinent pas aléatoirement: certains rôles sont, en quelques sortes, très _pérméables_, d'autres nécessitent des compétences spécifiques et ne peuvent se combiner qu'avec certains rôles, etc.
 
-Dans la visualisation qui suit, j'essaie de représenter le réseau que constitue ces rôles en utilisant les mots-composés désignant des rôles littéraires comme "auteur·rice-compositeur·rice-interprète". On y voit par exemple que même
+Dans la visualisation qui suit, j'essaie de représenter le réseau que constitue ces rôles en utilisant les mots-composés désignant des rôles littéraires comme "auteur·rice-compositeur·rice", "auteur·rice-lecteur·rice" ou "relecteur·rice-typographe". Chaque _edge_ du graphie représente un mot composé présent dans le corpus ("écrivain·e-entrepreneur·euse") et chaque _node_ un mot-composant. La dimension des _nodes_ (mot) correspond à leur fréquence dans le corpus, et l'épaisseur des _edges_ à la fréquence des mot composés.
 
 <div id="composition-roles"></div>
 <script type="module" src="./js/composition-roles.js"></script>
 
-{-- introduire et motiver la visualisation sur les personnes --}
+# personnes
 
-{-- visualisation verbes personnes --}
+La dernière visualisation que je propose dans cette exploration des activités littéraires sur le forum concerne le sens grammatical du mot _personne_. Il s'agit de se demander s'il y a des activités qui, dans les textes du forum, apparaissent comme fondamentalement _collective_ (usages pluriels très fréquent) ou comme fondamentalement _ancrés dans la conversation_ (usage très fréquent des pronoms déictique pure -- 1ère et 2ème personne) et manifestant ainsi, par exemple, une forme de coopération littéraire par l'échange.
 
-[^1]: voir, par exemple, les textes de Florent Coste[@coste2017a], ou dans une certaine mesure de Jérôme Meizoz [@meizoz2016]. Le deuxième paragraphe de l'article Wikipedia "Littérature" ajoute à la définition de la littérature comme corpus la définition de la littérature comme activité (mais uniquement comme activité de _création_, excluant donc par exemple la lecture); au reste, cette définition n'est pas la définition que donne l'article, mais uniquement une précision sur l'évolution de la notion de littérature.
+<div id="personnes-grammaires"></div>
+<script type="module" src="./js/personne-grammaire.js"></script>
+
+[^1]: Voir, par exemple, les textes de Florent Coste[@coste2017a], ou dans une certaine mesure de Jérôme Meizoz [@meizoz2016]. Le deuxième paragraphe de l'article Wikipedia "Littérature" ajoute à la définition de la littérature comme corpus la définition de la littérature comme activité (mais uniquement comme activité de _création_, excluant donc par exemple la lecture); au reste, cette définition n'est pas la définition que donne l'article, mais uniquement une précision sur l'évolution de la notion de littérature.
 
 [^spacy_fr]: Les modèles proposés par __spaCy__ pour le français ont été entraînés sur des données extrêmement incomplètes. Le pronom _tu_, entre autre, y est par exemple totalement absent et est donc systématiquement annoté de façon aléatoire (le corpus d'entraînement est uniquement constitué de textes issus de la presse écrite).
 
