@@ -66,9 +66,19 @@ En raison du nombre élevé de dimensions, il n'est pas évident de représenter
 
 {même visualisation mais avec fabriquer/utiliser?}
 
-## 
+## la composition des rôles
 
-Un réseau d'activités est aussi, naturellement, un réseau de personnes (ou plutôt d'acteur·rices). c'est, pour reprendre la terminologie du sociologue Howard Becker, un _monde_ (un "monde de l'art[@becker2017]").
+Un réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices). C'est, pour reprendre la terminologie du sociologue Howard Becker, un "monde de l'art[@becker2017]". Un monde de l'art est un ensemble de personnes réelles, mais c'est surtout un réseau de rôles, de pratiques, de normes, d'idées et d'activités. Ce réseau organise la fabrication et, la diffusion et la réception des oeuvres d'art dans des "chaînes de coopération[@becker2017]" auxquelles participent de nombreuses personnes:
+
+> Un éditeur, un correcteur, des amis, des parents ou collègues de l'auteur prennent des décisions ou donnent des conseils qui aboutissent à la version définitive de l'oeuvre. Ils ajoutent ici, retranchent là, modifient une formulation, restructurent des passages entiers. Tous ces remaniements donnent à l'oeuvre son aspect définitif. […] Au vrai, on s'aperçoit qu'il n'est pas excessif de dire que c'est le monde de l'art plutôt que l'artiste lui-même qui réalise l'oeuvre. [@becker2017, p.209]
+
+Les mots "correcteur" ou "amis" désignent ici à la fois des rôles (des positions dans le réseau) et des activités (des opération dans la chaîne de coopération). Elles désignent aussi des personnes réelles, qui remplissent souvent plusieurs rôles. Sur le forum, par exemple, personne n'est uniquement correcteur·rice ou relecteur·rice.
+Au reste, comme le montre Pierre-Michel Menger[@menger2002, voir surtout ses cours au collège de France], les artistes, surtout les plus précaires, remplissent souvent plusieurs rôles, ont des activités multiples.
+
+Dans la visualisation qui suit, j'essaie de représenter le réseau de ces activités en utilisant les mots-composés désignant des rôles littéraires comme "auteur·rice-compositeur·rice-interprète".
+
+<div id="composition-roles"></div>
+<script type="module" src="./js/composition-roles.js"></script>
 
 {-- visualisation composition rôles --}
 
