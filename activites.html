@@ -128,29 +128,32 @@ fréquence totale). Au reste, on ne voit pas vraiment ici des
 tous (qui en pose bien sûr d’autres) et l’utilisation de <a
 href="https://en.wikipedia.org/wiki/Word_embedding"><em>word
 embeddings</em></a> ou <em>word vectors</em>. Les <em>word
-embeddings</em> représentent les mots comme des points dans des espaces
-euclidiens à <em>n</em> dimensions (ceux que j’ai entraînés ont 100
-dimensions, d’autres en ont beaucoup plus). Plus un mot (un point) est
-proche d’un autre et plus il est <strong>sémantiquement</strong> proche.
-Ou plutôt, d’un point de vue algorithmique: plus il a tendance à être
-utilisé dans des contextes similaires. Selon une conception figurative
-(représentationnelle) du langage, cela n’a rien à voir avec <q>être
-sémantiquement proche</q>. Mais si l’on adopte une perspective
-wittgensteinienne sur le langage, cette idée n’est pas sans fondement.
-Selon Wittgenstein, la signification d’un mot est moins définie par une
-<q>chose</q> à laquelle ce mot ferait référence ou à un <q>concept</q>
-qu’il contiendrait qu’aux <q>jeux de langage<span class="citation"
-data-cites="wittgenstein2014"><a href="#fn4" class="footnote-ref"
-id="fnref4" role="doc-noteref"><sup>4</sup></a></span></q> qui le
+embeddings</em> représentent les mots comme des vecteurs à <em>n</em>
+dimensions (ceux que j’ai entraînés ont 100 dimensions, d’autres en ont
+beaucoup plus), mais pour la suite, par simplification,j’en parlerai
+comme des points<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> dans des espaces (à <em>n</em>
+dimensions). Plus un mot (un point) est proche d’un autre et plus il est
+<strong>sémantiquement</strong> proche. Ou plutôt, d’un point de vue
+algorithmique: plus il a tendance à être utilisé dans des contextes
+similaires. Selon une conception figurative (représentationnelle) du
+langage, cela n’a rien à voir avec <q>être sémantiquement proche</q>.
+Mais si l’on adopte une perspective wittgensteinienne sur le langage,
+cette idée n’est pas sans fondement. Selon Wittgenstein, la
+signification d’un mot est moins définie par une <q>chose</q> à laquelle
+ce mot ferait référence ou à un <q>concept</q> qu’il contiendrait qu’aux
+<q>jeux de langage<span class="citation"
+data-cites="wittgenstein2014"><a href="#fn5" class="footnote-ref"
+id="fnref5" role="doc-noteref"><sup>5</sup></a></span></q> qui le
 mobilisent: <q>la signification d’un mot c’est l’usage de ce mot<span
-class="citation" data-cites="wittgenstein2014"><a href="#fn5"
-class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a></span></q>. La signification du mot
+class="citation" data-cites="wittgenstein2014"><a href="#fn6"
+class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a></span></q>. La signification du mot
 <q>bonjour</q> n’est pas autre chose que le genre de situation dans
 lesquels on utilise ce mot (qui ne fait pas vraiment <q>référence</q> à
 quoi que ce soit<span class="citation" data-cites="wittgenstein2014"><a
-href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a></span>). <q>Vrai</q> et <q>faux</q>
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a></span>). <q>Vrai</q> et <q>faux</q>
 sont sémantiquement très proches parce qu’on réalise avec eux le même
 genre d’actions dans le même genre de situations. Wittgenstein dirait:
 leurs <q>grammaires</q> sont similaires. Leurs <em>word embeddings</em>
@@ -192,8 +195,8 @@ prévoir le point <code>B2 = B1 + v</code>: <q>Berlin</q>. <q>Berlin</q>
 <q>France</q> est (devrait être) identique au vecteur qui relie
 <q>Berlin</q> à <q>Allemagne</q> (ce sont des vecteurs parallèles de
 mêmes longueur): c’est le vecteur <q>être la capitale de</q><a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a>. Naturellement, ce n’est jamais
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>. Naturellement, ce n’est jamais
 vraiment le cas, précisément parce que le sens d’un mot n’est pas un
 concept contenu dans le mot, mais réside dans les choses que l’on fait
 avec ces mots, et l’on ne fait les mêmes choses avec les mots
@@ -214,16 +217,16 @@ horizontal) et <q>écrire</q> (axe vertical).</p>
 <div id="vecteurs">
 
 </div>
-<script type="module" src="./js/vecteurs.js"></script>
+<script type="module" src="./js/vectors/function.js"></script>
 <p>{même visualisation mais avec production/consommation ou
 produire/consommer}</p>
 <p>{même visualisation mais avec fabriquer/utiliser?}</p>
 <p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
 (ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
 sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span
-class="citation" data-cites="becker2017"><a href="#fn8"
-class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a></span></q>).</p>
+class="citation" data-cites="becker2017"><a href="#fn9"
+class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a></span></q>).</p>
 <p>{– visualisation composition rôles –}</p>
 <p>{– visualisation verbes personnes –}</p>
 <script src="./js/composition-roles.js"></script>
@@ -284,20 +287,26 @@ systématiquement annoté de façon aléatoire): le pronom <em>tu</em> (le
 corpus d’entraînement est uniquement constitué de textes issus de la
 presse écrite).<a href="#fnref3" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p><span class="smallcaps">Wittgenstein</span>, Ludwig,
+<li id="fn4"><p>En fait, ne s’agit bien sûr pas de <em>point</em> mais
+de <em>vecteur</em>; mais parler de <em>points</em> aide à mon avis à se
+représenter les <em>word vectors</em> dont les <em>forces</em> sont à
+peu près (il me semble) équivalentes aux <em>coordonnées</em> des
+<em>points</em>.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><span class="smallcaps">Wittgenstein</span>, Ludwig,
 <em>Recherches philosophiques</em>, trad. Françoise Dastur, Maurice
 Élie, Jean-Luc Gautero, Dominique Janicaud et Élisabeth Rigal, Paris,
-Gallimard, coll. tel, 2014.<a href="#fnref4" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><em>Ibid.</em><a href="#fnref5" class="footnote-back"
+Gallimard, coll. tel, 2014.<a href="#fnref5" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p><em>Ibid.</em><a href="#fnref6" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>C’est un exemple très souvent cité.<a href="#fnref7"
+<li id="fn7"><p><em>Ibid.</em><a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>C’est un exemple très souvent cité.<a href="#fnref8"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<li id="fn9"><p><span class="smallcaps">Becker</span>, Howard Saul,
 <em>Les mondes de l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris,
-Flammarion, coll. Champs, 2017.<a href="#fnref8" class="footnote-back"
+Flammarion, coll. Champs, 2017.<a href="#fnref9" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
