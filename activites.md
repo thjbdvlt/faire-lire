@@ -50,10 +50,15 @@ L'une des tâches d'évaluations auxquelles les _word embeddings_ sont parfois s
 
 [^vecteur_capitale]: C'est un exemple très souvent cité.
 
-Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser. En raison du nombre élevé de dimensions, il n'est pas évident de représenter des _word embeddings_. On ne peut en représenter qu'un aspect, qu'une portion. La visualisation qui suit représente le degré de proximité d'un petit groupe de mots avec les mots "lire" (axe horizontal) et "écrire" (axe vertical).
+Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser. En raison du nombre élevé de dimensions, il n'est pas évident de représenter des _word embeddings_. On ne peut en représenter qu'un aspect, qu'une portion. La visualisation qui suit représente le degré de proximité de quelques verbes avec les mots "lire" (axe horizontal) et "écrire" (axe vertical).
 
 <div id="vecteurs"></div>
-<script src="./js/vecteurs.js"></script>
+<script type="module" src="./js/vecteurs.js"></script>
+
+{même visualisation mais avec production/consommation ou produire/consommer}
+
+{même visualisation mais avec fabriquer/utiliser?}
+
 
 ce réseau d'activité est aussi, naturellement, un réseau de personnes (ou plutôt d'acteur·rices). c'est, pour reprendre la terminologie du sociologue Howard Becker, un _monde_ (un "monde de l'art[@becker2017]").
 

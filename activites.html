@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>visualisation de relations lexicales entre activités littéraires</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="./js/colors.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -208,12 +209,15 @@ corpus-objet et un corpus de référence qu’on peut s’intéresser. En
 raison du nombre élevé de dimensions, il n’est pas évident de
 représenter des <em>word embeddings</em>. On ne peut en représenter
 qu’un aspect, qu’une portion. La visualisation qui suit représente le
-degré de proximité d’un petit groupe de mots avec les mots <q>lire</q>
-(axe horizontal) et <q>écrire</q> (axe vertical).</p>
+degré de proximité de quelques verbes avec les mots <q>lire</q> (axe
+horizontal) et <q>écrire</q> (axe vertical).</p>
 <div id="vecteurs">
 
 </div>
-<script src="./js/vecteurs.js"></script>
+<script type="module" src="./js/vecteurs.js"></script>
+<p>{même visualisation mais avec production/consommation ou
+produire/consommer}</p>
+<p>{même visualisation mais avec fabriquer/utiliser?}</p>
 <p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
 (ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
 sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span

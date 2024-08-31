@@ -12,6 +12,7 @@
  * */
 
 const div = d3.select("#vecteurs")
+import { color  } from "./colors.js";
 
 /* quelques constantes:
  * - les noms des corpus.
@@ -27,11 +28,6 @@ const body_padding = 20;
 const size = {
   default: 2,
   hover: 8
-}
-const color = {
-  forum: "#69b3a2",
-  general: "#ff00ff",
-  axistitle: "#ffffff",
 }
 
 /* propriétés du svg: longueur, largeur. elles sont calculées dynamiquement en prenant en compte la largeur et la hauteur de la fenêtre du navigateur.*/
@@ -78,14 +74,13 @@ d3.json(datapath).then(data => {
   svg.append("g")
     .call(d3.axisLeft(y));
 
-
   /* ajouter les titres des axes */
   svg.append("text").attr("x", x(0)).attr("y", y(1)).text(
-      "similarité avec " + mots[0])
+      "similarité avec " + mots[1])
     .style("text-anchor", "middle")
     .style("fill", color.axistitle).attr("transform", "rotate(90)");
   svg.append("text").attr("x", x(0)).attr("y", y(-1)).text(
-    "similarité avec " + mots[1])
+    "similarité avec " + mots[0])
     .style("text-anchor", "middle")
     .style("fill", color.axistitle);
 
@@ -138,8 +133,8 @@ d3.json(datapath).then(data => {
       .data(data)
       .enter()
       .append("circle")
-      .attr("cx", d => x(d[corpus].lire))
-      .attr("cy", d => y(d[corpus].ecrire))
+      .attr("cx", d => x(d[corpus][mots[0]]))
+      .attr("cy", d => y(d[corpus][mots[1]]))
       .attr("r", size.default)
       .style("fill", color[corpus])
       .on("mouseover", mouseover)
