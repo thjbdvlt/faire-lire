@@ -7,6 +7,7 @@
   <title>visualisation de relations lexicales entre activités littéraires</title>
   <link rel="stylesheet" href="css/style.css" />
   <script type="module" src="./js/colors.js"></script>
+  <script type="module" src="./js/vectors/function.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -124,6 +125,7 @@ simples cooccurrences. Un autre inconvénient, c’est l’importance,
 fréquents (mais comme solution à cela, il y a la pondération par la
 fréquence totale). Au reste, on ne voit pas vraiment ici des
 <q>activités</q> littéraires.</p>
+<h1 id="word-embeddings"><em>word embeddings</em></h1>
 <p>Une solution alternative qui ne pose pas ces mêmes problèmes, ou pas
 tous (qui en pose bien sûr d’autres) et l’utilisation de <a
 href="https://en.wikipedia.org/wiki/Word_embedding"><em>word
@@ -181,9 +183,9 @@ certaines des choses qu’on peut faire avec.</p>
 <p>L’une des tâches d’évaluations auxquelles les <em>word
 embeddings</em> sont parfois soumis est dite <em>d’analogie</em>. Elle
 consiste à prendre un mot <code>A1</code>, par exemple <q>France</q>
-auquel on soustrait un mot <code>A2</code>, <q>Paris</q>.
-<q>Soustraire</q>, parce que l’avantage réel des <em>word
-embeddings</em> est la possibilité de réaliser des opérations
+auquel on soustrait un mot <code>A2</code>, <q>Paris</q> —
+<em>soustraire</em>, parce que l’intérêt des <em>word embeddings</em>
+est la possibilité qu’ils offrent de réaliser des opérations
 mathématiques sur des mots. On soustrait donc <code>A2</code>
 (<q>Paris</q>) à <code>A1</code> (<q>France</q>), et on obtient un
 vecteur <code>v</code>. On additionne ensuite ce vecteur <code>v</code>
@@ -193,14 +195,9 @@ prévoir le point <code>B2 = B1 + v</code>: <q>Berlin</q>. <q>Berlin</q>
 <q>Allemagne</q> (<code>B1</code>) que <q>Paris</q> (<code>A2</code>) à
 <q>France</q> (<code>A1</code>) car le vecteur qui relie <q>Paris</q> à
 <q>France</q> est (devrait être) identique au vecteur qui relie
-<q>Berlin</q> à <q>Allemagne</q> (ce sont des vecteurs parallèles de
-mêmes longueur): c’est le vecteur <q>être la capitale de</q><a
-href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>. Naturellement, ce n’est jamais
-vraiment le cas, précisément parce que le sens d’un mot n’est pas un
-concept contenu dans le mot, mais réside dans les choses que l’on fait
-avec ces mots, et l’on ne fait les mêmes choses avec les mots
-<q>France</q> ou <q>Allemagne</q>, <q>Paris</q> ou <q>Berlin</q>.</p>
+<q>Berlin</q> à <q>Allemagne</q>: c’est le vecteur <q>être la capitale
+de</q><a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>.</p>
 <p>Quels sont, ainsi compris, les 10 mots les plus proches de
 <q>écrire</q> dans mon corpus? <q>lire</q>, <q>rédiger</q>,
 <q>pondre</q>, <q>débuter</q>, <q>réécrire</q>, <q>relire</q>,
@@ -217,14 +214,15 @@ horizontal) et <q>écrire</q> (axe vertical).</p>
 <div id="vecteurs">
 
 </div>
-<script type="module" src="./js/vectors/function.js"></script>
+<script type="module" src="./js/vectors/lire_ecrire.js"></script>
 <p>{même visualisation mais avec production/consommation ou
 produire/consommer}</p>
 <p>{même visualisation mais avec fabriquer/utiliser?}</p>
-<p>ce réseau d’activité est aussi, naturellement, un réseau de personnes
-(ou plutôt d’acteur·rices). c’est, pour reprendre la terminologie du
-sociologue Howard Becker, un <em>monde</em> (un <q>monde de l’art<span
-class="citation" data-cites="becker2017"><a href="#fn9"
+<h2 id="section"></h2>
+<p>Un réseau d’activités est aussi, naturellement, un réseau de
+personnes (ou plutôt d’acteur·rices). c’est, pour reprendre la
+terminologie du sociologue Howard Becker, un <em>monde</em> (un <q>monde
+de l’art<span class="citation" data-cites="becker2017"><a href="#fn9"
 class="footnote-ref" id="fnref9"
 role="doc-noteref"><sup>9</sup></a></span></q>).</p>
 <p>{– visualisation composition rôles –}</p>
@@ -302,8 +300,14 @@ role="doc-backlink">↩︎</a></p></li>
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p><em>Ibid.</em><a href="#fnref7" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>C’est un exemple très souvent cité.<a href="#fnref8"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>C’est un exemple très souvent cité. Naturellement, les
+vecteurs ne sont pas absolument identiques, précisément parce que le
+sens d’un mot n’est pas un concept contenu dans le mot, mais réside dans
+les choses que l’on fait avec ces mots, et l’on ne fait les mêmes choses
+avec les mots <q>France</q> ou <q>Allemagne</q>, <q>Paris</q> ou
+<q>Berlin</q>. La pertinence de cette tâche est d’ailleurs, parfois
+débattue.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p><span class="smallcaps">Becker</span>, Howard Saul,
 <em>Les mondes de l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris,
 Flammarion, coll. Champs, 2017.<a href="#fnref9" class="footnote-back"
