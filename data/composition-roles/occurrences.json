@@ -1,1 +1,310 @@
-[{"n": 2, "mot": "réviseur·euse"}, {"n": 2, "mot": "sélectionneur·euse"}, {"n": 4, "mot": "courtier·ère"}, {"n": 4, "mot": "contemplateur·rice"}, {"n": 4, "mot": "ébéniste"}, {"n": 8, "mot": "rhéteur"}, {"n": 9, "mot": "thérapeute"}, {"n": 11, "mot": "payeur·euse"}, {"n": 11, "mot": "parolier·ère"}, {"n": 14, "mot": "brigand"}, {"n": 15, "mot": "documentaliste"}, {"n": 17, "mot": "bricoleur·euse"}, {"n": 20, "mot": "veilleur·euse"}, {"n": 23, "mot": "essayiste"}, {"n": 24, "mot": "menuisier·ère"}, {"n": 26, "mot": "typographe"}, {"n": 31, "mot": "gourou"}, {"n": 31, "mot": "physicien·ne"}, {"n": 36, "mot": "gamer"}, {"n": 39, "mot": "interprète"}, {"n": 46, "mot": "titulaire"}, {"n": 47, "mot": "explorateur·rice"}, {"n": 49, "mot": "écrivaillon"}, {"n": 53, "mot": "récepteur·rice"}, {"n": 54, "mot": "bouquiniste"}, {"n": 59, "mot": "compositeur·rice"}, {"n": 63, "mot": "éclaireur·euse"}, {"n": 65, "mot": "informaticien·ne"}, {"n": 68, "mot": "contributeur·rice"}, {"n": 71, "mot": "collaborateur·rice"}, {"n": 76, "mot": "commis·e"}, {"n": 79, "mot": "tatoueur·euse"}, {"n": 85, "mot": "psychologue"}, {"n": 85, "mot": "formateur·rice"}, {"n": 86, "mot": "bourreau"}, {"n": 88, "mot": "biographe"}, {"n": 88, "mot": "destinataire"}, {"n": 88, "mot": "entrepreneur·euse"}, {"n": 93, "mot": "linguiste"}, {"n": 94, "mot": "photographe"}, {"n": 98, "mot": "observateur·rice"}, {"n": 133, "mot": "conseiller·ère"}, {"n": 149, "mot": "dessinateur·rice"}, {"n": 154, "mot": "relecteur·rice"}, {"n": 161, "mot": "cuisinier·ère"}, {"n": 181, "mot": "apprenti·e"}, {"n": 186, "mot": "enseignant·e"}, {"n": 196, "mot": "consommateur·rice"}, {"n": 197, "mot": "geek"}, {"n": 205, "mot": "scénariste"}, {"n": 211, "mot": "blogueur·euse"}, {"n": 213, "mot": "travailleur·euse"}, {"n": 227, "mot": "voyageur·euse"}, {"n": 228, "mot": "historien·ne"}, {"n": 230, "mot": "philosophe"}, {"n": 237, "mot": "chercheur·euse"}, {"n": 242, "mot": "citoyen·ne"}, {"n": 258, "mot": "acheteur·euse"}, {"n": 273, "mot": "propriétaire"}, {"n": 277, "mot": "peintre"}, {"n": 333, "mot": "stagiaire"}, {"n": 345, "mot": "traducteur·rice"}, {"n": 349, "mot": "marchand·e"}, {"n": 365, "mot": "expert·e"}, {"n": 392, "mot": "spectateur·rice"}, {"n": 400, "mot": "romancier·ère"}, {"n": 405, "mot": "chroniqueur·euse"}, {"n": 423, "mot": "avocat·e"}, {"n": 426, "mot": "copine"}, {"n": 514, "mot": "vendeur·euse"}, {"n": 525, "mot": "joueur·euse"}, {"n": 531, "mot": "créateur·rice"}, {"n": 546, "mot": "esthétique"}, {"n": 579, "mot": "amateur·rice"}, {"n": 580, "mot": "distributeur·rice"}, {"n": 606, "mot": "collègue"}, {"n": 617, "mot": "professeur·e"}, {"n": 622, "mot": "participatif·ve"}, {"n": 661, "mot": "étudiant·e"}, {"n": 679, "mot": "prince·sse"}, {"n": 689, "mot": "imprimeur·euse"}, {"n": 753, "mot": "diffuseur·euse"}, {"n": 785, "mot": "acteur·rice"}, {"n": 908, "mot": "illustrateur·rice"}, {"n": 1057, "mot": "client·e"}, {"n": 1076, "mot": "policier·ère"}, {"n": 1170, "mot": "poète·sse"}, {"n": 1276, "mot": "scientifique"}, {"n": 1398, "mot": "narrateur·rice"}, {"n": 1506, "mot": "chef·fe"}, {"n": 1583, "mot": "employer"}, {"n": 1827, "mot": "artiste"}, {"n": 2110, "mot": "libraire"}, {"n": 3600, "mot": "correcteur·rice"}, {"n": 6611, "mot": "écrivain·e"}, {"n": 13750, "mot": "lecteur·rice"}, {"n": 23717, "mot": "personnage"}, {"n": 26650, "mot": "éditeur·rice"}, {"n": 39054, "mot": "auteur·rice"}, {"n": 1, "mot": "rédac"}, {"n": 1, "mot": "auteure"}, {"n": 1, "mot": "écrivants"}, {"n": 1, "mot": "amuseur·euse"}]
+[{
+  "n": 2,
+  "mot": "réviseur·euse"
+}, {
+  "n": 2,
+  "mot": "sélectionneur·euse"
+}, {
+  "n": 4,
+  "mot": "courtier·ère"
+}, {
+  "n": 4,
+  "mot": "contemplateur·rice"
+}, {
+  "n": 4,
+  "mot": "ébéniste"
+}, {
+  "n": 8,
+  "mot": "rhéteur"
+}, {
+  "n": 9,
+  "mot": "thérapeute"
+}, {
+  "n": 11,
+  "mot": "payeur·euse"
+}, {
+  "n": 11,
+  "mot": "parolier·ère"
+}, {
+  "n": 14,
+  "mot": "brigand"
+}, {
+  "n": 15,
+  "mot": "documentaliste"
+}, {
+  "n": 17,
+  "mot": "bricoleur·euse"
+}, {
+  "n": 20,
+  "mot": "veilleur·euse"
+}, {
+  "n": 23,
+  "mot": "essayiste"
+}, {
+  "n": 24,
+  "mot": "menuisier·ère"
+}, {
+  "n": 26,
+  "mot": "typographe"
+}, {
+  "n": 31,
+  "mot": "gourou"
+}, {
+  "n": 31,
+  "mot": "physicien·ne"
+}, {
+  "n": 36,
+  "mot": "gamer"
+}, {
+  "n": 39,
+  "mot": "interprète"
+}, {
+  "n": 46,
+  "mot": "titulaire"
+}, {
+  "n": 47,
+  "mot": "explorateur·rice"
+}, {
+  "n": 49,
+  "mot": "écrivaillon"
+}, {
+  "n": 53,
+  "mot": "récepteur·rice"
+}, {
+  "n": 54,
+  "mot": "bouquiniste"
+}, {
+  "n": 59,
+  "mot": "compositeur·rice"
+}, {
+  "n": 63,
+  "mot": "éclaireur·euse"
+}, {
+  "n": 65,
+  "mot": "informaticien·ne"
+}, {
+  "n": 68,
+  "mot": "contributeur·rice"
+}, {
+  "n": 71,
+  "mot": "collaborateur·rice"
+}, {
+  "n": 76,
+  "mot": "commis·e"
+}, {
+  "n": 79,
+  "mot": "tatoueur·euse"
+}, {
+  "n": 85,
+  "mot": "psychologue"
+}, {
+  "n": 85,
+  "mot": "formateur·rice"
+}, {
+  "n": 86,
+  "mot": "bourreau"
+}, {
+  "n": 88,
+  "mot": "biographe"
+}, {
+  "n": 88,
+  "mot": "destinataire"
+}, {
+  "n": 88,
+  "mot": "entrepreneur·euse"
+}, {
+  "n": 93,
+  "mot": "linguiste"
+}, {
+  "n": 94,
+  "mot": "photographe"
+}, {
+  "n": 98,
+  "mot": "observateur·rice"
+}, {
+  "n": 133,
+  "mot": "conseiller·ère"
+}, {
+  "n": 149,
+  "mot": "dessinateur·rice"
+}, {
+  "n": 154,
+  "mot": "relecteur·rice"
+}, {
+  "n": 161,
+  "mot": "cuisinier·ère"
+}, {
+  "n": 181,
+  "mot": "apprenti·e"
+}, {
+  "n": 186,
+  "mot": "enseignant·e"
+}, {
+  "n": 196,
+  "mot": "consommateur·rice"
+}, {
+  "n": 197,
+  "mot": "geek"
+}, {
+  "n": 205,
+  "mot": "scénariste"
+}, {
+  "n": 211,
+  "mot": "blogueur·euse"
+}, {
+  "n": 213,
+  "mot": "travailleur·euse"
+}, {
+  "n": 227,
+  "mot": "voyageur·euse"
+}, {
+  "n": 228,
+  "mot": "historien·ne"
+}, {
+  "n": 230,
+  "mot": "philosophe"
+}, {
+  "n": 237,
+  "mot": "chercheur·euse"
+}, {
+  "n": 242,
+  "mot": "citoyen·ne"
+}, {
+  "n": 258,
+  "mot": "acheteur·euse"
+}, {
+  "n": 273,
+  "mot": "propriétaire"
+}, {
+  "n": 277,
+  "mot": "peintre"
+}, {
+  "n": 333,
+  "mot": "stagiaire"
+}, {
+  "n": 345,
+  "mot": "traducteur·rice"
+}, {
+  "n": 349,
+  "mot": "marchand·e"
+}, {
+  "n": 365,
+  "mot": "expert·e"
+}, {
+  "n": 392,
+  "mot": "spectateur·rice"
+}, {
+  "n": 400,
+  "mot": "romancier·ère"
+}, {
+  "n": 405,
+  "mot": "chroniqueur·euse"
+}, {
+  "n": 423,
+  "mot": "avocat·e"
+}, {
+  "n": 426,
+  "mot": "copine"
+}, {
+  "n": 514,
+  "mot": "vendeur·euse"
+}, {
+  "n": 525,
+  "mot": "joueur·euse"
+}, {
+  "n": 531,
+  "mot": "créateur·rice"
+}, {
+  "n": 546,
+  "mot": "esthétique"
+}, {
+  "n": 579,
+  "mot": "amateur·rice"
+}, {
+  "n": 580,
+  "mot": "distributeur·rice"
+}, {
+  "n": 606,
+  "mot": "collègue"
+}, {
+  "n": 617,
+  "mot": "professeur·e"
+}, {
+  "n": 622,
+  "mot": "participatif·ve"
+}, {
+  "n": 661,
+  "mot": "étudiant·e"
+}, {
+  "n": 679,
+  "mot": "prince·sse"
+}, {
+  "n": 689,
+  "mot": "imprimeur·euse"
+}, {
+  "n": 753,
+  "mot": "diffuseur·euse"
+}, {
+  "n": 785,
+  "mot": "acteur·rice"
+}, {
+  "n": 908,
+  "mot": "illustrateur·rice"
+}, {
+  "n": 1057,
+  "mot": "client·e"
+}, {
+  "n": 1076,
+  "mot": "policier·ère"
+}, {
+  "n": 1170,
+  "mot": "poète·sse"
+}, {
+  "n": 1276,
+  "mot": "scientifique"
+}, {
+  "n": 1398,
+  "mot": "narrateur·rice"
+}, {
+  "n": 1506,
+  "mot": "chef·fe"
+}, {
+  "n": 1583,
+  "mot": "employer"
+}, {
+  "n": 1827,
+  "mot": "artiste"
+}, {
+  "n": 2110,
+  "mot": "libraire"
+}, {
+  "n": 3600,
+  "mot": "correcteur·rice"
+}, {
+  "n": 6611,
+  "mot": "écrivain·e"
+}, {
+  "n": 13750,
+  "mot": "lecteur·rice"
+}, {
+  "n": 23717,
+  "mot": "personnage"
+}, {
+  "n": 26650,
+  "mot": "éditeur·rice"
+}, {
+  "n": 39054,
+  "mot": "auteur·rice"
+}, {
+  "n": 1,
+  "mot": "rédac"
+}, {
+  "n": 1,
+  "mot": "auteure"
+}, {
+  "n": 1,
+  "mot": "écrivants"
+}, {
+  "n": 1,
+  "mot": "amuseur·euse"
+}]

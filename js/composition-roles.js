@@ -8,8 +8,13 @@ import {
   height
 } from "./dimensions.js";
 
-/* je travaille à partir du code trouvé ici:
+/* SOURCE:
+ * je travaille à partir du code trouvé ici:
  * https://observablehq.com/@d3/force-directed-graph/
+ * 
+ * NOTE:
+ * les commentaires qui commencent par des doubles slash (//) ne sont
+ * pas de moi: ils proviennent du scrip utilisé comme base de travail.
  * */
 
 /* quelques constantes pour les dimensions des edges et nodes */
@@ -22,10 +27,10 @@ const div = d3.select("#composition-roles")
 
 /* ajouter un <div> pour le tooltip lors du survol avec la souris. */
 var tooltip = div.append('div')
-.attr('id', 'tooltip-composition')
-.append("div")
-.style("opacity", 0)
-.attr("class", "tooltip")
+  .attr('id', 'tooltip-composition')
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
 
 var mouseover = function(event, d) {
   /* réveler le tooltip */
@@ -54,8 +59,6 @@ var mouseleave = function(event, d) {
     .style("opacity", 0)
   d3.select(this).style('fill', color.mot)
 }
-
-
 
 /* deux CSV servent à produire cette visualisation.
  * - un pour les nodes-lemme (et leur nombre d'occurence)
@@ -88,15 +91,15 @@ d3.csv(path_composition).then(data_links => {
     /* la fontion qui calcule la largeur d'un <circle> sur la base
      * du nombre d'occurrences du lemme */
     function get_width(count) {
-      return Math.max(max_node_radius * (count / max),
-        min_node_radius)
+      return (max_node_radius - 3) * ((count / max)) + 3
     }
 
     /* les blocs qui suivent sont repris, presque sans modifications, du
      * code trouvé ici:
      * https://observablehq.com/@d3/force-directed-graph/
      * à l'exception, toutefois, des functions que j'ajoute pour les
-     * largeurs et rayons des <circle> et <line> */
+     * largeurs et rayons des <circle> et <line>. il s'agit
+     * essentiellement de la partie technique du graphe: forces, etc. */
 
     // Create a simulation with several forces.
     const simulation = d3.forceSimulation(nodes)
@@ -119,6 +122,8 @@ d3.csv(path_composition).then(data_links => {
       .selectAll()
       .data(links)
       .join("line")
+      /* la fréquence des mots composés se répercutent sur l'épaisseur
+       * des 'edges'. */
       .attr("stroke-width", d => Math.min(max_link_width, d
         .count));
 
@@ -126,15 +131,19 @@ d3.csv(path_composition).then(data_links => {
       .selectAll()
       .data(nodes)
       .join("circle")
+      /* j'ai défini plus haut une fonction pour calculer le rayon
+       * des <circle> en fonction de la fréquence des lemmes. */
       .attr("r", d => get_width(d.count))
       .attr("fill", color.mot);
 
 
     // Add a drag behavior.
     node.call(d3.drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended))
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended))
+      /* naturellement, c'est moi qui ajoute les trois lignes ci-dessous
+       * pour le tooltip. */
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
@@ -172,7 +181,6 @@ d3.csv(path_composition).then(data_links => {
       event.subject.fx = null;
       event.subject.fy = null;
     }
-
 
     div.node().append(svg.node());
 
