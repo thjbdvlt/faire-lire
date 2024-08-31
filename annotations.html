@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>annotations de textes avec spacy</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="./js/colors.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<div id="centered-page">
+<h1 id="annotation">annotation</h1>
+<p>L’annotation de texte avec <strong>spaCy</strong> se fait en
+définissant une <em>pipeline</em>, une succession de fonction appliqué à
+un <a href="https://spacy.io/api/doc">document</a>. Un document est une
+liste de mots et des informations les concernant: leur nature
+grammaticale (<em>part-of-speech</em> – par exemple <q>verbe</q>), leur
+position dans le texte, leur noyau (<em>head</em>), leur fonction
+(<em>dependency</em> – par exemple <q>sujet</q>), leur lemme
+(<em>lemma</em> – le mot infléchi, par exemple <q>être</q> pour
+<q>êtes</q>), etc.</p>
+<h2 id="tokenization">tokenization</h2>
+<p>Au tout début de cette <em>pipeline</em> se trouve une opération qui
+peut sembler assez simple mais est en réalité assez délicate: la
+<em>tokenization</em>, le découpage d’une chaîne de caractère (texte) en
+<em>tokens</em> (mots, ponctuation, etc.). Si un texte comme <q>cette
+partie est merveilleuse.</q> est facile à réaliser, il en va déjà
+autrement pour un texte comme <q>les étudiant.e.s s’informent auprès de
+A. pour le(s) dossier(s).</q>. Les modèles proposés par
+<strong>spaCy</strong> ne parviennent pas à correctement découper un
+texte comme celui-ci, parce que les parenthèses <q>intra-mots</q>
+(<q>dossier(s)</q>) seront toujours séparées du mot lui-même, produisant
+un <em>token</em> isolé (<q>s</q>) qui sera alors analysé comme un
+pronom réflexif (<q>se</q>, <q>s’</q>). Par ailleurs, ils ne parviennent
+pas à correctement découper les différentes formes d’écriture inclusive,
+et ont un comportement aléatoire en ce qui concerne les traits d’unions.
+J’ai donc écrit un <em>tokenizer</em>, <a
+href="https://github.com/thjbdvlt/quelquhui">quelquhui</a>, pour
+réaliser cette tâche.</p>
+<h2 id="normalization">normalization</h2>
+<p>Comme beaucoup de textes, les textes de mon corpus contiennent des
+formes dysorthographiques (<q>vous etes</q>) et des variations
+typographiques (<q>J’AAAARRIIIVVVE</q>). Pour pouvoir analyser
+correctement le sens de ces expressions, j’ai écrit un
+<em>normalizer</em>, <a
+href="https://github.com/thjbdvlt/presque">presque</a> qui ramène ces
+expressions vers leurs forme canoniques (<q>vous êtes</q>,
+<q>j’arrive</q>). Cette opération ne modifie pas le texte, mais assigne
+à valeur à la propriété <code>norm</code> de chaque <em>token</em>.
+Toutes les opérations suivantes feront la même chose: assigner, pour
+chaque <em>token</em> une valeur à une propriété.</p>
+<h2 id="pos-tagging-morphological-analysis">pos-tagging &amp;
+morphological analysis</h2>
+<p>Le <em>morphologizer</em> <a
+href="https://github.com/thjbdvlt/turlututu">turlututu</a> assigne les
+<em>part-of-speech</em> (<q>noun</q>, <q>verb</q>, <q>adj</q>, …) et les
+caractéristiques <em>morphologies</em> (<q>Number</q>, <q>Tense</q>,
+<q>Person</q>, etc.) au format FEATS. Il s’agit d’un modèle neuronal
+entraîné sur un corpus que j’ai annoté de façon semi-automatique.</p>
+<h2 id="lemmatization">lemmatization</h2>
+<p>Le <em>lemmatizer</em> <a
+href="https://github.com/thjbdvlt/viceverser">viceverser</a> détermine
+les <em>lemmes</em>, les formes non-fléchies des mots (<q>parcourir</q>
+pour <q>parcourions</q>) en utilisant un lexique au format <a
+href="http://hunspell.github.io/">Hunspell</a> (un programme de
+correction orthographique et de d’analyse morphologique) que j’ai
+fabriqué à partir des fichiers du logiciel <a
+href="https://grammalecte.net/">Grammalecte</a> et qui est disponible <a
+href="https://github.com/thjbdvlt/spell-fr.vim">ici</a> (il s’agissait à
+la base, pour moi, de réaliser un correcteur orthographique pour
+l’éditeur de texte <a href="https://www.vim.org/">Vim</a> qui soit
+décent pour le français).</p>
+<h2 id="syntactic-dependency-parsing">syntactic dependency parsing</h2>
+<p>Le <em>parser</em> <a
+href="https://github.com/thjbdvlt/french-dependency-parser">french-dependency-parser</a>
+effectue le <em>syntactic dependency parsing</em>: l’analyse des
+relations syntaxiques entre les mots et assigne des valeurs à deux
+propriétés: <code>head</code> (le noyau du mot) et <code>dep</code> (la
+fonction syntaxique relative au noyau).</p>
+<h2 id="word-vectors">word vectors</h2>
+<p>Une partie de l’efficacité des modèles statistiques
+(<em>morphologizer</em> et <em>parser</em>) repose sur l’usage de
+<em>word vectors</em> de bonne qualité. Ceux que j’ai entraînés et qui
+sont disponibles <a
+href="https://github.com/thjbdvlt/french-word-vectors">ici</a> ont été
+entraînés sur un corpus d’environ 500M de <em>tokens</em> que j’ai
+obtenu par l’aggrégation de <em>corpora</em> linguistiques sous licence
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC
+BY-NC-SA</a> provenant notamment de <a
+href="https://www.ortolang.fr/">Ortolang</a>, mais aussi de romans
+(traductions de Jack London, par exemple), de textes de sciences
+humaines dans le domaine public (Weil, Wittgenstein, Mauss, entre autres
+choses) et de romans contemporains sous licence compatible avec la <a
+href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC
+BY-NC-SA</a>. La lemmatisation et la normalisation du corpus a été
+réalisé avec <strong>spaCy</strong> et l’entraînement avec <a
+href="https://radimrehurek.com/gensim/">Gensim</a> avec l’algorithme <a
+href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>
+(CBOW).</p>
+</div>
+</body>
+</html>
