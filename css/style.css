@@ -55,4 +55,5 @@ blockquote {
   background-color: var(--bg-tooltip);
   padding: 2px;
   color: var(--fg-tooltip);
+  opacity: 0;
 }

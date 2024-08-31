@@ -3,5 +3,6 @@ export const color = {
   mot: "#bbffbb",
   general: "#ff00ff",
   axistitle: "#ffffff",
+selected: 'red',
   fg: '#ffffff',
 };

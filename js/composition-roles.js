@@ -17,8 +17,45 @@ const max_node_radius = 20;
 const min_node_radius = 3;
 const max_link_width = 3;
 
-/* selectionner l'élemetn qui va contenir le SVG */
+/* selectionner l'élement qui va contenir le SVG */
 const div = d3.select("#composition-roles")
+
+/* ajouter un <div> pour le tooltip lors du survol avec la souris. */
+var tooltip = div.append('div')
+.attr('id', 'tooltip-composition')
+.append("div")
+.style("opacity", 0)
+.attr("class", "tooltip")
+
+var mouseover = function(event, d) {
+  /* réveler le tooltip */
+  tooltip.style("opacity", 1)
+  d3.select(this).style('fill', color.selected)
+  /* il faut sélectionner plusieurs <circle> (2): les deux elements
+   * qui ont le même attribut "mot" (les positions d'un mot dans les 2 corpus) */
+}
+
+/* event move */
+var mousemove = function(event, d) {
+  tooltip
+    /* le contenu du tooltip est le mot */
+    .html(d.id + ' (' + d.count + ')')
+    /* placer le tooltip près de la souris */
+    .style("top", (event.pageY - 10) + "px")
+    .style("left", (event.pageX + 10) + "px")
+}
+
+/* end event hover */
+var mouseleave = function(event, d) {
+  /* retour à l'état par défaut: cacher le tooltip */
+  tooltip
+    .transition()
+    .duration(200)
+    .style("opacity", 0)
+  d3.select(this).style('fill', color.mot)
+}
+
+
 
 /* deux CSV servent à produire cette visualisation.
  * - un pour les nodes-lemme (et leur nombre d'occurence)
@@ -92,14 +129,15 @@ d3.csv(path_composition).then(data_links => {
       .attr("r", d => get_width(d.count))
       .attr("fill", color.mot);
 
-    node.append("title")
-      .text(d => d.id);
 
     // Add a drag behavior.
     node.call(d3.drag()
       .on("start", dragstarted)
       .on("drag", dragged)
-      .on("end", dragended));
+      .on("end", dragended))
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave);
 
     // Set the position attributes of links and nodes each time the simulation ticks.
     function ticked() {
@@ -134,6 +172,7 @@ d3.csv(path_composition).then(data_links => {
       event.subject.fx = null;
       event.subject.fy = null;
     }
+
 
     div.node().append(svg.node());
 

@@ -50,7 +50,7 @@ parler  [-0.4,  0.1, -0.4,    1]
 
 Les dimensions (les axes géométriques) ne correspondent pas à une chose tangible, mais on pourrait se les représenter comme des axes sémantiques ou contextuels: la première dimension pourrait être la dimension _négative_-_positive_, la deuxième dimension serait la dimension _active_-_passive_, la troisième dimension serait la dimension _familière_-_soutenue_, etc. On pourrait alors imaginer que les _word embeddings_ de "vrai" et de "faux" sont absolument identique à l'exception d'une seule dimension (la dimension _vérité_-_fausseté_) pour laquelle "vrai" aurait la valeur `1` et "faux" la valeur `-1`. En réalité, il s'agit juste de dimensions _ad hoc_ initiées aléatoirement avec lesquelles construire un modèle statistique, mais les percevoir ainsi nous permet de comprendre certaines des choses qu'on peut faire avec.
 
-L'une des tâches d'évaluations auxquelles les _word embeddings_ sont parfois soumis est dite _d'analogie_. Elle consiste à prendre un mot `A1`, par exemple "France" auquel on soustrait un mot `A2`, "Paris" --- _soustraire_, parce que l'intérêt des _word embeddings_ est la possibilité qu'ils offrent de réaliser des opérations mathématiques sur des mots. On soustrait donc `A2` ("Paris") à `A1` ("France"), et on obtient un vecteur `v`. On additionne ensuite ce vecteur `v` à un point `B1`, disons "Allemagne" et l'on doit pouvoir prévoir le point `B2 = B1 + v`: "Berlin". "Berlin" (`B2`) est dans la même relation sémantique à "Allemagne" (`B1`) que "Paris" (`A2`) à "France" (`A1`) car le vecteur qui relie "Paris" à "France" est (devrait être) identique au vecteur qui relie "Berlin" à "Allemagne": c'est le vecteur "être la capitale de"[^vecteur_capitale].
+L'une des tâches d'évaluations auxquelles les _word embeddings_ sont parfois soumis est dite _d'analogie_. Elle consiste à prendre un mot `A1`, par exemple "France" auquel on soustrait un mot `A2`, "Paris". _Soustraire_, parce que l'intérêt des _word embeddings_ est la possibilité qu'ils offrent de réaliser des opérations mathématiques sur des mots. On soustrait donc `A2` ("Paris") à `A1` ("France"), et on obtient un vecteur `v`. On additionne ensuite ce vecteur `v` à un point `B1`, disons "Allemagne" et l'on doit pouvoir prévoir le point `B2 = B1 + v`: "Berlin". "Berlin" (`B2`) est dans la même relation sémantique à "Allemagne" (`B1`) que "Paris" (`A2`) à "France" (`A1`) car le vecteur qui relie "Paris" à "France" est (devrait être) identique au vecteur qui relie "Berlin" à "Allemagne": c'est le vecteur "être la capitale de"[^vecteur_capitale].
 
 [^vecteur_capitale]: C'est un exemple très souvent cité. Naturellement, les vecteurs ne sont pas absolument identiques, précisément parce que le sens d'un mot n'est pas un concept contenu dans le mot, mais réside dans les choses que l'on fait avec ces mots, et l'on ne fait les mêmes choses avec les mots "France" ou "Allemagne", "Paris" ou "Berlin". La pertinence de cette tâche est d'ailleurs, parfois débattue.
 
@@ -68,9 +68,9 @@ En raison du nombre élevé de dimensions, il n'est pas évident de représenter
 
 ## la composition des rôles
 
-Un réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices). C'est, pour reprendre la terminologie du sociologue Howard Becker, un "monde de l'art[@becker2017]". Sous ce terme, Becker regroupe toutes les personnes qui participent, d'une manière ou d'une autre, à la production, la diffusion et la réception des oeuvres d'art: artiste, relecteur·rice, gardien·ne de musée, éditeur·rice, critique, spectateur·rice, etc.
-
-Un monde de l'art est un réseau: "réseau de personnes qui coopèrent[@becker2017, p.59]", "réseau d'activités[@becker2013a, p.81]" ou encore "réseau de coopération[@becker2017, p.49]". Mais aussi d'idées, de pratiques, de normes.
+Ce réseau d'activités est aussi, naturellement, un réseau de personnes (d'acteur·rices): auteur·rices, relecteur·rices, éditeur·rices, critique, lecteur·rices, etc. Il constitue ce que le sociologue Howard Becker appelle un "monde de l'art": toutes les personnes qui participent, d'une manière ou d'une autre, à la production, la diffusion et la réception des oeuvres d'art[@becker2017].
+Un "monde de l'art", précisément, est un réseau: "réseau de personnes qui coopèrent[@becker2017, p.59]", "réseau d'activités[@becker2013a, p.81]" ou encore "réseau de coopération[@becker2017, p.49]".
+Mais aussi d'idées, de pratiques, de normes.
 Ce réseau organise la production-distribution des oeuvres dans des "chaînes de coopération[@becker2017, p.59]" auxquelles participent de nombreuses personnes:
 
 > Un éditeur, un correcteur, des amis, des parents ou collègues de l'auteur prennent des décisions ou donnent des conseils qui aboutissent à la version définitive de l'oeuvre. Ils ajoutent ici, retranchent là, modifient une formulation, restructurent des passages entiers. Tous ces remaniements donnent à l'oeuvre son aspect définitif. […] Au vrai, on s'aperçoit qu'il n'est pas excessif de dire que c'est le monde de l'art plutôt que l'artiste lui-même qui réalise l'oeuvre. [@becker2017, p.209]
@@ -82,6 +82,9 @@ Dans la visualisation qui suit, j'essaie de représenter le réseau de ces activ
 
 <div id="composition-roles"></div>
 <script type="module" src="./js/composition-roles.js"></script>
+
+<!-- écrivain très connecté, mais peu d'occurrences total, car écrivain vraiment un statut, et surtout c'est sans valence (on est pas l'écrivain de qqch) -->
+<!-- lecteur·rice: très peu connectée, mais aussi assez peu présent, comparé à la fréquence du verbe 'lire' -->
 
 {-- visualisation composition rôles --}
 
