@@ -12,15 +12,49 @@ import {
  * https://observablehq.com/@d3/force-directed-graph/
 * */
 
-// const div = d3.select("#composition-roles").node()
+/* quelques constantes pour les dimensions des edges et nodes */
+const max_node_radius = 20;
+const min_node_radius = 3;
+const max_link_width = 3;
+
+/* selectionner l'élemetn qui va contenir le SVG */
 const div = d3.select("#composition-roles")
 
+/* deux CSV servent à produire cette visualisation.
+ * - un pour les nodes-lemme (et leur nombre d'occurence)
+ * - un pour les linke-lemme-composé (et nombre d'occurrence) */
 const path_composition = "./data/composition-roles/mots_composes.csv";
 const path_occurrence = "./data/composition-roles/occurrences.csv";
 
-const data = {links: [{source: "a", target: "b"}, {source: "b", target: "c"}], nodes: [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}]}
-const links = data.links.map(d => ({...d}));
-const nodes = data.nodes.map(d => ({...d}));
+/* récupérer les données des deux fichiers */
+d3.csv(path_composition).then(data_links => {
+    d3.csv(path_occurrence).then(data_nodes => {
+
+    /* créer une copie des arrays (car ils sont modifiés par d3) */
+    const links = data_links.map(d => ({...d}));
+    const nodes = data_nodes.map(d => ({...d}));
+
+    /* récupérer le nombre d'occurrences maximum pour un lemme, afin
+     * que la largeur des <circle> soient définie relativement à 
+     * ce maximum */
+    let max = 0;
+    nodes.map(d => {
+      if (d.count > max) {
+        max = Math.max(max, d.count)
+      }
+    })
+
+    /* la fontion qui calcule la largeur d'un <circle> sur la base
+     * du nombre d'occurrences du lemme */
+    function get_width(count) {
+      return Math.max(max_node_radius * (count / max), min_node_radius)
+    }
+
+/* les blocs qui suivent sont repris, presque sans modifications, du
+ * code trouvé ici:
+ * https://observablehq.com/@d3/force-directed-graph/
+ * à l'exception, toutefois, des functions que j'ajoute pour les
+* largeurs et rayons des <circle> et <line> */
 
   // Create a simulation with several forces.
   const simulation = d3.forceSimulation(nodes)
@@ -43,7 +77,7 @@ const nodes = data.nodes.map(d => ({...d}));
     .selectAll()
     .data(links)
     .join("line")
-      .attr("stroke-width", 1);
+      .attr("stroke-width", d => Math.min(max_link_width, d.count));
 
   const node = svg.append("g")
       .attr("stroke", "#fff")
@@ -51,7 +85,7 @@ const nodes = data.nodes.map(d => ({...d}));
     .selectAll()
     .data(nodes)
     .join("circle")
-      .attr("r", 5)
+      .attr("r", d => get_width(d.count))
       .attr("fill", "red");
 
   node.append("title")
@@ -98,3 +132,6 @@ const nodes = data.nodes.map(d => ({...d}));
   }
 
 div.node().append(svg.node());
+
+    })
+})
