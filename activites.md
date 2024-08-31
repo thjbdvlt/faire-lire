@@ -54,7 +54,10 @@ L'une des tâches d'évaluations auxquelles les _word embeddings_ sont parfois s
 
 [^vecteur_capitale]: C'est un exemple très souvent cité. Naturellement, les vecteurs ne sont pas absolument identiques, précisément parce que le sens d'un mot n'est pas un concept contenu dans le mot, mais réside dans les choses que l'on fait avec ces mots, et l'on ne fait les mêmes choses avec les mots "France" ou "Allemagne", "Paris" ou "Berlin". La pertinence de cette tâche est d'ailleurs, parfois débattue.
 
-Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser. En raison du nombre élevé de dimensions, il n'est pas évident de représenter des _word embeddings_. On ne peut en représenter qu'un aspect, qu'une portion. La visualisation qui suit représente le degré de proximité de quelques verbes avec les mots "lire" (axe horizontal) et "écrire" (axe vertical).
+<!--
+Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser.
+-->
+En raison du nombre élevé de dimensions, il n'est pas évident de représenter des _word embeddings_. On ne peut en représenter qu'un aspect, qu'une portion. La visualisation qui suit représente le degré de proximité de quelques verbes avec les mots "lire" (axe horizontal) et "écrire" (axe vertical). Elle compare deux modèles de _word vectors_: celui entraîné sur mon corpus, le forum de littérature et un autre entraîné sur un [corpus générique](https://github.com/thjbdvlt/french-word-vectors) que j'ai constitué.
 
 <div id="vecteurs"></div>
 <script type="module" src="./js/vectors/lire_ecrire.js"></script>
