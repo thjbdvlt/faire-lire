@@ -35,7 +35,8 @@ const margin = {
   },
   width = Math.min(800, window.innerWidth) - margin.left - margin
   .right - body_padding,
-  height = Math.min(width, window.innerHeight)
+  height = Math.min(width, window.innerHeight - margin.top - margin
+    .bottom)
 
 /* créer l'élément SVG. */
 const svg = div.append('svg')
