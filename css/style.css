@@ -1,13 +1,26 @@
-html {
+:root {
+    --bg: #111111;
+    --fg: white;
+    --fg-q: #bbffbb;
+    --fg-n: grey;
+    --fg-tooltip: #000000;
+    --fg-tooltip: #ffdddd;
 }
 
+html {}
+
 body {
-    background: #111111;
+    background: var(--bg);
     color: white;
     font-family: arial, sans-serif;
+}
+
+div#centered-page {
     margin: 0;
     padding: 20px;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
@@ -20,28 +33,26 @@ table {
     margin: 10px;
 }
 
-th {
-    color: green;
-}
-
 .mot {
-    color: #bbffbb;
-}
-
-.nombre {
-    color: grey;
+    color: var(--fg-q);
 }
 
 q {
-    color: #bbffbb;
+    color: var(--fg-q);
 }
+
 blockquote {
-    color: #bbffbb;
+    color: var(--fg-q);
+}
+
+.nombre {
+    color: var(--fg-n);
 }
 
 .tooltip {
   position: absolute;
   pointer-events: none;
-  background-color: red;
-  color: #fff;
+  background-color: var(--bg-tooltip);
+  padding: 2px;
+  color: var(--fg-tooltip);
 }

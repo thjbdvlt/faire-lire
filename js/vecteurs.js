@@ -6,6 +6,9 @@
  * pour les tooltips, je suis parti de ça:
  * https://d3-graph-gallery.com/graph/scatter_tooltip.html
  * (exemple qu'il a notamment fallu adapté à la version actuelle (v7))
+ *
+ * pour la position du tooltip relativement au curseur:
+ * https://d3-graph-gallery.com/graph/interactivity_tooltip.html
  * */
 
 const div = d3.select("#vecteurs")
@@ -17,6 +20,7 @@ const body_padding = 20;
  * - les couleurs des <circles> (dépend du corpus)
  *   */
 const corpora = ["forum", "general"];
+const datapath = "./data/vectors/verbes_similarite.json";
 const size = {
   default: 2,
   hover: 8
@@ -26,7 +30,7 @@ const color = {
   general: "#ff00ff"
 }
 
-/* propriétés du svg: longueur, largeur. */
+/* propriétés du svg: longueur, largeur. elles sont calculées dynamiquement en prenant en compte la largeur et la hauteur de la fenêtre du navigateur.*/
 const margin = {
     top: 10,
     right: 10,
@@ -46,7 +50,14 @@ const svg = div.append('svg')
   .attr("transform", "translate(" + margin.left + "," + margin.top +
     ")");
 
-d3.json("./data/vectors/verbes_similarite.json").then(data => {
+/* tooltip */
+var tooltip = div
+  .attr('id', 'tooltip-vectors')
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+
+d3.json(datapath).then(data => {
 
   /* axe horizontal: "écrire" */
   var x = d3.scaleLinear()
@@ -62,13 +73,6 @@ d3.json("./data/vectors/verbes_similarite.json").then(data => {
     .range([height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
-
-  /* tooltip */
-  var tooltip = div
-    .attr('id', 'tooltip-vectors')
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
 
   /* event hover */
   var mouseover = function(event, d) {
@@ -87,8 +91,8 @@ d3.json("./data/vectors/verbes_similarite.json").then(data => {
   var mousemove = function(event, d) {
     tooltip
       .html(d.mot)
-      .style("left", (d3.mouse(this)[0] + 90) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
+      .style("top", (event.pageY - 10) + "px")
+      .style("left", (event.pageX + 10) + "px")
   }
 
   /* end event hover */
@@ -106,7 +110,8 @@ d3.json("./data/vectors/verbes_similarite.json").then(data => {
       .attr("r", size.default)
   }
 
-  /* iterate sur les deux nom de corpus pour construire les deux layers */
+  /* iterate sur les deux nom de corpus pour construire les
+   * deux layers */
   for (let corpus of corpora) {
     svg.append('g')
       .selectAll("dot")
