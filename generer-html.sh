@@ -11,3 +11,7 @@ pandoc -i activites.md -o activites.html \
     --csl=${d}unige-ll-fr-mod.csl \
     --standalone --css=css/style.css --template=${d}template.html \
     --html-q-tags=true
+
+pandoc -i annotations.md -o annotations.html \
+    --standalone --css=css/style.css --template=${d}template.html \
+    --html-q-tags=true
