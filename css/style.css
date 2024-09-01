@@ -133,3 +133,16 @@ sup:after {
 sup {
     vertical-align: top;
 }
+
+.csl-entry {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.csl-entry em {
+    color: var(--fg);
+}
+
+#footnotes ol li em {
+    color: var(--fg);
+}

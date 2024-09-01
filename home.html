@@ -68,8 +68,8 @@ scripts SQL qu’on pourra au besoin consulter dans le dossier <a
 href="./sql">./sql/</a>.</p>
 <p class="info-donnees">
 La collecte des données s’est faite en respectant le fichier
-<code>robots.txt</code> (qui n’est pas spécifique à ce forum) et,
-évidemment, en ayant pris connaissances des <a
+<code>robots.txt</code> (communs à plusieurs forum utilisant le même
+hébergement) et, évidemment, en ayant pris connaissances des <a
 href="https://www.jeunesecrivains.com/t56577-a-lire-les-regles-du-forum">règles</a>
 du forum (rédigées par les membres <em>admins</em> du forum) et de son
 <a
@@ -305,6 +305,15 @@ rôles littéraires.
 Il y a un petit problème que je n’ai pas pû résoudre: lors du premier
 clic sur un élément, la fenêtre se déplace.
 </p>
+<p class="info-donnees">
+J’ai choisi la même couleurs pour les <em>nodes</em> et les
+<em>edges</em> parce que même si leurs fonctions dans le graphes sont
+différentes, il s’agit toujours de mots (composés ou non-composés). La
+largeur des <em>edges</em> est très peu variables (soit 1px, soit 2px)
+car la plupart des mots-composés n’apparaissent qu’une seule fois, et
+quelques-uns apparaissent un grands nombres de fois. Entre les deux, il
+y a assez peu de variations intéressante à observer.
+</p>
 <h2 id="personnes">personnes</h2>
 <p>La dernière visualisation que je propose dans cette exploration des
 activités littéraires sur le forum concerne le sens grammatical du mot
@@ -323,7 +332,7 @@ l’échange.</p>
 Dans ma base de données, il y a une table <strong>mot</strong> (tel mot
 particulier dans tel texte) qui contient une référence à une table
 <strong>lexeme</strong> (le mot, avec toutes ses caractéristiques, mais
-hors de son contexte: le mot <em>possible</em>), laquelle contient le
+hors de son contexte: le <em>mot possible</em>), laquelle contient le
 <strong>lemme</strong> (le mot non fléchi, que j’utilise pour toutes les
 visualisations<a href="#fn13" class="footnote-ref" id="fnref13"
 role="doc-noteref"><sup>13</sup></a>) mais aussi les informations
@@ -336,17 +345,18 @@ valeur <code>Plur</code> et pour <code>Person</code> la valeur
 <code>1</code>. Mais en réalité, récupérer ces informations est un peu
 plus compliqué, et l’analyse morphologique n’est pas suffisante. Il faut
 aussi une analyse des relations syntaxiques pour pouvoir intégrer des
-cas comme <q>j’ai écrit</q>. En effet, <q>écris</q>, en tant que
-participe passé, ne porte pas ces valeurs, il faut donc les récupérer de
-son auxiliaire, lequel n’est pas forcément placé juste avant le verbe.
-Les temps composés étant extrêmement courant en français, ces cas
-représentent une portion trop importante (~30% de la visualisation qui
-suit) pour être laissés de côtés, c’est pourquoi, en plus du
-<em>morphologizer</em>, il faut utiliser un <em>syntactic dependency
-parser</em> qui va annoter les textes en mettant en relation les mots
-entre eux. C’est ainsi que j’ai pu déterminer les auxiliaires des verbes
-et récupérer (dans les requêtes SQL) leurs caractéristiques
-morphologiques, que j’ai transmises à leur verbe (noyau).
+cas comme <q>j’ai écrit</q>. En effet, <q>écrit</q>, en tant que
+participe passé, ne porte pas ces valeurs (<code>Sing</code>,
+<code>1</code>), il faut donc les récupérer de son auxiliaire, lequel
+n’est pas forcément placé juste avant le verbe. Les temps composés étant
+extrêmement courant en français, ces cas représentent une portion trop
+importante (~30% de cette visualisation) pour être laissés de côtés,
+c’est pourquoi, en plus du <em>morphologizer</em>, il me faut utiliser
+pour l’annotation un <em>syntactic dependency parser</em> textes en
+mettant en relation les mots entre eux. C’est ainsi que j’ai pu
+déterminer les auxiliaires des verbes et récupérer (dans les requêtes
+SQL) leurs caractéristiques morphologiques, que j’ai transmises à leur
+verbe (noyau).
 </p>
 <script src="./js/composition-roles.js"></script>
 <h2 class="unnumbered" id="bibliographie">bibliographie</h2>
@@ -411,7 +421,7 @@ Becker n’est pas spécifique à la littérature et concerne n’importe que
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Les modèles proposés par <strong>spaCy</strong> pour le
 français ont été entraînés sur des données extrêmement incomplètes. Le
-pronom <em>tu</em> y est par exemple totalement absent et est donc
+pronom <q>tu</q> y est par exemple totalement absent et est donc
 systématiquement annoté de façon aléatoire (le corpus d’entraînement est
 uniquement constitué de textes issus de la presse écrite).<a
 href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>

@@ -24,7 +24,7 @@ const div = d3.select(divid);
 const svg = div.append('svg')
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+  .append("g").style('color', color.axis)
   .attr("transform", "translate(" + margin.left + "," + margin.top +
     ")");
 
@@ -34,7 +34,7 @@ var x = d3.scaleLinear()
   .range([0, width]);
 svg.append("g")
   .attr("transform", "translate(0," + height / 2 + ")")
-  .call(d3.axisBottom(x).ticks(0, null));
+  .call(d3.axisBottom(x).ticks(0, null)).style('opacity', 0.2);
 
 /* axe vertical: nombre (singulier, pluriel) */
 var y = d3.scaleLinear()
@@ -42,7 +42,7 @@ var y = d3.scaleLinear()
   .range([height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y).ticks(0, null))
-  .attr("transform", "translate(" + width / 2 + ",0)");
+  .attr("transform", "translate(" + width / 2 + ",0)").style('opacity', 0.2);
 
 /* ajouter les titres des axes (de chaque côté) */
 const labels = [{
@@ -72,13 +72,13 @@ const labels = [{
     x: 1,
     y: 0.5,
     rotate: true,
-    xplus: -244,
+    xplus: -220,
     yplus: -4
   },
 ]
 for (let i of labels) {
   svg.append('text').attr('x', x(i.x) + i.xplus).attr('y', y(i.y) + i
-    .yplus).text(i.label).style('fill', color.fg)
+    .yplus).text(i.label).style('fill', color.axis).style('font-size', '90%')
 }
 
 

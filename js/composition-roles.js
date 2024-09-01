@@ -20,7 +20,7 @@ import {
 /* quelques constantes pour les dimensions des edges et nodes */
 const max_node_radius = 20;
 const min_node_radius = 3;
-const max_link_width = 3;
+const max_link_width = 2;
 
 /* selectionner l'élement qui va contenir le SVG */
 const div = d3.select("#composition-roles")
@@ -117,7 +117,7 @@ d3.csv(path_composition).then(data_links => {
 
     // Add a line for each link, and a circle for each node.
     const link = svg.append("g")
-      .attr("stroke", color.fg)
+      .attr("stroke", color.mot)
       .attr("stroke-opacity", 0.6)
       .selectAll()
       .data(links)
