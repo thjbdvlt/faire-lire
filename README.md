@@ -5,7 +5,7 @@ Explorer, à l'aide de la librairie [d3.js](https://d3js.org/), les données iss
 
 Ce dépôt, réalisé dans le cadre de l'enseignement [_Visualisation de données_](https://github.com/ipante/ressources_visualisation_de_donnees) dispensé à l'université de Lausanne par Isaac Pante, aborde les nombreuses activités et les nombreuses personnes qui prennent part à l'écriture ou à la lecture littéraire. Car à n'importe quelle activité d'écriture, ou presque, contribuent de multiples acteur·rices, et c'est le cas de l'écriture de ce dépôt:
 
-- Les fichiers HTML ont été générés à l'aide de [Pandoc](https://pandoc.org/) à partir de fichier Markdown, d'un [template](./pandoc/template.html) HTML et d'une bibliographie au format CSL-JSON (tout est dans le dépôt, y compris la [commande utilisée](./generer-html.sh)).
+- Les fichiers HTML ont été générés à l'aide de [Pandoc](https://pandoc.org/) à partir de fichiers Markdown, d'un [template](./pandoc/template.html) HTML et d'une bibliographie au format CSL-JSON (tout est dans le dépôt, y compris la [commande utilisée](./generer-html.sh)).
 - Les fichiers `.js` sont mis en forme à l'aide du programme [js-beautify](https://github.com/beautifier/js-beautify). Le fichier de configuration est [./.jsbeautifyrc](./.jsbeautifyrc)).
 - Tous les fichiers ont été édités à l'aide de l'éditeur [Neovim](https://neovim.io/) en utilisant le _Language Server Protocol_ pour javascript [quick-lint-js](https://quick-lint-js.com/docs/lsp/).
 
