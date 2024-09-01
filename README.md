@@ -35,7 +35,7 @@ live-server --entry-file=home.html --browser=firefox
 navigateur
 ----------
 
-Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).
+Les visualisations ont été testées dans le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).
 
 screenshots
 -----------
