@@ -57,3 +57,7 @@ blockquote {
   color: var(--fg-tooltip);
   opacity: 0;
 }
+
+.info-donnees {
+    color: yellow;
+}

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <script type="module" src="./js/colors.js"></script>
   <script type="module" src="./js/dimensions.js"></script>
-  <script type="module" src="./js/vectors/function.js"></script>
+  <script type="module" src="./js/vectors/scatterplot.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -58,8 +58,8 @@ href="https://github.com/thjbdvlt/french-word-vectors"><em>word
 vectors</em></a>. Je ne rentre pas dans les détails de ces opérations
 (elles sont, au besoin, décrites <a href="./annotations.html">ici</a>).
 Le corpus annoté représente un peu plus de 14M de mots (14’787’715).</p>
-<p>Le corpus est stocké sous la forme d’une base de données <a
-href="https://www.postgresql.org/">Postgresql</a> dans un schéma que
+<p>Le corpus est stocké localement sous la forme d’une base de données
+<a href="https://www.postgresql.org/">Postgresql</a> dans un schéma que
 j’ai conçu pour l’analyse de textes en français (une implémentation d’un
 modèle <a
 href="https://en.wikipedia.org/wiki/Entity–attribute–value_model">EAV</a>
@@ -69,6 +69,28 @@ utilisées dans les visualisations qui vont suivre ont donc simplement
 été récupérées de cette base de données <em>via</em> des courts scripts
 SQL qu’on pourra au besoin consulter dans le dossier <a
 href="./sql">sql</a>.</p>
+<p class="info-donnees">
+La collecte des données s’est faite en respectant le fichier
+<code>robots.txt</code> (qui n’est pas spécifique à ce forum) et,
+évidemment, en ayant pris connaissances des <a
+href="https://www.jeunesecrivains.com/t56577-a-lire-les-regles-du-forum">règles</a>
+du forum (rédigées par les membres <em>admin</em> du forum) et de son <a
+href="https://www.jeunesecrivains.com/t59918-guide-pratique-d-utilisation-du-forum">guide</a>
+d’utilisation. Seules les sections <strong>publiques</strong>
+(accessibles sans identification) ont été collectées. C’est un principe
+éthique minimal du <em>web scraping</em> et il est ici pertinent
+puisqu’environ la moitié des section seulement est publique: les données
+accessibles publiquement le sont intentionnellement. J’ai tout de même
+exclu certaines sections publiques: la section <em>présentation</em>
+(dans laquelle se présentent les membres du forum), celles qui
+concernent les interactions <em>IRL</em> (organisation d’événements,
+etc.) et la section <em>constance</em> qui propose des journaux
+d’écriture (pour éviter de collecter, précisément, ce qui s’apparente à
+des journaux personnels). Les données collectées ne sont pas
+distribuées: seules des visualisations et des fragments sont utilisées
+ici, qui ne permettent en aucune façon l’identification de personnes
+réelles.
+</p>
 <h1 id="deux-tableaux">deux tableaux</h1>
 <p>Quelles sont donc ces activités littéraires, et quelles sont leurs
 relations?</p>
@@ -78,10 +100,10 @@ susceptible de penser il y a, il me semble, <q>lire</q> et
 relations qu’ont d’autres activités avec celle-ci consiste à regarder
 les cooccurrences les plus fréquentes. Les tableaux suivants montrent
 les verbes qu’on retrouve le plus souvent dans une même phrase que les
-verbes <q>lire</q> ou <q>écrire</q>. (Ce sont les <a
+verbes <q>lire</q> ou <q>écrire</q>. Ce sont les <a
 href="https://universaldependencies.org/u/overview/morphology.html#lemmas">lemmes</a>
 qui sont pris en compte: <q>je lirai ce que tu as écris</q> et <q>nous
-préférons lire qu’écrire</q> sont donc équivalents.)</p>
+préférons lire qu’écrire</q> sont donc équivalents.</p>
 <div id="cooccurrence">
 
 </div>
@@ -105,11 +127,12 @@ de temps que le lire (plus un processus est long, et plus il apparait
 naturel de dire qu’on l’a <q>commencé</q>: on dit souvent <q>j’ai
 commencé une série</q> mais plus rarement <q>j’ai commencé un morceau de
 musique</q>, etc.). Plus probablement encore, cela fait référence au
-début, non de l’écriture de telle ou telle texte (processus), mais de
-l’écriture comme activité. Certaines variations sont moins liées au sens
-d’un mot qu’à des locutions particulières. Ainsi, <q>donner</q> est
-beaucoup plus fréquent avec <q>lire</q> qu’avec <q>écrire</q>
-probablement en raison de l’expression <q>donner à lire</q>.</p>
+début, non de l’écriture de telle ou telle texte (début d’un processus
+ou d’un projet), mais de l’écriture comme activité. Certaines variations
+sont moins liées au sens d’un mot qu’à des locutions particulières.
+Ainsi, <q>donner</q> est beaucoup plus fréquent avec <q>lire</q> qu’avec
+<q>écrire</q> probablement en raison de l’expression <q>donner à
+lire</q>.</p>
 <p>Presque tout en bas de ces tableaux on trouve <q>publier</q>. C’est
 le premier verbe semble vraiment en lien directe avec <q>lire</q> et
 <q>écrire</q>. Sur le forum, il y a en effet beaucoup de discussions
@@ -208,6 +231,12 @@ de <em>word vectors</em>: celui entraîné sur mon corpus, le forum de
 littérature et un autre entraîné sur un <a
 href="https://github.com/thjbdvlt/french-word-vectors">corpus
 générique</a> que j’ai constitué.</p>
+<p class="info-donnees">
+La visualisation est interactive: positionner le curseur sur un point
+(un mot) affiche le mot en question et agrandi le point. Le point
+correspondant au même mot dans l’autre corpus est aussi agrandi, afin de
+pouvoir facilement établir la comparaison.
+</p>
 <div id="vecteurs">
 
 </div>
@@ -246,12 +275,34 @@ ne peuvent se combiner qu’avec certains rôles, etc.</p>
 <p>Dans la visualisation qui suit, j’essaie de représenter le réseau que
 constitue ces rôles en utilisant les mots-composés désignant des rôles
 littéraires comme <q>auteur·rice-compositeur·rice</q>,
-<q>auteur·rice-lecteur·rice</q> ou <q>relecteur·rice-typographe</q>.
-Chaque <em>edge</em> du graphie représente un mot composé présent dans
-le corpus (<q>écrivain·e-entrepreneur·euse</q>) et chaque <em>node</em>
-un mot-composant. La dimension des <em>nodes</em> (mot) correspond à
-leur fréquence dans le corpus, et l’épaisseur des <em>edges</em> à la
-fréquence des mot composés.</p>
+<q>auteur·rice-lecteur·rice</q> ou <q>relecteur·rice-typographe</q>.</p>
+<p class="info-donnees">
+Chaque <em>edge</em> du graphe représente un mot composé présent dans le
+corpus (<q>écrivain·e-entrepreneur·euse</q>) et chaque <em>node</em> un
+mot-composant. La dimension des <em>nodes</em> (mot) correspond à leur
+fréquence dans le corpus, et l’épaisseur des <em>edges</em> à la
+fréquence des mot composés. La visualisation est interactive: on peut
+déplacer les <em>nodes</em> pour réorganiser spatialement le graphe.
+Passer la souris sur un <em>node</em> fait apparaître le lemme qu’il
+représente (et son nombre total d’occurrence dans le corpus). La
+production des données pour ce graphe s’est faite de façon itérative.
+J’ai commencé par dressé une <a
+href="./data/composition-roles/roles_base.txt">liste</a>
+(<strong>A</strong>) de <em>rôles</em> littéraires (<q>auteur·rice</q>,
+<q>lecteur·rice</q>, <q>imprimeur·euse</q>, etc.). J’ai ensuite récupéré
+à l’aide des <em>word vectors</em>, pour chacun de ces mots, les 10 mots
+les plus proches dans le corpus, pour arriver à une liste
+(<strong>B</strong>) d’une centaine de mots pour laquelle j’ai récupéré,
+<em>via</em> des requêtes SQL, une liste (<strong>C</strong>) des mots
+composés qui les contenaient, par exemple <q>auteur·rice-typographe</q>.
+J’ai alors manuellement trié ces mots-composés et refait la procédure en
+ajoutant les mots de la liste <strong>C</strong> à la liste
+<strong>B</strong> (en ajoutant donc, par exemple, <q>typographe</q>). À
+chaque étape du processus, j’ai retranché les mots composés qui
+n’étaient pas des compositions de rôles (où chaque lemme simple est un
+rôle), par exemple <q>néo-écrivain·e</q> ou <q>non-lecteur·rice</q>, car
+<q>néo</q> et <q>non</q> ne sont pas des rôles littéraires.
+</p>
 <div id="composition-roles">
 
 </div>
@@ -266,6 +317,35 @@ fondamentalement <em>ancrés dans la conversation</em> (usage très
 fréquent des pronoms déictique pure – 1ère et 2ème personne) et
 manifestant ainsi, par exemple, une forme de coopération littéraire par
 l’échange.</p>
+<p class="info-donnees">
+Dans ma base de données, il y a une table <strong>mot</strong> (tel mot
+particulier dans tel texte) qui contient une référence à une table
+<strong>lexeme</strong> (le mot, avec toutes ses caractéristiques, mais
+hors de son contexte: le mot <em>possible</em>), laquelle contient le
+<strong>lemme</strong> (le mot non fléchi, que j’utilise pour toutes les
+visualisation<a href="#fn12" class="footnote-ref" id="fnref12"
+role="doc-noteref"><sup>12</sup></a>) mais aussi les informations
+morphologiques qui correspondent au format <a
+href="https://universaldependencies.org/u/feat/index.html">FEATS</a>,
+lequel correspond à un format <strong>clé-valeur</strong>. Les clés qui
+m’intéressent ici sont <code>Number</code> et <code>Person</code>. Par
+exemple, le lexème <q>serions</q> aurait pour <code>Number</code> la
+valeur <code>Plur</code> et pour <code>Person</code> la valeur
+<code>1</code>. Mais en réalité, récupérer ces informations est un peu
+plus compliqué, et l’analyse morphologique n’est pas suffisante. Il faut
+aussi une analyse des relations syntaxiques pour pouvoir intégrer des
+cas comme <q>j’ai écris</q>. En effet, <q>écris</q>, en tant que
+participe passé, ne porte pas ces valeurs, il faut donc les récupérer de
+son auxiliaire, lequel n’est pas forcément placé juste avant le verbe.
+Le temps composés étant extrêmement courant en français, ces cas
+représentent une portion trop importante (~30% de la visualisation qui
+suit) pour être laissés de côtés, c’est pourquoi, en plus du
+<em>morphologizer</em>, il faut utiliser un <em>syntactic dependency
+parser</em> qui va annoter les textes en mettant en relation les mots
+entre eux. C’est ainsi que j’ai pu déterminer les auxiliaires des verbes
+et récupérer (dans les requêtes SQL) leurs caractéristiques
+morphologiques, que j’ai transmises à leur verbe (noyau).
+</p>
 <div id="personnes-grammaires">
 
 </div>
@@ -380,6 +460,11 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11"><p><em>L’art et l’argent</em>, Paris, Éditions Amsterdam,
 2017.<a href="#fnref11" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>En réalité, la table <strong>lexeme</strong> contient
+seulement une référence vers les tables <strong>lemme</strong> et
+<strong>morphologie</strong> mais la compréhension du processus de
+production des données se passe de cet aspect.<a href="#fnref12"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 </div>
