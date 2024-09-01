@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>visualisation de relations lexicales entre activités littéraires</title>
+  <title>faire lire</title>
   <link rel="stylesheet" href="css/style.css" />
   <script type="module" src="./js/colors.js"></script>
   <script type="module" src="./js/dimensions.js"></script>
@@ -13,6 +13,7 @@
 </head>
 <body>
 <div id="centered-page">
+<h1 id="faire-lire">faire lire</h1>
 <p>On conçoit souvent la littérature comme un corpus. C’est la
 définition qu’on trouve sur <a
 href="https://fr.wikipedia.org/wiki/Littérature">Wikipedia</a>:</p>
@@ -21,13 +22,12 @@ href="https://fr.wikipedia.org/wiki/Littérature">Wikipedia</a>:</p>
 orales auxquelles on reconnaît une valeur esthétique</p>
 </blockquote>
 <p>On peut préférer la considérer comme une activité<a href="#fn1"
-class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, ou
-plus exactement, comme <q>un réseau d’activité<span class="citation"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>,
+voire comme <q>un réseau d’activité<span class="citation"
 data-cites="becker2013a"><a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a></span></q> dans lequel se trouvent
-<em>lire</em>, <em>écrire</em>, <em>traduire</em>, mais aussi
-<em>acheter</em>, <em>recommander</em>, <em>corriger</em>,
-<em>commenter</em>, etc.</p>
+role="doc-noteref"><sup>2</sup></a></span></q>: <em>lire</em>,
+<em>écrire</em>, <em>traduire</em>, mais aussi <em>acheter</em>,
+<em>recommander</em>, <em>corriger</em>, <em>commenter</em>, etc.</p>
 <p>Dans ce dépôt, je me propose d’explorer ces activités, leurs
 proximités et leurs relations sur la base de l’analyse lexicale d’un
 corpus de textes que j’ai constitué et annoté dans le cadre de mon
@@ -42,59 +42,57 @@ libraire (python) d’analyse du langage naturel (<em>NLP</em>).
 href="https://spacy.io/models/fr">modèles</a> pour le français mais
 ceux-ci n’étant pas adaptés à mon corpus (en fait, à mon avis, assez peu
 adapté à n’importe quel corpus<a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a>), j’ai écris plusieurs
+id="fnref3" role="doc-noteref"><sup>3</sup></a>), j’ai écrit plusieurs
 modules (et entraîné quelques modèles) permettant de réaliser les
 différentes tâches nécessaires à l’annotation de textes: un <a
-href="https://github.com/thjbdvlt/quelquhui"><em>tokenizer</em></a>, un
-<a href="https://github.com/thjbdvlt/presque"><em>normalizer</em></a>,
-un <a
-href="https://github.com/thjbdvlt/turlututu"><em>morphologizer</em></a>,
-un <a
-href="https://github.com/thjbdvlt/viceverser"><em>lemmatizer</em></a> et
-un <a
-href="https://github.com/thjbdvlt/french-dependency-parser"><em>syntactic
-dependency parser</em></a> qui reposent, pour certains sur des <a
-href="https://github.com/thjbdvlt/french-word-vectors"><em>word
-vectors</em></a>. Je ne rentre pas dans les détails de ces opérations
-(elles sont, au besoin, décrites <a href="./annotations.html">ici</a>).
-Le corpus annoté représente un peu plus de 14M de mots (14’787’715).</p>
+href="https://github.com/thjbdvlt/quelquhui">tokenizer</a>, un <a
+href="https://github.com/thjbdvlt/presque">normalizer</a>, un <a
+href="https://github.com/thjbdvlt/turlututu">morphologizer</a>, un <a
+href="https://github.com/thjbdvlt/viceverser">lemmatizer</a> et un <a
+href="https://github.com/thjbdvlt/french-dependency-parser">syntactic
+dependency parser</a> qui reposent, pour certains sur des <a
+href="https://github.com/thjbdvlt/french-word-vectors">word vectors</a>.
+Je ne rentre pas dans les détails de ces opérations qui sont, au besoin,
+décrites dans <a href="./annotations.html">ce</a> fichier. Le corpus
+annoté représente un peu plus de 14M de mots (14’787’715).</p>
 <p>Le corpus est stocké localement sous la forme d’une base de données
 <a href="https://www.postgresql.org/">Postgresql</a> dans un schéma que
 j’ai conçu pour l’analyse de textes en français (une implémentation d’un
 modèle <a
 href="https://en.wikipedia.org/wiki/Entity–attribute–value_model">EAV</a>
-hybride, dont le code et la documentation sont disponibles <a
-href="https://github.com/thjbdvlt/litteralement">ici</a>). Les données
-utilisées dans les visualisations qui vont suivre ont donc simplement
-été récupérées de cette base de données <em>via</em> des courts scripts
-SQL qu’on pourra au besoin consulter dans le dossier <a
-href="./sql">sql</a>.</p>
+hybride, dont le code et la documentation sont disponibles dans un autre
+<a href="https://github.com/thjbdvlt/litteralement">dépôt</a>). Les
+données utilisées dans les visualisations qui vont suivre ont donc
+simplement été récupérées de cette base de données <i>via</i> des courts
+scripts SQL qu’on pourra au besoin consulter dans le dossier <a
+href="./sql">./sql/</a>.</p>
 <p class="info-donnees">
 La collecte des données s’est faite en respectant le fichier
 <code>robots.txt</code> (qui n’est pas spécifique à ce forum) et,
 évidemment, en ayant pris connaissances des <a
 href="https://www.jeunesecrivains.com/t56577-a-lire-les-regles-du-forum">règles</a>
-du forum (rédigées par les membres <em>admin</em> du forum) et de son <a
+du forum (rédigées par les membres <em>admins</em> du forum) et de son
+<a
 href="https://www.jeunesecrivains.com/t59918-guide-pratique-d-utilisation-du-forum">guide</a>
 d’utilisation. Seules les sections <strong>publiques</strong>
 (accessibles sans identification) ont été collectées. C’est un principe
 éthique minimal du <em>web scraping</em> et il est ici pertinent
-puisqu’environ la moitié des section seulement est publique: les données
-accessibles publiquement le sont intentionnellement. J’ai tout de même
-exclu certaines sections publiques: la section <em>présentation</em>
-(dans laquelle se présentent les membres du forum), celles qui
-concernent les interactions <em>IRL</em> (organisation d’événements,
-etc.) et la section <em>constance</em> qui propose des journaux
-d’écriture (pour éviter de collecter, précisément, ce qui s’apparente à
-des journaux personnels). Les données collectées ne sont pas
-distribuées: seules des visualisations et des fragments sont utilisées
-ici, qui ne permettent en aucune façon l’identification de personnes
-réelles.
+puisqu’environ la moitié des sections seulement est publique: les
+données accessibles publiquement le sont intentionnellement. J’ai tout
+de même exclu certaines sections publiques: la section
+<em>présentation</em> (dans laquelle se présentent les membres du
+forum), celles qui concernent les interactions <em>IRL</em>
+(organisation d’événements, etc.) et la section <em>constance</em> qui
+propose des journaux d’écriture (pour éviter de collecter, précisément,
+ce qui s’apparente à des journaux personnels). Les données collectées ne
+sont pas distribuées: seules des visualisations et des fragments sont
+utilisées ici, qui ne permettent en aucune façon l’identification de
+personnes réelles.
 </p>
-<h1 id="deux-tableaux">deux tableaux</h1>
+<h2 id="deux-tableaux">deux tableaux</h2>
 <p>Quelles sont donc ces activités littéraires, et quelles sont leurs
 relations?</p>
-<p>Parmi les première activités littéraires auxquelles on est
+<p>Parmi les premières activités littéraires auxquelles on est
 susceptible de penser il y a, il me semble, <q>lire</q> et
 <q>écrire</q>. Une première manière, très simple, d’explorer les
 relations qu’ont d’autres activités avec celle-ci consiste à regarder
@@ -102,123 +100,116 @@ les cooccurrences les plus fréquentes. Les tableaux suivants montrent
 les verbes qu’on retrouve le plus souvent dans une même phrase que les
 verbes <q>lire</q> ou <q>écrire</q>. Ce sont les <a
 href="https://universaldependencies.org/u/overview/morphology.html#lemmas">lemmes</a>
-qui sont pris en compte: <q>je lirai ce que tu as écris</q> et <q>nous
+qui sont pris en compte: <q>je lirai ce que tu as écrit</q> et <q>nous
 préférons lire qu’écrire</q> sont donc équivalents.</p>
+<div class="centered">
 <div id="cooccurrence">
 
 </div>
+</div>
 <script src="./js/cooccurrence.js"></script>
-<p>Les première lignes de chaque tableaux peuvent sembler assez
+<p>Les premières lignes de chaque tableau peuvent sembler assez
 insignifiantes: le verbe le plus fréquemment employé dans une même
 phrase que <q>lire</q> est… <q>lire</q> (<q>j’ai lu Wittgenstein avant
 de lire Weil</q>); idem pour écrire. Le second est <q>écrire</q>
 (<q>lire et écrire</q>). Les lignes qui suivent montrent des verbes qui
 sont tout simplement très fréquents en français (dans le tableau, les
 cooccurrences ne sont pas relatives mais absolues): <q>savoir</q>,
-<q>aimer</q>, <q>mettre</q>, <q>prendre</q>, etc. Pourtant, il y a des
+<q>aimer</q>, <q>mettre</q>, <q>prendre</q>, etc. Il y a quelques
 variations: <q>savoir</q>, <q>trouver</q>, <q>prendre</q> sont aux mêmes
 positions pour <q>lire</q> et <q>écrire</q>, mais les positions de
-<q>aimer</q> et <q>penser</q> sont inversées.</p>
-<p>La position de <q>commencer</q> est aussi très différente dans les
-deux tableaux: <q>commencer à écrire</q> est beaucoup plus fréquent que
-<q>commencer à lire</q>. On peut, je crois, sans mal le comprendre, car
-écrire un roman (la forme dominante sur le forum) prend bien davantage
-de temps que le lire (plus un processus est long, et plus il apparait
-naturel de dire qu’on l’a <q>commencé</q>: on dit souvent <q>j’ai
-commencé une série</q> mais plus rarement <q>j’ai commencé un morceau de
-musique</q>, etc.). Plus probablement encore, cela fait référence au
-début, non de l’écriture de telle ou telle texte (début d’un processus
-ou d’un projet), mais de l’écriture comme activité. Certaines variations
-sont moins liées au sens d’un mot qu’à des locutions particulières.
-Ainsi, <q>donner</q> est beaucoup plus fréquent avec <q>lire</q> qu’avec
-<q>écrire</q> probablement en raison de l’expression <q>donner à
-lire</q>.</p>
+<q>aimer</q> et <q>penser</q> sont inversées, et <q>commencer</q>
+apparaît comme beaucoup plus fréquent avec <q>lire</q> qu’avec
+<q>écrire</q><a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>.</p>
 <p>Presque tout en bas de ces tableaux on trouve <q>publier</q>. C’est
-le premier verbe semble vraiment en lien directe avec <q>lire</q> et
+le premier verbe semble vraiment en lien direct avec <q>lire</q> et
 <q>écrire</q>. Sur le forum, il y a en effet beaucoup de discussions
 consacrées à la publication, mais il y en a encore beaucoup plus
 consacrées au processus d’écriture lui-même, au sujet duquel on demande
 des conseils. Or, <q>publier</q> a peu de synonyme (tout au plus
 <q>éditer</q>), contrairement, par exemple, à <q>conseiller</q>
-(suggérer, recommander, proposer, …). C’est là un des inconvénients à
-travailler avec des simples cooccurrences. Un autre inconvénient, c’est
-l’importance, évoquée plus haut, que prennent les verbes qui sont tout
-simplement très fréquents (mais comme solution à cela, il y a la
-pondération par la fréquence totale). Au reste, on ne voit pas vraiment
-ici des <q>activités</q> littéraires.</p>
-<h1 id="word-embeddings"><em>word embeddings</em></h1>
+(<q>suggérer</q>, <q>recommander</q>, <q>proposer</q>, etc.). C’est là
+un des inconvénients à travailler avec des simples cooccurrences. Un
+autre inconvénient, c’est l’importance, évoquée plus haut, que prennent
+les verbes qui sont tout simplement très fréquents (mais comme solution
+à cela, il y a la pondération par la fréquence totale).</p>
+<h2 id="word-embeddings"><em>word embeddings</em></h2>
 <p>Une solution alternative qui ne pose pas ces mêmes problèmes, ou pas
 tous (qui en pose bien sûr d’autres) et l’utilisation de <a
-href="https://en.wikipedia.org/wiki/Word_embedding"><em>word
-embeddings</em></a> ou <em>word vectors</em>. Les <em>word
-embeddings</em> représentent les mots comme des vecteurs à <em>n</em>
-dimensions (ceux que j’ai entraînés ont 100 dimensions, d’autres en ont
-beaucoup plus). Pour la suite, par simplification, j’en parlerai comme
-des points<a href="#fn4" class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a> dans des espaces (à <em>n</em>
-dimensions). Plus un mot (un point) est proche d’un autre et plus il en
-est <strong>sémantiquement</strong> proche. Ou plutôt, d’un point de vue
-algorithmique: plus il a tendance à être utilisé dans des contextes
-similaires. Selon une conception figurative (représentationnelle) du
-langage, cela n’a rien à voir avec <q>être sémantiquement proche</q>.
-Mais si l’on adopte une perspective wittgensteinienne sur le langage,
-cette idée n’est pas sans fondement. Selon Wittgenstein, la
-signification d’un mot est moins définie par une <q>chose</q> à laquelle
-ce mot ferait référence ou à un <q>concept</q> qu’il contiendrait qu’aux
-<q>jeux de langage<span class="citation"
-data-cites="wittgenstein2014"><a href="#fn5" class="footnote-ref"
-id="fnref5" role="doc-noteref"><sup>5</sup></a></span></q> qui le
+href="https://en.wikipedia.org/wiki/Word_embedding">word embeddings</a>
+ou <em>word vectors</em>. Les <em>word embeddings</em> représentent les
+mots comme des vecteurs à <em>n</em> dimensions (ceux que j’ai entraînés
+ont 100 dimensions, d’autres en ont beaucoup plus). Pour la suite, par
+simplification, j’en parlerai comme des points<a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>
+dans des espaces (à <em>n</em> dimensions). Plus un mot (un point) est
+proche d’un autre et plus il en est <strong>sémantiquement</strong>
+proche. Ou plutôt, d’un point de vue algorithmique: plus il a tendance à
+être utilisé dans des contextes similaires. Selon une conception
+figurative (représentationnelle) du langage, cela n’a rien à voir avec
+<q>être sémantiquement proche</q>. Mais si l’on adopte une perspective
+wittgensteinienne sur le langage, cette idée n’est pas sans fondement.
+Selon Wittgenstein, la signification d’un mot est moins définie par une
+<q>chose</q> à laquelle ce mot ferait référence ou à un <q>concept</q>
+qu’il contiendrait qu’aux <q>jeux de langage<span class="citation"
+data-cites="wittgenstein2014"><a href="#fn6" class="footnote-ref"
+id="fnref6" role="doc-noteref"><sup>6</sup></a></span></q> qui le
 mobilisent: <q>la signification d’un mot c’est l’usage de ce mot<span
-class="citation" data-cites="wittgenstein2014"><a href="#fn6"
-class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a></span></q>. La signification du mot
+class="citation" data-cites="wittgenstein2014"><a href="#fn7"
+class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a></span></q>. La signification du mot
 <q>bonjour</q> n’est pas autre chose que le genre de situation dans
 lesquels on utilise ce mot (qui ne fait pas vraiment <q>référence</q> à
 quoi que ce soit<span class="citation" data-cites="wittgenstein2014"><a
-href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a></span>). <q>Vrai</q> et <q>faux</q>
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></span>). <q>Vrai</q> et <q>faux</q>
 sont sémantiquement très proches parce qu’on réalise avec eux le même
-genre d’actions dans le même genre de situations. Wittgenstein dirait:
-leurs <q>grammaires</q> sont similaires. Leurs <em>word embeddings</em>
-seraient par conséquent très proches (et le sont souvent).</p>
+genre d’actions dans le même genre de situations. Wittgenstein dirait
+que leurs <em>grammaires</em> sont similaires. Leurs <em>word
+embeddings</em> seraient par conséquent très proches (et le sont
+souvent).</p>
 <p>Une représentation minimale d’un tout petit modèle de <em>word
 embeddings</em> pourrait ressembler à ceci:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode txt"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lire    [ 0.3, -0.2,   -1,  0.1]</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>écrire  [ 0.1, -0.4,    1, -0.7]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>parler  [-0.4,  0.1, -0.4,    1]</span></code></pre></div>
+<div class="centered">
+<pre><code>lire    [ 0.3, -0.2,   -1,  0.1]
+écrire  [ 0.1, -0.4,    1, -0.7]
+parler  [-0.4,  0.1, -0.4,    1]</code></pre>
+</div>
 <p>Les dimensions (les axes géométriques) ne correspondent pas à une
 chose tangible, mais on pourrait se les représenter comme des axes
 sémantiques ou contextuels: la première dimension pourrait être la
-dimension <em>négative</em>-<em>positive</em>, la deuxième dimension
-serait la dimension <em>active</em>-<em>passive</em>, la troisième
-dimension serait la dimension <em>familière</em>-<em>soutenue</em>, etc.
-On pourrait alors imaginer que les <em>word embeddings</em> de
-<q>vrai</q> et de <q>faux</q> sont absolument identique à l’exception
-d’une seule dimension (la dimension <em>vérité</em>-<em>fausseté</em>)
-pour laquelle <q>vrai</q> aurait la valeur <code>1</code> et <q>faux</q>
-la valeur <code>-1</code>. En réalité, il s’agit juste de dimensions
-<em>ad hoc</em> initiées aléatoirement avec lesquelles construire un
-modèle statistique, mais les percevoir ainsi nous permet de comprendre
-certaines des choses qu’on peut faire avec.</p>
+dimension négative-positive, la deuxième dimension serait la dimension
+active-passive, la troisième dimension serait la dimension
+familière-soutenue, etc. On pourrait alors imaginer que les <em>word
+embeddings</em> de <q>vrai</q> et de <q>faux</q> sont absolument
+identiques à l’exception d’une seule dimension (la dimension
+vérité-fausseté) pour laquelle <q>vrai</q> aurait la valeur
+<code>1</code> et <q>faux</q> la valeur <code>-1</code>. En réalité, il
+s’agit juste de dimensions <i>ad hoc</i> initiées aléatoirement avec
+lesquelles construire un modèle statistique, mais les percevoir ainsi
+nous permet de comprendre certaines des choses qu’on peut faire
+avec.</p>
 <p>L’une des tâches d’évaluations auxquelles les <em>word
 embeddings</em> sont parfois soumis est dite <em>d’analogie</em>. Elle
 consiste à prendre un mot <code>A1</code>, par exemple <q>France</q>
-auquel on soustrait un mot <code>A2</code>, <q>Paris</q>.
+auquel on soustrait un mot <code>A2</code>, par exemple <q>Paris</q>.
 <em>Soustraire</em>, parce que l’intérêt des <em>word embeddings</em>
 est la possibilité qu’ils offrent de réaliser des opérations
-mathématiques sur des mots. On soustrait donc <code>A2</code>
-(<q>Paris</q>) à <code>A1</code> (<q>France</q>), et on obtient un
-vecteur <code>v</code>. On additionne ensuite ce vecteur <code>v</code>
-à un point <code>B1</code>, disons <q>Allemagne</q> et l’on doit pouvoir
-prévoir le point <code>B2 = B1 + v</code>: <q>Berlin</q>. <q>Berlin</q>
-(<code>B2</code>) est dans la même relation sémantique à
-<q>Allemagne</q> (<code>B1</code>) que <q>Paris</q> (<code>A2</code>) à
-<q>France</q> (<code>A1</code>) car le vecteur qui relie <q>Paris</q> à
-<q>France</q> est (devrait être) identique au vecteur qui relie
-<q>Berlin</q> à <q>Allemagne</q>: c’est le vecteur <q>être la capitale
-de</q><a href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a>.</p>
+mathématiques sur des mots. (On peut soustraire un vecteur à un autre,
+et obtenir un troisième vecteur – c’est pour cela qu’il s’agit en vérité
+de <em>vecteur</em> et non de <em>point</em>). On soustrait donc
+<code>A2</code> (<q>Paris</q>) à <code>A1</code> (<q>France</q>), et on
+obtient un vecteur <code>v</code>. On additionne ensuite ce vecteur
+<code>v</code> à un point <code>B1</code>, disons <q>Allemagne</q> et
+l’on doit pouvoir prévoir le point <code>B2 = B1 + v</code>:
+<q>Berlin</q>. <q>Berlin</q> (<code>B2</code>) est dans la même relation
+sémantique à <q>Allemagne</q> (<code>B1</code>) que <q>Paris</q>
+(<code>A2</code>) à <q>France</q> (<code>A1</code>) car le vecteur qui
+relie <q>Paris</q> à <q>France</q> est (devrait être) identique au
+vecteur qui relie <q>Berlin</q> à <q>Allemagne</q>: c’est le vecteur
+<q>être la capitale de</q><a href="#fn9" class="footnote-ref"
+id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
 <!--
 Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser.
 -->
@@ -231,83 +222,87 @@ de <em>word vectors</em>: celui entraîné sur mon corpus, le forum de
 littérature et un autre entraîné sur un <a
 href="https://github.com/thjbdvlt/french-word-vectors">corpus
 générique</a> que j’ai constitué.</p>
+<div id="vecteurs">
+
+</div>
+<script type="module" src="./js/vectors/lire_ecrire.js"></script>
 <p class="info-donnees">
 La visualisation est interactive: positionner le curseur sur un point
 (un mot) affiche le mot en question et agrandi le point. Le point
 correspondant au même mot dans l’autre corpus est aussi agrandi, afin de
 pouvoir facilement établir la comparaison.
 </p>
-<div id="vecteurs">
-
-</div>
-<script type="module" src="./js/vectors/lire_ecrire.js"></script>
 <p>{même visualisation mais avec production/consommation ou
 produire/consommer}</p>
 <p>{même visualisation mais avec fabriquer/utiliser?}</p>
-<h1 id="la-composition-des-rôles">la composition des rôles</h1>
+<h2 id="la-composition-des-rôles">la composition des rôles</h2>
 <p>Ce réseau d’activités est aussi, naturellement, un réseau de
 personnes (d’acteur·rices): auteur·rices, relecteur·rices,
 éditeur·rices, critique, lecteur·rices, etc. qui, toutes, participent à
 ce que le sociologue Howard Becker appelle un <q>monde de l’art<a
-href="#fn9" class="footnote-ref" id="fnref9"
-role="doc-noteref"><sup>9</sup></a></q>. Un <q>monde de l’art</q>, c’est
-tout d’abord un ensemble d’<q>activités</q>, de <q>conventions</q> et de
-<q>savoirs partagés</q><span class="citation" data-cites="becker2017"><a
 href="#fn10" class="footnote-ref" id="fnref10"
-role="doc-noteref"><sup>10</sup></a></span>. C’est, ensuite, non les
-personnes qui exercent ces activités, mais les <em>rôles</em> (ou
-fonctions) que les délimitations entre ces activités définissent.</p>
+role="doc-noteref"><sup>10</sup></a></q>. Un <q>monde de l’art</q>,
+c’est tout d’abord un ensemble d’<q>activités</q>, de <q>conventions</q>
+et de <q>savoirs partagés</q><span class="citation"
+data-cites="becker2017"><a href="#fn11" class="footnote-ref"
+id="fnref11" role="doc-noteref"><sup>11</sup></a></span>. C’est,
+ensuite, non les personnes qui exercent ces activités, mais les
+<em>rôles</em> (ou fonctions) que les délimitations entre ces activités
+définissent.</p>
 <p>Dans les <q>mondes de l’art</q> (plus que dans d’autres mondes
-socioprofessionnels), il courant qu’une personne remplissent plusieurs
+socioprofessionnels), il est courant qu’une personne remplisse plusieurs
 rôles. C’est par exemple le cas des artistes les plus précaires, qui
 s’occupent à la fois de la fabrication des oeuvres, de leur diffusion et
 de la production du discours critique<span class="citation"
-data-cites="menger2002"><span class="smallcaps">Cometti</span>,
-Jean-Pierre et <span class="smallcaps">Quintane</span>, Nathalie (éd.)<a
-href="#fn11" class="footnote-ref" id="fnref11"
-role="doc-noteref"><sup>11</sup></a></span>. Sur le forum <a
-href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a> personne
-n’est uniquement correcteur·rice ou relecteur·rice, ni uniquement
-auteur·rice. Or, ces <em>rôles multiples</em> ne se combinent pas
-aléatoirement: certains rôles sont, en quelques sortes, très
-<em>pérméables</em>, d’autres nécessitent des compétences spécifiques et
-ne peuvent se combiner qu’avec certains rôles, etc.</p>
+data-cites="menger2002"><a href="#fn12" class="footnote-ref"
+id="fnref12" role="doc-noteref"><sup>12</sup></a></span>. Sur le forum
+<a href="https://www.jeunesecrivains.com/">Jeunes Écrivain·es</a>
+personne n’est uniquement correcteur·rice ou relecteur·rice, ni
+uniquement auteur·rice (pas de <em>bêta-lecture</em> possible avant
+d’avoir posté 60 messages dans le forum). Or, ces <em>rôles
+multiples</em> ne se combinent pas aléatoirement: certains rôles sont,
+en quelque sorte, très <em>pérméables</em>, d’autres nécessitent des
+compétences spécifiques et ne peuvent se combiner qu’avec certains
+rôles, etc.</p>
 <p>Dans la visualisation qui suit, j’essaie de représenter le réseau que
-constitue ces rôles en utilisant les mots-composés désignant des rôles
+constituent ces rôles en utilisant les mots-composés désignant des rôles
 littéraires comme <q>auteur·rice-compositeur·rice</q>,
 <q>auteur·rice-lecteur·rice</q> ou <q>relecteur·rice-typographe</q>.</p>
-<p class="info-donnees">
-Chaque <em>edge</em> du graphe représente un mot composé présent dans le
-corpus (<q>écrivain·e-entrepreneur·euse</q>) et chaque <em>node</em> un
-mot-composant. La dimension des <em>nodes</em> (mot) correspond à leur
-fréquence dans le corpus, et l’épaisseur des <em>edges</em> à la
-fréquence des mot composés. La visualisation est interactive: on peut
-déplacer les <em>nodes</em> pour réorganiser spatialement le graphe.
-Passer la souris sur un <em>node</em> fait apparaître le lemme qu’il
-représente (et son nombre total d’occurrence dans le corpus). La
-production des données pour ce graphe s’est faite de façon itérative.
-J’ai commencé par dressé une <a
-href="./data/composition-roles/roles_base.txt">liste</a>
-(<strong>A</strong>) de <em>rôles</em> littéraires (<q>auteur·rice</q>,
-<q>lecteur·rice</q>, <q>imprimeur·euse</q>, etc.). J’ai ensuite récupéré
-à l’aide des <em>word vectors</em>, pour chacun de ces mots, les 10 mots
-les plus proches dans le corpus, pour arriver à une liste
-(<strong>B</strong>) d’une centaine de mots pour laquelle j’ai récupéré,
-<em>via</em> des requêtes SQL, une liste (<strong>C</strong>) des mots
-composés qui les contenaient, par exemple <q>auteur·rice-typographe</q>.
-J’ai alors manuellement trié ces mots-composés et refait la procédure en
-ajoutant les mots de la liste <strong>C</strong> à la liste
-<strong>B</strong> (en ajoutant donc, par exemple, <q>typographe</q>). À
-chaque étape du processus, j’ai retranché les mots composés qui
-n’étaient pas des compositions de rôles (où chaque lemme simple est un
-rôle), par exemple <q>néo-écrivain·e</q> ou <q>non-lecteur·rice</q>, car
-<q>néo</q> et <q>non</q> ne sont pas des rôles littéraires.
-</p>
 <div id="composition-roles">
 
 </div>
 <script type="module" src="./js/composition-roles.js"></script>
-<h1 id="personnes">personnes</h1>
+<p class="info-donnees">
+Chaque <em>edge</em> du graphe représente un mot composé présent dans le
+corpus (<q>écrivain·e-entrepreneur·euse</q>) et chaque <em>node</em> un
+mot-composant (<q>écrivain</q>, <q>entrepreneur·euse</q>). La dimension
+des <em>nodes</em> (mot) correspond à leur fréquence dans le corpus, et
+l’épaisseur des <em>edges</em> à la fréquence des mots composés. La
+visualisation est interactive: on peut déplacer les <em>nodes</em> pour
+réorganiser spatialement le graphe. Passer la souris sur un
+<em>node</em> fait apparaître le lemme qu’il représente (et son nombre
+total d’occurrence dans le corpus).
+</p>
+<p class="info-donnees">
+La production des données pour ce graphe s’est faite de façon itérative.
+J’ai commencé par dresser une <a
+href="./data/composition-roles/roles_base.txt">liste</a> <code>A</code>
+de <em>rôles</em> littéraires (<q>auteur·rice</q>, <q>lecteur·rice</q>,
+<q>imprimeur·euse</q>, etc.). J’ai ensuite récupéré à l’aide des
+<em>word vectors</em>, pour chacun de ces mots, les 10 mots les plus
+proches dans le corpus, pour arriver à une liste <code>B</code> d’une
+centaine de mots pour laquelle j’ai récupéré, <i>via</i> des requêtes
+SQL, une liste <code>C</code> des mots composés qui les contenaient, par
+exemple <q>auteur·rice-typographe</q>. J’ai alors manuellement trié ces
+mots-composés et refait la procédure en ajoutant les mots de la liste
+<code>C</code> à la liste <code>B</code> (en ajoutant donc, par exemple,
+<q>typographe</q>). À chaque étape du processus, j’ai retranché les mots
+composés qui n’étaient pas des compositions de rôles (où chaque lemme
+simple est un rôle), par exemple <q>néo-écrivain·e</q> ou
+<q>non-lecteur·rice</q>, car <q>néo</q> et <q>non</q> ne sont pas des
+rôles littéraires.
+</p>
+<h2 id="personnes">personnes</h2>
 <p>La dernière visualisation que je propose dans cette exploration des
 activités littéraires sur le forum concerne le sens grammatical du mot
 <em>personne</em>. Il s’agit de se demander s’il y a des activités qui,
@@ -317,14 +312,18 @@ fondamentalement <em>ancrés dans la conversation</em> (usage très
 fréquent des pronoms déictique pure – 1ère et 2ème personne) et
 manifestant ainsi, par exemple, une forme de coopération littéraire par
 l’échange.</p>
+<div id="personnes-grammaires">
+
+</div>
+<script type="module" src="./js/personne-grammaire.js"></script>
 <p class="info-donnees">
 Dans ma base de données, il y a une table <strong>mot</strong> (tel mot
 particulier dans tel texte) qui contient une référence à une table
 <strong>lexeme</strong> (le mot, avec toutes ses caractéristiques, mais
 hors de son contexte: le mot <em>possible</em>), laquelle contient le
 <strong>lemme</strong> (le mot non fléchi, que j’utilise pour toutes les
-visualisation<a href="#fn12" class="footnote-ref" id="fnref12"
-role="doc-noteref"><sup>12</sup></a>) mais aussi les informations
+visualisations<a href="#fn13" class="footnote-ref" id="fnref13"
+role="doc-noteref"><sup>13</sup></a>) mais aussi les informations
 morphologiques qui correspondent au format <a
 href="https://universaldependencies.org/u/feat/index.html">FEATS</a>,
 lequel correspond à un format <strong>clé-valeur</strong>. Les clés qui
@@ -334,10 +333,10 @@ valeur <code>Plur</code> et pour <code>Person</code> la valeur
 <code>1</code>. Mais en réalité, récupérer ces informations est un peu
 plus compliqué, et l’analyse morphologique n’est pas suffisante. Il faut
 aussi une analyse des relations syntaxiques pour pouvoir intégrer des
-cas comme <q>j’ai écris</q>. En effet, <q>écris</q>, en tant que
+cas comme <q>j’ai écrit</q>. En effet, <q>écris</q>, en tant que
 participe passé, ne porte pas ces valeurs, il faut donc les récupérer de
 son auxiliaire, lequel n’est pas forcément placé juste avant le verbe.
-Le temps composés étant extrêmement courant en français, ces cas
+Les temps composés étant extrêmement courant en français, ces cas
 représentent une portion trop importante (~30% de la visualisation qui
 suit) pour être laissés de côtés, c’est pourquoi, en plus du
 <em>morphologizer</em>, il faut utiliser un <em>syntactic dependency
@@ -346,12 +345,8 @@ entre eux. C’est ainsi que j’ai pu déterminer les auxiliaires des verbes
 et récupérer (dans les requêtes SQL) leurs caractéristiques
 morphologiques, que j’ai transmises à leur verbe (noyau).
 </p>
-<div id="personnes-grammaires">
-
-</div>
-<script type="module" src="./js/personne-grammaire.js"></script>
 <script src="./js/composition-roles.js"></script>
-<h1 class="unnumbered" id="bibliographie">bibliographie</h1>
+<h2 class="unnumbered" id="bibliographie">bibliographie</h2>
 <div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-becker2017" class="csl-entry" role="listitem">
 <span class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
@@ -401,7 +396,7 @@ class="smallcaps">Meizoz</span>, Jérôme, <em>La littérature en personne
 2016)</span>. Le deuxième paragraphe de l’article Wikipedia
 <q>Littérature</q> ajoute à la définition de la littérature comme corpus
 la définition de la littérature comme activité (mais uniquement comme
-activité de <em>création</em>, excluant donc par exemple la lecture); au
+activité de <em>création</em>, excluant par exemple la lecture); au
 reste, cette définition n’est pas la définition que donne l’article,
 mais uniquement une précision sur l’évolution de la notion de
 littérature.<a href="#fnref1" class="footnote-back"
@@ -413,57 +408,69 @@ Becker n’est pas spécifique à la littérature et concerne n’importe que
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Les modèles proposés par <strong>spaCy</strong> pour le
 français ont été entraînés sur des données extrêmement incomplètes. Le
-pronom <em>tu</em>, entre autre, y est par exemple totalement absent et
-est donc systématiquement annoté de façon aléatoire (le corpus
-d’entraînement est uniquement constitué de textes issus de la presse
-écrite).<a href="#fnref3" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>En fait, ne s’agit bien sûr pas de <em>point</em> mais
+pronom <em>tu</em> y est par exemple totalement absent et est donc
+systématiquement annoté de façon aléatoire (le corpus d’entraînement est
+uniquement constitué de textes issus de la presse écrite).<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>On peut, je crois, sans mal le comprendre, car écrire un
+roman (la forme dominante sur le forum) prend bien davantage de temps
+que le lire (plus un processus est long, et plus il apparait naturel de
+dire qu’on l’a <q>commencé</q>: on dit souvent <q>j’ai commencé une
+série</q> mais plus rarement <q>j’ai commencé un morceau de musique</q>,
+etc.). Plus probablement encore, cela fait référence au début, non de
+l’écriture de tel ou tel texte (début d’un processus ou d’un projet),
+mais de l’écriture comme activité. Certaines variations sont moins liées
+au sens d’un mot qu’à des locutions particulières. Ainsi, <q>donner</q>
+est beaucoup plus fréquent avec <q>lire</q> qu’avec <q>écrire</q>
+probablement en raison de l’expression <q>donner à lire</q>.<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>En fait, ne s’agit bien sûr pas de <em>point</em> mais
 de <em>vecteur</em>; mais parler de <em>points</em> aide à mon avis à se
 représenter les <em>word vectors</em> dont les <em>forces</em> sont à
 peu près (il me semble) équivalentes aux <em>coordonnées</em> des
-<em>points</em>.<a href="#fnref4" class="footnote-back"
+<em>points</em>.<a href="#fnref5" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><span class="smallcaps">Wittgenstein</span>, Ludwig,
+<li id="fn6"><p><span class="smallcaps">Wittgenstein</span>, Ludwig,
 <em>Recherches philosophiques</em>, trad. Françoise Dastur, Maurice
 Élie, Jean-Luc Gautero, Dominique Janicaud et Élisabeth Rigal, Paris,
-Gallimard, coll. tel, 2014.<a href="#fnref5" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p><em>Ibid.</em><a href="#fnref6" class="footnote-back"
+Gallimard, coll. tel, 2014.<a href="#fnref6" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p><em>Ibid.</em><a href="#fnref7" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>C’est un exemple très souvent cité. Naturellement, les
+<li id="fn8"><p><em>Ibid.</em><a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>C’est un exemple très souvent cité. Naturellement, les
 vecteurs ne sont pas absolument identiques, précisément parce que le
 sens d’un mot n’est pas un concept contenu dans le mot, mais réside dans
 les choses que l’on fait avec ces mots, et l’on ne fait les mêmes choses
 avec les mots <q>France</q> ou <q>Allemagne</q>, <q>Paris</q> ou
 <q>Berlin</q>. La pertinence de cette tâche est d’ailleurs, parfois
-débattue.<a href="#fnref8" class="footnote-back"
+débattue.<a href="#fnref9" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>C’est vraiment comme d’un réseau que Becker parle des
-mondes de l’art: <q>réseau de personnes qui coopèrent<span
+<li id="fn10"><p>C’est vraiment comme d’un réseau que Becker parle des
+mondes de l’art: <q>réseau de personnes qui coopèrent</q><span
 class="citation" data-cites="becker2017"> (<span
 class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
 l’art</em>, trad. Jeanne Bouniort, 3e éd., Paris, Flammarion, coll.
-Champs, 2017, 59)</span></q>, <q>réseau d’activités<span
+Champs, 2017, 59)</span>, <q>réseau d’activités</q><span
 class="citation" data-cites="becker2013a"> (<span
 class="smallcaps">Becker</span>, Howard Saul, <em>Propos sur l’art</em>,
-<em>op. cit.</em>, 81)</span></q> ou encore <q>réseau de
-coopération<span class="citation" data-cites="becker2017"> (<span
+<em>op. cit.</em>, 81)</span> ou encore <q>réseau de
+coopération</q><span class="citation" data-cites="becker2017"> (<span
 class="smallcaps">Becker</span>, Howard Saul, <em>Les mondes de
-l’art</em>, <em>op. cit.</em>, 49)</span></q>.<a href="#fnref9"
+l’art</em>, <em>op. cit.</em>, 49)</span>.<a href="#fnref10"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p><span class="smallcaps">Becker</span>, Howard Saul,
-<em>Les mondes de l’art</em>, <em>op. cit.</em><a href="#fnref10"
+<li id="fn11"><p><span class="smallcaps">Becker</span>, Howard Saul,
+<em>Les mondes de l’art</em>, <em>op. cit.</em><a href="#fnref11"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p><em>L’art et l’argent</em>, Paris, Éditions Amsterdam,
-2017.<a href="#fnref11" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn12"><p>En réalité, la table <strong>lexeme</strong> contient
+<li id="fn12"><p><span class="smallcaps">Cometti</span>, Jean-Pierre et
+<span class="smallcaps">Quintane</span>, Nathalie (éd.), <em>L’art et
+l’argent</em>, Paris, Éditions Amsterdam, 2017.<a href="#fnref12"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>En réalité, la table <strong>lexeme</strong> contient
 seulement une référence vers les tables <strong>lemme</strong> et
 <strong>morphologie</strong> mais la compréhension du processus de
-production des données se passe de cet aspect.<a href="#fnref12"
+production des données se passe de cet aspect.<a href="#fnref13"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

@@ -1,26 +1,46 @@
 :root {
-    --bg: #555555;
-    --fg: white;
-    --fg-q: #bbffbb;
+    --bg: #fffcfa;
+    --fg: #000;
+    --fg-q: #008800;
     --fg-n: grey;
-    --fg-tooltip: #000000;
     --fg-tooltip: #ffdddd;
+    --bg-bg: #fef6f0;
+    --fg-a: #0087d7;
 }
 
-html {}
+html { }
 
 body {
     background: var(--bg);
-    color: white;
     font-family: arial, sans-serif;
 }
 
 div#centered-page {
+    color: var(--fg);
+    background-color: var(--bg);
     margin: 0;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+p {
+    text-align: justify;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info-donnees {
+    color: #888;
+    font-size: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-top:0px;
+    padding-top:0px;
 }
 
 h2 {
@@ -33,17 +53,38 @@ table {
     margin: 10px;
 }
 
-.mot {
-    color: var(--fg-q);
-}
-
 q {
     color: var(--fg-q);
 }
 
+a {
+    color: var(--fg-a);
+    text-decoration: none;
+}
+
+em {
+    color: #d08;
+}
+
+code {
+    color: #d40;
+    font-family: monospace;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+
 blockquote {
     color: var(--fg-q);
+    max-width: 500px;
+    margin: 0 auto;
 }
+
+.mot {
+    color: var(--fg-q);
+}
+
 
 .nombre {
     color: var(--fg-n);
@@ -58,6 +99,25 @@ blockquote {
   opacity: 0;
 }
 
-.info-donnees {
-    color: yellow;
+.centered {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* pour le formattage des appels de notes comme ceci: [1], j'ai utilisé un snippet trouvé ici:
+ * https://stackoverflow.com/questions/40213184/how-can-i-alter-the-formatting-of-pandoc-footnote-marks
+ *
+ * (uniquement pour l'ajout avant/après de crochets).
+ * et ici pour les positionner plus bas (et éviter les changements d'interligne):
+ * https://stackoverflow.com/questions/1530685/how-can-i-keep-consistent-line-height-with-superscript-elements
+ * */
+sup:before {
+  content: '[';
+}
+sup:after {
+  content: ']';
+}
+sup {
+    vertical-align: top;
 }
