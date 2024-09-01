@@ -69,7 +69,9 @@ L'une des tâches d'évaluations auxquelles les _word embeddings_ sont parfois s
 <!--
 Quels sont, ainsi compris, les 10 mots les plus proches de "écrire" dans mon corpus? "lire", "rédiger", "pondre", "débuter", "réécrire", "relire", "terminer", "travailler", "corriger". Évidemment, cette liste est spécifique au forum de littérature, car "pondre", par exemple, est, dans d'autres corpus, beaucoup moins fortement associé à l'écriture. En fait, c'est précisément à ces écarts entre un corpus-objet et un corpus de référence qu'on peut s'intéresser.
 -->
+
 En raison du nombre élevé de dimensions, il n'est pas évident de représenter des _word embeddings_. On ne peut en représenter qu'un aspect, qu'une portion. La visualisation qui suit représente le degré de proximité de quelques verbes avec les mots "lire" (axe horizontal) et "écrire" (axe vertical). Elle compare deux modèles de _word vectors_: celui entraîné sur mon corpus, le forum de littérature et un autre entraîné sur un [corpus générique](https://github.com/thjbdvlt/french-word-vectors) que j'ai constitué.
+<!-- parler du choix des verbes -->
 
 <div id="vecteurs"></div>
 <script type="module" src="./js/vectors/lire_ecrire.js"></script>
@@ -78,10 +80,15 @@ En raison du nombre élevé de dimensions, il n'est pas évident de représenter
 La visualisation est interactive: positionner le curseur sur un point (un mot) affiche le mot en question et agrandi le point. Le point correspondant au même mot dans l'autre corpus est aussi agrandi, afin de pouvoir facilement établir la comparaison.
 </p>
 
+Comme on l'a vu plus haut, les verbes "lire" et "écrire" sont déjà, dans mon corpus, des verbes très proches. Je vais donc essayer de comparer dans une visualisation similaire le même groupe de verbes mais avec deux autres verbes: "fabriquer" et "utiliser" (que j'ai choisi à partir d'un livre d'Howard Becker[@becker2009]), dans lequel il examine le fonctionnement de _communautés interprétatives_[@becker2009, p.22] dans lesquels il distinguent schématiquement deux catégories de personnes (mais chaque individu peut se trouver dans ces deux catégories, il s'agit donc de catégories de _rôles_): les "fabricants" et les "usagers"[@becker2009].
 
-{même visualisation mais avec production/consommation ou produire/consommer}
+<div id="vecteurs-fabriquer-utiliser"></div>
+<script type="module" src="./js/vectors/fabriquer_utiliser.js"></script>
 
-{même visualisation mais avec fabriquer/utiliser?}
+<!--
+<div id="vecteurs-produire-consommer"></div>
+<script type="module" src="./js/vectors/produire_consommer.js"></script>
+-->
 
 la composition des rôles
 ------------------------
@@ -113,7 +120,6 @@ Il y a un petit problème que je n'ai pas pû résoudre: lors du premier clic su
 J'ai choisi la même couleurs pour les _nodes_ et les _edges_ parce que même si leurs fonctions dans le graphes sont différentes, il s'agit toujours de mots (composés ou non-composés). La largeur des _edges_ est très peu variables (soit 1px, soit 2px) car la plupart des mots-composés n'apparaissent qu'une seule fois, et quelques-uns apparaissent un grands nombres de fois. Entre les deux, il y a assez peu de variations intéressante à observer.
 </p>
 
-
 personnes
 ---------
 
@@ -133,7 +139,6 @@ Dans ma base de données, il y a une table __mot__ (tel mot particulier dans tel
 [^spacy_fr]: Les modèles proposés par __spaCy__ pour le français ont été entraînés sur des données extrêmement incomplètes. Le pronom "tu" y est par exemple totalement absent et est donc systématiquement annoté de façon aléatoire (le corpus d'entraînement est uniquement constitué de textes issus de la presse écrite).
 
 <script src="./js/composition-roles.js"></script>
-
 
 bibliographie
 -------------
