@@ -40,10 +40,8 @@ Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozil
 screenshots
 -----------
 
-![./img/20240901-154910.png]
+![](./img/1.png)
 
-![./img/20240901-154951.png]
+![](./img/2.png)
 
-![./img/20240901-154959.png]
-
-![./img/20240901-155022.png]
+![](./img/3.png)
