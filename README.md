@@ -37,3 +37,10 @@ navigateur
 ----------
 
 (Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).)
+
+code
+----
+
+Les fichiers `.js` sont mis en forme à l'aide du programme [js-beautify](https://github.com/beautifier/js-beautify). Le fichier de configuration est dans le dépôt ([./.jsbeautifyrc](./.jsbeautifyrc))).
+
+Tous les fichiers ont été édités à l'aide de l'éditeur [Neovim](https://neovim.io/) en utilisant un _Language Server Protocol_ pour javascript: [quick-lint-js](https://quick-lint-js.com/docs/lsp/).
