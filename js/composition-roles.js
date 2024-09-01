@@ -177,6 +177,9 @@ d3.csv(path_composition).then(data_links => {
     // Restore the target alpha so the simulation cools after dragging ends.
     // Unfix the subject position now that it’s no longer being dragged.
     function dragended(event) {
+      /* il doit y avoir quelque chose à modifier ici pour éviter le saut visuel
+       * lors du dragended event. mais malgré plusieurs tests, je n'ai pas réussi
+       * à modifier ça. */
       if (!event.active) simulation.alphaTarget(0);
       event.subject.fx = null;
       event.subject.fy = null;

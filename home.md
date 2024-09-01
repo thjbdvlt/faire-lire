@@ -41,8 +41,8 @@ Les premières lignes de chaque tableau peuvent sembler assez insignifiantes: le
 
 Presque tout en bas de ces tableaux on trouve "publier". C'est le premier verbe semble vraiment en lien direct avec "lire" et "écrire". Sur le forum, il y a en effet beaucoup de discussions consacrées à la publication, mais il y en a encore beaucoup plus consacrées au processus d'écriture lui-même, au sujet duquel on demande des conseils. Or, "publier" a peu de synonyme (tout au plus "éditer"), contrairement, par exemple, à "conseiller" ("suggérer", "recommander", "proposer", etc.). C'est là un des inconvénients à travailler avec des simples cooccurrences. Un autre inconvénient, c'est l'importance, évoquée plus haut, que prennent les verbes qui sont tout simplement très fréquents (mais comme solution à cela, il y a la pondération par la fréquence totale).
 
-_word embeddings_
------------------
+word embeddings
+----------------
 
 Une solution alternative qui ne pose pas ces mêmes problèmes, ou pas tous (qui en pose bien sûr d'autres) et l'utilisation de [word embeddings](https://en.wikipedia.org/wiki/Word_embedding) ou _word vectors_. Les _word embeddings_ représentent les mots comme des vecteurs à _n_ dimensions (ceux que j'ai entraînés ont 100 dimensions, d'autres en ont beaucoup plus). Pour la suite, par simplification, j'en parlerai comme des points[^point] dans des espaces (à _n_ dimensions).
 Plus un mot (un point) est proche d'un autre et plus il en est __sémantiquement__ proche. Ou plutôt, d'un point de vue algorithmique: plus il a tendance à être utilisé dans des contextes similaires. Selon une conception figurative (représentationnelle) du langage, cela n'a rien à voir avec "être sémantiquement proche". Mais si l'on adopte une perspective wittgensteinienne sur le langage, cette idée n'est pas sans fondement. Selon Wittgenstein, la signification d'un mot est moins définie par une "chose" à laquelle ce mot ferait référence ou à un "concept" qu'il contiendrait qu'aux "jeux de langage[@wittgenstein2014]" qui le mobilisent: "la signification d'un mot c'est l'usage de ce mot[@wittgenstein2014]". La signification du mot "bonjour" n'est pas autre chose que le genre de situation dans lesquels on utilise ce mot (qui ne fait pas vraiment "référence" à quoi que ce soit[@wittgenstein2014]). "Vrai" et "faux" sont sémantiquement très proches parce qu'on réalise avec eux le même genre d'actions dans le même genre de situations. Wittgenstein dirait que leurs _grammaires_ sont similaires. Leurs _word embeddings_ seraient par conséquent très proches (et le sont souvent).
@@ -92,7 +92,7 @@ Ce réseau d'activités est aussi, naturellement, un réseau de personnes (d'act
 
 Dans les "mondes de l'art" (plus que dans d'autres mondes socioprofessionnels), il est courant qu'une personne remplisse plusieurs rôles. C'est par exemple le cas des artistes les plus précaires, qui s'occupent à la fois de la fabrication des oeuvres, de leur diffusion et de la production du discours critique[@menger2002, voir surtout ses cours au collège de France. Voir aussi [@cometti2017]].
 Sur le forum [Jeunes Écrivain·es](https://www.jeunesecrivains.com/) personne n'est uniquement correcteur·rice ou relecteur·rice, ni uniquement auteur·rice (pas de _bêta-lecture_ possible avant d'avoir posté 60 messages dans le forum).
-Or, ces _rôles multiples_ ne se combinent pas aléatoirement: certains rôles sont, en quelque sorte, très _pérméables_, d'autres nécessitent des compétences spécifiques et ne peuvent se combiner qu'avec certains rôles, etc.
+Or, ces _rôles multiples_ ne se combinent pas aléatoirement: certains rôles sont, en quelque sorte, très perméables, d'autres nécessitent des compétences spécifiques et ne peuvent se combiner qu'avec certains rôles, etc.
 
 Dans la visualisation qui suit, j'essaie de représenter le réseau que constituent ces rôles en utilisant les mots-composés désignant des rôles littéraires comme "auteur·rice-compositeur·rice", "auteur·rice-lecteur·rice" ou "relecteur·rice-typographe".
 
@@ -105,6 +105,9 @@ La visualisation est interactive: on peut déplacer les _nodes_ pour réorganise
 </p>
 <p class="info-donnees">
 La production des données pour ce graphe s'est faite de façon itérative. J'ai commencé par dresser une [liste](./data/composition-roles/roles_base.txt) `A` de _rôles_ littéraires ("auteur·rice", "lecteur·rice", "imprimeur·euse", etc.). J'ai ensuite récupéré à l'aide des _word vectors_, pour chacun de ces mots, les 10 mots les plus proches dans le corpus, pour arriver à une liste `B` d'une centaine de mots pour laquelle j'ai récupéré, <i>via</i> des requêtes SQL, une liste `C` des mots composés qui les contenaient, par exemple "auteur·rice-typographe". J'ai alors manuellement trié ces mots-composés et refait la procédure en ajoutant les mots de la liste `C` à la liste `B` (en ajoutant donc, par exemple, "typographe"). À chaque étape du processus, j'ai retranché les mots composés qui n'étaient pas des compositions de rôles (où chaque lemme simple est un rôle), par exemple "néo-écrivain·e" ou "non-lecteur·rice", car "néo" et "non" ne sont pas des rôles littéraires.
+</p>
+<p class="info-donnees">
+Il y a un petit problème que je n'ai pas pû résoudre: lors du premier clic sur un élément, la fenêtre se déplace.
 </p>
 
 

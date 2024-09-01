@@ -3,5 +3,5 @@ import {
 } from './scatterplot.js';
 
 make_scatterplot_embeddings("./data/vectors/verbes_similarite.json", [
-  "forum", "general"
+  "forum", "générique"
 ], ["lire", "ecrire"], "#vecteurs")

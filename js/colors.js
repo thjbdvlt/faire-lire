@@ -1,8 +1,9 @@
 export const color = {
-  forum: "#69b3a2",
-  mot: "#bbffbb",
-  general: "#ff00ff",
-  axistitle: "#ffffff",
+  mot: "#4d6",
+  forum: "#0c7",
+  "générique": "#f66",
+  axistitle: "#448",
+  axis: "#448",
   selected: 'red',
   fg: '#ffffff',
 };

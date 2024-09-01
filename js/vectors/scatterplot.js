@@ -54,23 +54,23 @@ function make_scatterplot_embeddings(datapath, corpora, mots, id) {
       .range([0, width]);
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x)).style('color', color.axis);
 
     /* axe vertical: "lire" */
     var y = d3.scaleLinear()
       .domain([-1, 1])
       .range([height, 0]);
     svg.append("g")
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y)).style('color', color.axis);
 
     /* ajouter les titres des axes */
     svg.append("text").attr("x", x(0)).attr("y", y(1) - 10).text(
-        "similarité avec " + mots[1])
+        "similarité avec " + mots[1]).style('font-size', '90%')
       .style("text-anchor", "middle")
       .style("fill", color.axistitle).attr("transform",
         "rotate(90)");
     svg.append("text").attr("x", x(0)).attr("y", y(-1) - 10).text(
-        "similarité avec " + mots[0])
+        "similarité avec " + mots[0]).style('font-size', '90%')
       .style("text-anchor", "middle")
       .style("fill", color.axistitle);
 
@@ -119,15 +119,12 @@ function make_scatterplot_embeddings(datapath, corpora, mots, id) {
     /* un element <g> pour contenir l'infobox dans laquelle je vais
      * placer un rectangle et du texte. */
     const info = svg.append('g')
-    const rect = info.append('rect').style('stroke', color.fg)
+    const rect = info.append('rect').style('stroke', color.axis).style('stroke-width', 0)
       .attr(
         'width', 100).attr('height', 80).attr('x', 10).attr('y',
         10)
       .style('fill', 'transparent')
-    let h = 30;
-    info.append('text').style('fill', color.fg).text('CORPUS')
-      .attr("y", h).attr('x', 20)
-    h += 5;
+    let h = 40;
 
     /* iterate sur les deux nom de corpus pour construire les
      * deux layers */
@@ -151,7 +148,7 @@ function make_scatterplot_embeddings(datapath, corpora, mots, id) {
       h += 20;
       info.append('text').style('fill', color[corpus]).text(
           corpus)
-        .attr("y", h).attr('x', 20)
+        .attr("y", h).attr('x', 40)
     }
   })
 

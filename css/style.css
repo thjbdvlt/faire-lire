@@ -1,11 +1,14 @@
 :root {
     --bg: #fffcfa;
     --fg: #000;
-    --fg-q: #008800;
+    --fg-q: #080;
     --fg-n: grey;
-    --fg-tooltip: #ffdddd;
+    --fg-tooltip: #fdd;
+    --axis:#448;
     --bg-bg: #fef6f0;
     --fg-a: #0087d7;
+    --title: #e84;
+    --code: #d40;
 }
 
 html { }
@@ -41,11 +44,17 @@ p {
 h1 {
     margin-top:0px;
     padding-top:0px;
+    color: var(--title);
+    /* text-align: right; */
 }
 
 h2 {
     margin:0;
+    margin-top: 40px;
+    margin-bottom: 20px;
     padding:0;
+    color: var(--title);
+    /* text-align: right; */
 }
 
 table {
@@ -67,7 +76,7 @@ em {
 }
 
 code {
-    color: #d40;
+    color: var(--code);
     font-family: monospace;
     margin: 0 auto;
     width: 200px;
@@ -93,10 +102,13 @@ blockquote {
 .tooltip {
   position: absolute;
   pointer-events: none;
-  background-color: var(--bg-tooltip);
-  padding: 2px;
-  color: var(--fg-tooltip);
+  padding: 1px;
+  color: var(--axis);
   opacity: 0;
+  background-color: var(--bg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--axis);
 }
 
 .centered {
