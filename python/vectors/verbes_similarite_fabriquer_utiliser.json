@@ -1,0 +1,941 @@
+[{
+    "mot": "distribuer",
+    "forum": {
+        "fabriquer": 0.5289999842643738,
+        "utiliser": 0.17900000512599945
+    },
+    "générique": {
+        "fabriquer": 0.6079999804496765,
+        "utiliser": 0.5389999747276306
+    }
+}, {
+    "mot": "démolir",
+    "forum": {
+        "fabriquer": 0.41100001335144043,
+        "utiliser": 0.1379999965429306
+    },
+    "générique": {
+        "fabriquer": 0.296999990940094,
+        "utiliser": 0.12600000202655792
+    }
+}, {
+    "mot": "interpréter",
+    "forum": {
+        "fabriquer": 0.3009999990463257,
+        "utiliser": 0.4059999883174896
+    },
+    "générique": {
+        "fabriquer": 0.3179999887943268,
+        "utiliser": 0.47200000286102295
+    }
+}, {
+    "mot": "recopier",
+    "forum": {
+        "fabriquer": 0.21199999749660492,
+        "utiliser": 0.3779999911785126
+    },
+    "générique": {
+        "fabriquer": 0.2639999985694885,
+        "utiliser": 0.42399999499320984
+    }
+}, {
+    "mot": "dire",
+    "forum": {
+        "fabriquer": 0.15000000596046448,
+        "utiliser": 0.25099998712539673
+    },
+    "générique": {
+        "fabriquer": 0.2549999952316284,
+        "utiliser": 0.33899998664855957
+    }
+}, {
+    "mot": "mimer",
+    "forum": {
+        "fabriquer": 0.3109999895095825,
+        "utiliser": 0.14000000059604645
+    },
+    "générique": {
+        "fabriquer": 0.23499999940395355,
+        "utiliser": 0.1979999989271164
+    }
+}, {
+    "mot": "recycler",
+    "forum": {
+        "fabriquer": 0.5429999828338623,
+        "utiliser": 0.33799999952316284
+    },
+    "générique": {
+        "fabriquer": 0.5830000042915344,
+        "utiliser": 0.39100000262260437
+    }
+}, {
+    "mot": "relire",
+    "forum": {
+        "fabriquer": -0.1080000028014183,
+        "utiliser": 0.1420000046491623
+    },
+    "générique": {
+        "fabriquer": 0.10999999940395355,
+        "utiliser": 0.1899999976158142
+    }
+}, {
+    "mot": "exprimer",
+    "forum": {
+        "fabriquer": 0.14800000190734863,
+        "utiliser": 0.39500001072883606
+    },
+    "générique": {
+        "fabriquer": 0.17499999701976776,
+        "utiliser": 0.335999995470047
+    }
+}, {
+    "mot": "publier",
+    "forum": {
+        "fabriquer": 0.20900000631809235,
+        "utiliser": 0.16500000655651093
+    },
+    "générique": {
+        "fabriquer": 0.27900001406669617,
+        "utiliser": 0.3109999895095825
+    }
+}, {
+    "mot": "imaginer",
+    "forum": {
+        "fabriquer": 0.3889999985694885,
+        "utiliser": 0.33799999952316284
+    },
+    "générique": {
+        "fabriquer": 0.2980000078678131,
+        "utiliser": 0.3970000147819519
+    }
+}, {
+    "mot": "compiler",
+    "forum": {
+        "fabriquer": 0.2290000021457672,
+        "utiliser": 0.23499999940395355
+    },
+    "générique": {
+        "fabriquer": 0.3580000102519989,
+        "utiliser": 0.48100000619888306
+    }
+}, {
+    "mot": "imprimer",
+    "forum": {
+        "fabriquer": 0.46299999952316284,
+        "utiliser": 0.29100000858306885
+    },
+    "générique": {
+        "fabriquer": 0.4399999976158142,
+        "utiliser": 0.47699999809265137
+    }
+}, {
+    "mot": "coordonner",
+    "forum": {
+        "fabriquer": 0.35199999809265137,
+        "utiliser": 0.13699999451637268
+    },
+    "générique": {
+        "fabriquer": 0.16500000655651093,
+        "utiliser": 0.19200000166893005
+    }
+}, {
+    "mot": "agréger",
+    "forum": {
+        "fabriquer": 0.057999998331069946,
+        "utiliser": 0.0729999989271164
+    },
+    "générique": {
+        "fabriquer": 0.11400000005960464,
+        "utiliser": 0.2290000021457672
+    }
+}, {
+    "mot": "arranger",
+    "forum": {
+        "fabriquer": 0.22499999403953552,
+        "utiliser": 0.24300000071525574
+    },
+    "générique": {
+        "fabriquer": 0.21799999475479126,
+        "utiliser": 0.2669999897480011
+    }
+}, {
+    "mot": "reconsidérer",
+    "forum": {
+        "fabriquer": 0.08100000023841858,
+        "utiliser": 0.10100000351667404
+    },
+    "générique": {
+        "fabriquer": 0.06700000166893005,
+        "utiliser": 0.15299999713897705
+    }
+}, {
+    "mot": "retranscrire",
+    "forum": {
+        "fabriquer": 0.4350000023841858,
+        "utiliser": 0.531000018119812
+    },
+    "générique": {
+        "fabriquer": 0.31299999356269836,
+        "utiliser": 0.4050000011920929
+    }
+}, {
+    "mot": "écrire",
+    "forum": {
+        "fabriquer": 0.0729999989271164,
+        "utiliser": 0.328000009059906
+    },
+    "générique": {
+        "fabriquer": 0.38199999928474426,
+        "utiliser": 0.4690000116825104
+    }
+}, {
+    "mot": "consommer",
+    "forum": {
+        "fabriquer": 0.4490000009536743,
+        "utiliser": 0.24500000476837158
+    },
+    "générique": {
+        "fabriquer": 0.5180000066757202,
+        "utiliser": 0.49900001287460327
+    }
+}, {
+    "mot": "découper",
+    "forum": {
+        "fabriquer": 0.3889999985694885,
+        "utiliser": 0.32100000977516174
+    },
+    "générique": {
+        "fabriquer": 0.5130000114440918,
+        "utiliser": 0.3919999897480011
+    }
+}, {
+    "mot": "coller",
+    "forum": {
+        "fabriquer": 0.1889999955892563,
+        "utiliser": 0.2750000059604645
+    },
+    "générique": {
+        "fabriquer": 0.39899998903274536,
+        "utiliser": 0.30000001192092896
+    }
+}, {
+    "mot": "transporter",
+    "forum": {
+        "fabriquer": 0.47600001096725464,
+        "utiliser": 0.17299999296665192
+    },
+    "générique": {
+        "fabriquer": 0.6389999985694885,
+        "utiliser": 0.4790000021457672
+    }
+}, {
+    "mot": "raconter",
+    "forum": {
+        "fabriquer": 0.2680000066757202,
+        "utiliser": 0.19499999284744263
+    },
+    "générique": {
+        "fabriquer": 0.2529999911785126,
+        "utiliser": 0.09200000017881393
+    }
+}, {
+    "mot": "décider",
+    "forum": {
+        "fabriquer": 0.24400000274181366,
+        "utiliser": -0.04600000008940697
+    },
+    "générique": {
+        "fabriquer": -0.03400000184774399,
+        "utiliser": -0.06400000303983688
+    }
+}, {
+    "mot": "corriger",
+    "forum": {
+        "fabriquer": -0.039000000804662704,
+        "utiliser": 0.2590000033378601
+    },
+    "générique": {
+        "fabriquer": 0.1340000033378601,
+        "utiliser": 0.38499999046325684
+    }
+}, {
+    "mot": "analyser",
+    "forum": {
+        "fabriquer": 0.40400001406669617,
+        "utiliser": 0.3720000088214874
+    },
+    "générique": {
+        "fabriquer": 0.23100000619888306,
+        "utiliser": 0.4429999887943268
+    }
+}, {
+    "mot": "critiquer",
+    "forum": {
+        "fabriquer": 0.25200000405311584,
+        "utiliser": 0.3240000009536743
+    },
+    "générique": {
+        "fabriquer": 0.16500000655651093,
+        "utiliser": 0.3310000002384186
+    }
+}, {
+    "mot": "manipuler",
+    "forum": {
+        "fabriquer": 0.550000011920929,
+        "utiliser": 0.34200000762939453
+    },
+    "générique": {
+        "fabriquer": 0.5590000152587891,
+        "utiliser": 0.597000002861023
+    }
+}, {
+    "mot": "prendre",
+    "forum": {
+        "fabriquer": 0.27000001072883606,
+        "utiliser": 0.3089999854564667
+    },
+    "générique": {
+        "fabriquer": 0.23399999737739563,
+        "utiliser": 0.3720000088214874
+    }
+}, {
+    "mot": "coder",
+    "forum": {
+        "fabriquer": 0.4169999957084656,
+        "utiliser": 0.4449999928474426
+    },
+    "générique": {
+        "fabriquer": 0.3330000042915344,
+        "utiliser": 0.5960000157356262
+    }
+}, {
+    "mot": "parler",
+    "forum": {
+        "fabriquer": 0.3009999990463257,
+        "utiliser": 0.3869999945163727
+    },
+    "générique": {
+        "fabriquer": 0.2930000126361847,
+        "utiliser": 0.4560000002384186
+    }
+}, {
+    "mot": "utiliser",
+    "forum": {
+        "fabriquer": 0.3889999985694885,
+        "utiliser": 1.0
+    },
+    "générique": {
+        "fabriquer": 0.5839999914169312,
+        "utiliser": 1.0
+    }
+}, {
+    "mot": "récupérer",
+    "forum": {
+        "fabriquer": 0.4519999921321869,
+        "utiliser": 0.289000004529953
+    },
+    "générique": {
+        "fabriquer": 0.5180000066757202,
+        "utiliser": 0.5199999809265137
+    }
+}, {
+    "mot": "créer",
+    "forum": {
+        "fabriquer": 0.48500001430511475,
+        "utiliser": 0.3569999933242798
+    },
+    "générique": {
+        "fabriquer": 0.4650000035762787,
+        "utiliser": 0.39399999380111694
+    }
+}, {
+    "mot": "coopérer",
+    "forum": {
+        "fabriquer": 0.2750000059604645,
+        "utiliser": 0.05900000035762787
+    },
+    "générique": {
+        "fabriquer": 0.25200000405311584,
+        "utiliser": 0.16300000250339508
+    }
+}, {
+    "mot": "recontextualiser",
+    "forum": {
+        "fabriquer": 0.11299999803304672,
+        "utiliser": 0.0820000022649765
+    },
+    "générique": {
+        "fabriquer": 0.09300000220537186,
+        "utiliser": 0.13899999856948853
+    }
+}, {
+    "mot": "commenter",
+    "forum": {
+        "fabriquer": -0.039000000804662704,
+        "utiliser": 0.1720000058412552
+    },
+    "générique": {
+        "fabriquer": 0.0430000014603138,
+        "utiliser": 0.1850000023841858
+    }
+}, {
+    "mot": "transférer",
+    "forum": {
+        "fabriquer": 0.32499998807907104,
+        "utiliser": 0.2680000066757202
+    },
+    "générique": {
+        "fabriquer": 0.3659999966621399,
+        "utiliser": 0.4410000145435333
+    }
+}, {
+    "mot": "réaliser",
+    "forum": {
+        "fabriquer": 0.5090000033378601,
+        "utiliser": 0.33000001311302185
+    },
+    "générique": {
+        "fabriquer": 0.5509999990463257,
+        "utiliser": 0.4099999964237213
+    }
+}, {
+    "mot": "pirater",
+    "forum": {
+        "fabriquer": 0.4620000123977661,
+        "utiliser": 0.14900000393390656
+    },
+    "générique": {
+        "fabriquer": 0.28700000047683716,
+        "utiliser": 0.3889999985694885
+    }
+}, {
+    "mot": "photocopier",
+    "forum": {
+        "fabriquer": 0.23399999737739563,
+        "utiliser": -0.02500000037252903
+    },
+    "générique": {
+        "fabriquer": 0.23399999737739563,
+        "utiliser": 0.2639999985694885
+    }
+}, {
+    "mot": "voler",
+    "forum": {
+        "fabriquer": 0.46799999475479126,
+        "utiliser": 0.1940000057220459
+    },
+    "générique": {
+        "fabriquer": 0.4410000145435333,
+        "utiliser": 0.32100000977516174
+    }
+}, {
+    "mot": "transcrire",
+    "forum": {
+        "fabriquer": 0.3790000081062317,
+        "utiliser": 0.40299999713897705
+    },
+    "générique": {
+        "fabriquer": 0.30000001192092896,
+        "utiliser": 0.46700000762939453
+    }
+}, {
+    "mot": "construire",
+    "forum": {
+        "fabriquer": 0.41999998688697815,
+        "utiliser": 0.29100000858306885
+    },
+    "générique": {
+        "fabriquer": 0.5789999961853027,
+        "utiliser": 0.3310000002384186
+    }
+}, {
+    "mot": "traduire",
+    "forum": {
+        "fabriquer": 0.375,
+        "utiliser": 0.4309999942779541
+    },
+    "générique": {
+        "fabriquer": 0.36899998784065247,
+        "utiliser": 0.4309999942779541
+    }
+}, {
+    "mot": "effacer",
+    "forum": {
+        "fabriquer": 0.15299999713897705,
+        "utiliser": 0.21799999475479126
+    },
+    "générique": {
+        "fabriquer": 0.16200000047683716,
+        "utiliser": 0.36800000071525574
+    }
+}, {
+    "mot": "apporter",
+    "forum": {
+        "fabriquer": 0.11999999731779099,
+        "utiliser": 0.1860000044107437
+    },
+    "générique": {
+        "fabriquer": 0.2800000011920929,
+        "utiliser": 0.3869999945163727
+    }
+}, {
+    "mot": "réutiliser",
+    "forum": {
+        "fabriquer": 0.527999997138977,
+        "utiliser": 0.6800000071525574
+    },
+    "générique": {
+        "fabriquer": 0.5609999895095825,
+        "utiliser": 0.6729999780654907
+    }
+}, {
+    "mot": "accomplir",
+    "forum": {
+        "fabriquer": 0.2980000078678131,
+        "utiliser": 0.1679999977350235
+    },
+    "générique": {
+        "fabriquer": 0.1809999942779541,
+        "utiliser": 0.1850000023841858
+    }
+}, {
+    "mot": "ressentir",
+    "forum": {
+        "fabriquer": 0.17599999904632568,
+        "utiliser": 0.1770000010728836
+    },
+    "générique": {
+        "fabriquer": 0.13600000739097595,
+        "utiliser": 0.22599999606609344
+    }
+}, {
+    "mot": "examiner",
+    "forum": {
+        "fabriquer": 0.3140000104904175,
+        "utiliser": 0.1889999955892563
+    },
+    "générique": {
+        "fabriquer": 0.19699999690055847,
+        "utiliser": 0.4059999883174896
+    }
+}, {
+    "mot": "balayer",
+    "forum": {
+        "fabriquer": 0.3610000014305115,
+        "utiliser": 0.18799999356269836
+    },
+    "générique": {
+        "fabriquer": 0.22100000083446503,
+        "utiliser": 0.27399998903274536
+    }
+}, {
+    "mot": "republier",
+    "forum": {
+        "fabriquer": 0.3529999852180481,
+        "utiliser": 0.28999999165534973
+    },
+    "générique": {
+        "fabriquer": 0.19599999487400055,
+        "utiliser": 0.210999995470047
+    }
+}, {
+    "mot": "approprier",
+    "forum": {
+        "fabriquer": 0.25200000405311584,
+        "utiliser": 0.47099998593330383
+    },
+    "générique": {
+        "fabriquer": 0.1889999955892563,
+        "utiliser": 0.4339999854564667
+    }
+}, {
+    "mot": "indexer",
+    "forum": {
+        "fabriquer": 0.27000001072883606,
+        "utiliser": 0.17800000309944153
+    },
+    "générique": {
+        "fabriquer": 0.27399998903274536,
+        "utiliser": 0.48399999737739563
+    }
+}, {
+    "mot": "évaluer",
+    "forum": {
+        "fabriquer": 0.30300000309944153,
+        "utiliser": 0.2919999957084656
+    },
+    "générique": {
+        "fabriquer": 0.20999999344348907,
+        "utiliser": 0.41600000858306885
+    }
+}, {
+    "mot": "improviser",
+    "forum": {
+        "fabriquer": 0.328000009059906,
+        "utiliser": 0.20499999821186066
+    },
+    "générique": {
+        "fabriquer": 0.10599999874830246,
+        "utiliser": 0.11100000143051147
+    }
+}, {
+    "mot": "financer",
+    "forum": {
+        "fabriquer": 0.5350000262260437,
+        "utiliser": 0.1379999965429306
+    },
+    "générique": {
+        "fabriquer": 0.34200000762939453,
+        "utiliser": 0.24500000476837158
+    }
+}, {
+    "mot": "justifier",
+    "forum": {
+        "fabriquer": 0.28200000524520874,
+        "utiliser": 0.3109999895095825
+    },
+    "générique": {
+        "fabriquer": 0.11999999731779099,
+        "utiliser": 0.2619999945163727
+    }
+}, {
+    "mot": "donner",
+    "forum": {
+        "fabriquer": 0.2280000001192093,
+        "utiliser": 0.23999999463558197
+    },
+    "générique": {
+        "fabriquer": 0.24300000071525574,
+        "utiliser": 0.4180000126361847
+    }
+}, {
+    "mot": "dupliquer",
+    "forum": {
+        "fabriquer": 0.257999986410141,
+        "utiliser": 0.2540000081062317
+    },
+    "générique": {
+        "fabriquer": 0.27900001406669617,
+        "utiliser": 0.39800000190734863
+    }
+}, {
+    "mot": "lire",
+    "forum": {
+        "fabriquer": 0.04399999976158142,
+        "utiliser": 0.2240000069141388
+    },
+    "générique": {
+        "fabriquer": 0.23499999940395355,
+        "utiliser": 0.38499999046325684
+    }
+}, {
+    "mot": "recevoir",
+    "forum": {
+        "fabriquer": 0.10999999940395355,
+        "utiliser": 0.15399999916553497
+    },
+    "générique": {
+        "fabriquer": 0.3100000023841858,
+        "utiliser": 0.3790000081062317
+    }
+}, {
+    "mot": "figurer",
+    "forum": {
+        "fabriquer": 0.21199999749660492,
+        "utiliser": 0.26600000262260437
+    },
+    "générique": {
+        "fabriquer": 0.20800000429153442,
+        "utiliser": 0.4169999957084656
+    }
+}, {
+    "mot": "déléguer",
+    "forum": {
+        "fabriquer": 0.45899999141693115,
+        "utiliser": 0.23100000619888306
+    },
+    "générique": {
+        "fabriquer": 0.07100000232458115,
+        "utiliser": 0.2160000056028366
+    }
+}, {
+    "mot": "rédiger",
+    "forum": {
+        "fabriquer": 0.20600000023841858,
+        "utiliser": 0.3869999945163727
+    },
+    "générique": {
+        "fabriquer": 0.34200000762939453,
+        "utiliser": 0.3779999911785126
+    }
+}, {
+    "mot": "acheter",
+    "forum": {
+        "fabriquer": 0.5210000276565552,
+        "utiliser": 0.2590000033378601
+    },
+    "générique": {
+        "fabriquer": 0.5879999995231628,
+        "utiliser": 0.5270000100135803
+    }
+}, {
+    "mot": "représenter",
+    "forum": {
+        "fabriquer": 0.5580000281333923,
+        "utiliser": 0.35199999809265137
+    },
+    "générique": {
+        "fabriquer": 0.3889999985694885,
+        "utiliser": 0.4050000011920929
+    }
+}, {
+    "mot": "déplacer",
+    "forum": {
+        "fabriquer": 0.08900000154972076,
+        "utiliser": 0.19099999964237213
+    },
+    "générique": {
+        "fabriquer": 0.2720000147819519,
+        "utiliser": 0.2930000126361847
+    }
+}, {
+    "mot": "penser",
+    "forum": {
+        "fabriquer": 0.07599999755620956,
+        "utiliser": 0.28700000047683716
+    },
+    "générique": {
+        "fabriquer": 0.14499999582767487,
+        "utiliser": 0.23100000619888306
+    }
+}, {
+    "mot": "allouer",
+    "forum": {
+        "fabriquer": 0.3149999976158142,
+        "utiliser": 0.20200000703334808
+    },
+    "générique": {
+        "fabriquer": 0.1589999943971634,
+        "utiliser": 0.31200000643730164
+    }
+}, {
+    "mot": "ralentir",
+    "forum": {
+        "fabriquer": 0.25999999046325684,
+        "utiliser": 0.1420000046491623
+    },
+    "générique": {
+        "fabriquer": 0.08699999749660492,
+        "utiliser": 0.257999986410141
+    }
+}, {
+    "mot": "visualiser",
+    "forum": {
+        "fabriquer": 0.3930000066757202,
+        "utiliser": 0.3779999911785126
+    },
+    "générique": {
+        "fabriquer": 0.2680000066757202,
+        "utiliser": 0.503000020980835
+    }
+}, {
+    "mot": "offrir",
+    "forum": {
+        "fabriquer": 0.4429999887943268,
+        "utiliser": 0.17299999296665192
+    },
+    "générique": {
+        "fabriquer": 0.3630000054836273,
+        "utiliser": 0.4180000126361847
+    }
+}, {
+    "mot": "citer",
+    "forum": {
+        "fabriquer": 0.23600000143051147,
+        "utiliser": 0.4449999928474426
+    },
+    "générique": {
+        "fabriquer": 0.3070000112056732,
+        "utiliser": 0.5339999794960022
+    }
+}, {
+    "mot": "gérer",
+    "forum": {
+        "fabriquer": 0.44600000977516174,
+        "utiliser": 0.37599998712539673
+    },
+    "générique": {
+        "fabriquer": 0.35499998927116394,
+        "utiliser": 0.46700000762939453
+    }
+}, {
+    "mot": "inventer",
+    "forum": {
+        "fabriquer": 0.4399999976158142,
+        "utiliser": 0.49900001287460327
+    },
+    "générique": {
+        "fabriquer": 0.5699999928474426,
+        "utiliser": 0.5230000019073486
+    }
+}, {
+    "mot": "voir",
+    "forum": {
+        "fabriquer": 0.26899999380111694,
+        "utiliser": 0.27399998903274536
+    },
+    "générique": {
+        "fabriquer": 0.26499998569488525,
+        "utiliser": 0.28700000047683716
+    }
+}, {
+    "mot": "plagier",
+    "forum": {
+        "fabriquer": 0.4099999964237213,
+        "utiliser": 0.19900000095367432
+    },
+    "générique": {
+        "fabriquer": 0.22699999809265137,
+        "utiliser": 0.2709999978542328
+    }
+}, {
+    "mot": "couper",
+    "forum": {
+        "fabriquer": 0.25999999046325684,
+        "utiliser": 0.34599998593330383
+    },
+    "générique": {
+        "fabriquer": 0.3569999933242798,
+        "utiliser": 0.33799999952316284
+    }
+}, {
+    "mot": "enregistrer",
+    "forum": {
+        "fabriquer": 0.45399999618530273,
+        "utiliser": 0.4339999854564667
+    },
+    "générique": {
+        "fabriquer": 0.26499998569488525,
+        "utiliser": 0.4699999988079071
+    }
+}, {
+    "mot": "fabriquer",
+    "forum": {
+        "fabriquer": 1.0,
+        "utiliser": 0.3889999985694885
+    },
+    "générique": {
+        "fabriquer": 1.0,
+        "utiliser": 0.5839999914169312
+    }
+}, {
+    "mot": "exécuter",
+    "forum": {
+        "fabriquer": 0.4099999964237213,
+        "utiliser": 0.11900000274181366
+    },
+    "générique": {
+        "fabriquer": 0.3619999885559082,
+        "utiliser": 0.49799999594688416
+    }
+}, {
+    "mot": "procurer",
+    "forum": {
+        "fabriquer": 0.3919999897480011,
+        "utiliser": 0.07699999958276749
+    },
+    "générique": {
+        "fabriquer": 0.3799999952316284,
+        "utiliser": 0.3799999952316284
+    }
+}, {
+    "mot": "programmer",
+    "forum": {
+        "fabriquer": 0.2919999957084656,
+        "utiliser": 0.22100000083446503
+    },
+    "générique": {
+        "fabriquer": 0.24799999594688416,
+        "utiliser": 0.39100000262260437
+    }
+}, {
+    "mot": "troquer",
+    "forum": {
+        "fabriquer": 0.25600001215934753,
+        "utiliser": -0.006000000052154064
+    },
+    "générique": {
+        "fabriquer": 0.46700000762939453,
+        "utiliser": 0.32899999618530273
+    }
+}, {
+    "mot": "travailler",
+    "forum": {
+        "fabriquer": 0.25099998712539673,
+        "utiliser": 0.3240000009536743
+    },
+    "générique": {
+        "fabriquer": 0.4350000023841858,
+        "utiliser": 0.3889999985694885
+    }
+}, {
+    "mot": "copier-coller",
+    "forum": {
+        "fabriquer": -0.003000000026077032,
+        "utiliser": 0.24400000274181366
+    },
+    "générique": {
+        "fabriquer": 0.19699999690055847,
+        "utiliser": 0.2409999966621399
+    }
+}, {
+    "mot": "entendre",
+    "forum": {
+        "fabriquer": 0.16699999570846558,
+        "utiliser": 0.21899999678134918
+    },
+    "générique": {
+        "fabriquer": 0.10300000011920929,
+        "utiliser": 0.2540000081062317
+    }
+}, {
+    "mot": "considérer",
+    "forum": {
+        "fabriquer": 0.3089999854564667,
+        "utiliser": 0.32499998807907104
+    },
+    "générique": {
+        "fabriquer": 0.29499998688697815,
+        "utiliser": 0.48899999260902405
+    }
+}, {
+    "mot": "tendre",
+    "forum": {
+        "fabriquer": 0.16599999368190765,
+        "utiliser": 0.061000000685453415
+    },
+    "générique": {
+        "fabriquer": 0.13099999725818634,
+        "utiliser": 0.03200000151991844
+    }
+}, {
+    "mot": "produire",
+    "forum": {
+        "fabriquer": 0.5910000205039978,
+        "utiliser": 0.28600001335144043
+    },
+    "générique": {
+        "fabriquer": 0.6299999952316284,
+        "utiliser": 0.4580000042915344
+    }
+}, {
+    "mot": "argumenter",
+    "forum": {
+        "fabriquer": -0.1379999965429306,
+        "utiliser": 0.125
+    },
+    "générique": {
+        "fabriquer": 0.0689999982714653,
+        "utiliser": 0.24400000274181366
+    }
+}]

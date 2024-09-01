@@ -1,0 +1,941 @@
+[{
+    "mot": "distribuer",
+    "forum": {
+        "produire": 0.3089999854564667,
+        "consommer": 0.3659999966621399
+    },
+    "générique": {
+        "produire": 0.5440000295639038,
+        "consommer": 0.5090000033378601
+    }
+}, {
+    "mot": "démolir",
+    "forum": {
+        "produire": 0.3269999921321869,
+        "consommer": 0.4300000071525574
+    },
+    "générique": {
+        "produire": 0.10999999940395355,
+        "consommer": 0.13300000131130219
+    }
+}, {
+    "mot": "interpréter",
+    "forum": {
+        "produire": 0.37599998712539673,
+        "consommer": 0.1899999976158142
+    },
+    "générique": {
+        "produire": 0.42800000309944153,
+        "consommer": 0.20900000631809235
+    }
+}, {
+    "mot": "recopier",
+    "forum": {
+        "produire": 0.09399999678134918,
+        "consommer": 0.0949999988079071
+    },
+    "générique": {
+        "produire": 0.3440000116825104,
+        "consommer": 0.2879999876022339
+    }
+}, {
+    "mot": "dire",
+    "forum": {
+        "produire": 0.2849999964237213,
+        "consommer": 0.16500000655651093
+    },
+    "générique": {
+        "produire": 0.30799999833106995,
+        "consommer": 0.3959999978542328
+    }
+}, {
+    "mot": "mimer",
+    "forum": {
+        "produire": 0.19599999487400055,
+        "consommer": 0.16300000250339508
+    },
+    "générique": {
+        "produire": 0.18000000715255737,
+        "consommer": 0.06199999898672104
+    }
+}, {
+    "mot": "recycler",
+    "forum": {
+        "produire": 0.4300000071525574,
+        "consommer": 0.4230000078678131
+    },
+    "générique": {
+        "produire": 0.37700000405311584,
+        "consommer": 0.42500001192092896
+    }
+}, {
+    "mot": "relire",
+    "forum": {
+        "produire": 0.05999999865889549,
+        "consommer": -0.0560000017285347
+    },
+    "générique": {
+        "produire": 0.13699999451637268,
+        "consommer": 0.22599999606609344
+    }
+}, {
+    "mot": "exprimer",
+    "forum": {
+        "produire": 0.3009999990463257,
+        "consommer": 0.1379999965429306
+    },
+    "générique": {
+        "produire": 0.4449999928474426,
+        "consommer": 0.2460000067949295
+    }
+}, {
+    "mot": "publier",
+    "forum": {
+        "produire": 0.3269999921321869,
+        "consommer": 0.1120000034570694
+    },
+    "générique": {
+        "produire": 0.41200000047683716,
+        "consommer": 0.20000000298023224
+    }
+}, {
+    "mot": "imaginer",
+    "forum": {
+        "produire": 0.38100001215934753,
+        "consommer": 0.24799999594688416
+    },
+    "générique": {
+        "produire": 0.36000001430511475,
+        "consommer": 0.296999990940094
+    }
+}, {
+    "mot": "compiler",
+    "forum": {
+        "produire": 0.0729999989271164,
+        "consommer": 0.061000000685453415
+    },
+    "générique": {
+        "produire": 0.4399999976158142,
+        "consommer": 0.2619999945163727
+    }
+}, {
+    "mot": "imprimer",
+    "forum": {
+        "produire": 0.3109999895095825,
+        "consommer": 0.23000000417232513
+    },
+    "générique": {
+        "produire": 0.3070000112056732,
+        "consommer": 0.16899999976158142
+    }
+}, {
+    "mot": "coordonner",
+    "forum": {
+        "produire": 0.17000000178813934,
+        "consommer": 0.12800000607967377
+    },
+    "générique": {
+        "produire": 0.25600001215934753,
+        "consommer": -0.017000000923871994
+    }
+}, {
+    "mot": "agréger",
+    "forum": {
+        "produire": 0.00800000037997961,
+        "consommer": 0.15800000727176666
+    },
+    "générique": {
+        "produire": 0.23600000143051147,
+        "consommer": 0.11699999868869781
+    }
+}, {
+    "mot": "arranger",
+    "forum": {
+        "produire": 0.18700000643730164,
+        "consommer": 0.13699999451637268
+    },
+    "générique": {
+        "produire": 0.33399999141693115,
+        "consommer": 0.2590000033378601
+    }
+}, {
+    "mot": "reconsidérer",
+    "forum": {
+        "produire": 0.03700000047683716,
+        "consommer": 0.06400000303983688
+    },
+    "générique": {
+        "produire": 0.15399999916553497,
+        "consommer": 0.1420000046491623
+    }
+}, {
+    "mot": "retranscrire",
+    "forum": {
+        "produire": 0.4230000078678131,
+        "consommer": 0.20600000023841858
+    },
+    "générique": {
+        "produire": 0.44600000977516174,
+        "consommer": 0.30000001192092896
+    }
+}, {
+    "mot": "écrire",
+    "forum": {
+        "produire": 0.3199999928474426,
+        "consommer": 0.07199999690055847
+    },
+    "générique": {
+        "produire": 0.38100001215934753,
+        "consommer": 0.3100000023841858
+    }
+}, {
+    "mot": "consommer",
+    "forum": {
+        "produire": 0.4970000088214874,
+        "consommer": 1.0
+    },
+    "générique": {
+        "produire": 0.6060000061988831,
+        "consommer": 1.0
+    }
+}, {
+    "mot": "découper",
+    "forum": {
+        "produire": 0.23600000143051147,
+        "consommer": 0.08100000023841858
+    },
+    "générique": {
+        "produire": 0.3529999852180481,
+        "consommer": 0.26100000739097595
+    }
+}, {
+    "mot": "coller",
+    "forum": {
+        "produire": 0.07800000160932541,
+        "consommer": -0.0560000017285347
+    },
+    "générique": {
+        "produire": 0.32600000500679016,
+        "consommer": 0.18700000643730164
+    }
+}, {
+    "mot": "transporter",
+    "forum": {
+        "produire": 0.24199999868869781,
+        "consommer": 0.3240000009536743
+    },
+    "générique": {
+        "produire": 0.5210000276565552,
+        "consommer": 0.527999997138977
+    }
+}, {
+    "mot": "raconter",
+    "forum": {
+        "produire": 0.3370000123977661,
+        "consommer": 0.05999999865889549
+    },
+    "générique": {
+        "produire": 0.335999995470047,
+        "consommer": 0.2290000021457672
+    }
+}, {
+    "mot": "décider",
+    "forum": {
+        "produire": 0.13099999725818634,
+        "consommer": -0.014999999664723873
+    },
+    "générique": {
+        "produire": -0.061000000685453415,
+        "consommer": 0.024000000208616257
+    }
+}, {
+    "mot": "corriger",
+    "forum": {
+        "produire": 0.1420000046491623,
+        "consommer": -0.04399999976158142
+    },
+    "générique": {
+        "produire": 0.24799999594688416,
+        "consommer": 0.24699999392032623
+    }
+}, {
+    "mot": "analyser",
+    "forum": {
+        "produire": 0.5770000219345093,
+        "consommer": 0.31200000643730164
+    },
+    "générique": {
+        "produire": 0.37599998712539673,
+        "consommer": 0.1940000057220459
+    }
+}, {
+    "mot": "critiquer",
+    "forum": {
+        "produire": 0.421999990940094,
+        "consommer": 0.4090000092983246
+    },
+    "générique": {
+        "produire": 0.24500000476837158,
+        "consommer": 0.2849999964237213
+    }
+}, {
+    "mot": "manipuler",
+    "forum": {
+        "produire": 0.5220000147819519,
+        "consommer": 0.5199999809265137
+    },
+    "générique": {
+        "produire": 0.4339999854564667,
+        "consommer": 0.44200000166893005
+    }
+}, {
+    "mot": "prendre",
+    "forum": {
+        "produire": 0.19200000166893005,
+        "consommer": 0.11999999731779099
+    },
+    "générique": {
+        "produire": 0.2840000092983246,
+        "consommer": 0.30799999833106995
+    }
+}, {
+    "mot": "coder",
+    "forum": {
+        "produire": 0.328000009059906,
+        "consommer": 0.32899999618530273
+    },
+    "générique": {
+        "produire": 0.32600000500679016,
+        "consommer": 0.24799999594688416
+    }
+}, {
+    "mot": "parler",
+    "forum": {
+        "produire": 0.2529999911785126,
+        "consommer": 0.2809999883174896
+    },
+    "générique": {
+        "produire": 0.3449999988079071,
+        "consommer": 0.43799999356269836
+    }
+}, {
+    "mot": "utiliser",
+    "forum": {
+        "produire": 0.28600001335144043,
+        "consommer": 0.24500000476837158
+    },
+    "générique": {
+        "produire": 0.4580000042915344,
+        "consommer": 0.49900001287460327
+    }
+}, {
+    "mot": "récupérer",
+    "forum": {
+        "produire": 0.125,
+        "consommer": 0.16599999368190765
+    },
+    "générique": {
+        "produire": 0.42899999022483826,
+        "consommer": 0.4440000057220459
+    }
+}, {
+    "mot": "créer",
+    "forum": {
+        "produire": 0.3919999897480011,
+        "consommer": 0.1420000046491623
+    },
+    "générique": {
+        "produire": 0.48399999737739563,
+        "consommer": 0.23800000548362732
+    }
+}, {
+    "mot": "coopérer",
+    "forum": {
+        "produire": 0.10999999940395355,
+        "consommer": 0.289000004529953
+    },
+    "générique": {
+        "produire": 0.20600000023841858,
+        "consommer": 0.1589999943971634
+    }
+}, {
+    "mot": "recontextualiser",
+    "forum": {
+        "produire": -0.035999998450279236,
+        "consommer": 0.2409999966621399
+    },
+    "générique": {
+        "produire": 0.1459999978542328,
+        "consommer": -0.009999999776482582
+    }
+}, {
+    "mot": "commenter",
+    "forum": {
+        "produire": 0.16300000250339508,
+        "consommer": 0.14499999582767487
+    },
+    "générique": {
+        "produire": 0.26899999380111694,
+        "consommer": 0.1469999998807907
+    }
+}, {
+    "mot": "transférer",
+    "forum": {
+        "produire": 0.17399999499320984,
+        "consommer": 0.164000004529953
+    },
+    "générique": {
+        "produire": 0.38499999046325684,
+        "consommer": 0.296999990940094
+    }
+}, {
+    "mot": "réaliser",
+    "forum": {
+        "produire": 0.5299999713897705,
+        "consommer": 0.2980000078678131
+    },
+    "générique": {
+        "produire": 0.6330000162124634,
+        "consommer": 0.23399999737739563
+    }
+}, {
+    "mot": "pirater",
+    "forum": {
+        "produire": 0.3569999933242798,
+        "consommer": 0.4580000042915344
+    },
+    "générique": {
+        "produire": 0.24300000071525574,
+        "consommer": 0.2070000022649765
+    }
+}, {
+    "mot": "photocopier",
+    "forum": {
+        "produire": -0.004000000189989805,
+        "consommer": 0.21199999749660492
+    },
+    "générique": {
+        "produire": 0.14900000393390656,
+        "consommer": 0.08799999952316284
+    }
+}, {
+    "mot": "voler",
+    "forum": {
+        "produire": 0.2290000021457672,
+        "consommer": 0.3149999976158142
+    },
+    "générique": {
+        "produire": 0.3490000069141388,
+        "consommer": 0.3610000014305115
+    }
+}, {
+    "mot": "transcrire",
+    "forum": {
+        "produire": 0.3889999985694885,
+        "consommer": 0.21699999272823334
+    },
+    "générique": {
+        "produire": 0.367000013589859,
+        "consommer": 0.3089999854564667
+    }
+}, {
+    "mot": "construire",
+    "forum": {
+        "produire": 0.44999998807907104,
+        "consommer": 0.14100000262260437
+    },
+    "générique": {
+        "produire": 0.4880000054836273,
+        "consommer": 0.23600000143051147
+    }
+}, {
+    "mot": "traduire",
+    "forum": {
+        "produire": 0.4790000021457672,
+        "consommer": 0.16300000250339508
+    },
+    "générique": {
+        "produire": 0.6140000224113464,
+        "consommer": 0.34200000762939453
+    }
+}, {
+    "mot": "effacer",
+    "forum": {
+        "produire": 0.21400000154972076,
+        "consommer": 0.13199999928474426
+    },
+    "générique": {
+        "produire": 0.3019999861717224,
+        "consommer": 0.21799999475479126
+    }
+}, {
+    "mot": "apporter",
+    "forum": {
+        "produire": 0.328000009059906,
+        "consommer": 0.008999999612569809
+    },
+    "générique": {
+        "produire": 0.40799999237060547,
+        "consommer": 0.30799999833106995
+    }
+}, {
+    "mot": "réutiliser",
+    "forum": {
+        "produire": 0.3659999966621399,
+        "consommer": 0.2460000067949295
+    },
+    "générique": {
+        "produire": 0.44999998807907104,
+        "consommer": 0.4749999940395355
+    }
+}, {
+    "mot": "accomplir",
+    "forum": {
+        "produire": 0.49799999594688416,
+        "consommer": 0.21699999272823334
+    },
+    "générique": {
+        "produire": 0.35199999809265137,
+        "consommer": 0.08900000154972076
+    }
+}, {
+    "mot": "ressentir",
+    "forum": {
+        "produire": 0.3919999897480011,
+        "consommer": 0.14900000393390656
+    },
+    "générique": {
+        "produire": 0.4099999964237213,
+        "consommer": 0.40400001406669617
+    }
+}, {
+    "mot": "examiner",
+    "forum": {
+        "produire": 0.24699999392032623,
+        "consommer": 0.2669999897480011
+    },
+    "générique": {
+        "produire": 0.2930000126361847,
+        "consommer": 0.21199999749660492
+    }
+}, {
+    "mot": "balayer",
+    "forum": {
+        "produire": 0.2639999985694885,
+        "consommer": 0.2639999985694885
+    },
+    "générique": {
+        "produire": 0.26899999380111694,
+        "consommer": 0.19499999284744263
+    }
+}, {
+    "mot": "republier",
+    "forum": {
+        "produire": 0.23600000143051147,
+        "consommer": 0.164000004529953
+    },
+    "générique": {
+        "produire": 0.21299999952316284,
+        "consommer": 0.17599999904632568
+    }
+}, {
+    "mot": "approprier",
+    "forum": {
+        "produire": 0.3799999952316284,
+        "consommer": 0.23899999260902405
+    },
+    "générique": {
+        "produire": 0.2849999964237213,
+        "consommer": 0.13099999725818634
+    }
+}, {
+    "mot": "indexer",
+    "forum": {
+        "produire": 0.22499999403953552,
+        "consommer": 0.4580000042915344
+    },
+    "générique": {
+        "produire": 0.39800000190734863,
+        "consommer": 0.29499998688697815
+    }
+}, {
+    "mot": "évaluer",
+    "forum": {
+        "produire": 0.49000000953674316,
+        "consommer": 0.2720000147819519
+    },
+    "générique": {
+        "produire": 0.3610000014305115,
+        "consommer": 0.24799999594688416
+    }
+}, {
+    "mot": "improviser",
+    "forum": {
+        "produire": 0.1770000010728836,
+        "consommer": 0.11800000071525574
+    },
+    "générique": {
+        "produire": 0.25699999928474426,
+        "consommer": 0.05700000002980232
+    }
+}, {
+    "mot": "financer",
+    "forum": {
+        "produire": 0.42100000381469727,
+        "consommer": 0.26100000739097595
+    },
+    "générique": {
+        "produire": 0.38100001215934753,
+        "consommer": 0.2460000067949295
+    }
+}, {
+    "mot": "justifier",
+    "forum": {
+        "produire": 0.5419999957084656,
+        "consommer": 0.1420000046491623
+    },
+    "générique": {
+        "produire": 0.4659999907016754,
+        "consommer": 0.21699999272823334
+    }
+}, {
+    "mot": "donner",
+    "forum": {
+        "produire": 0.23899999260902405,
+        "consommer": -0.04100000113248825
+    },
+    "générique": {
+        "produire": 0.4180000126361847,
+        "consommer": 0.30300000309944153
+    }
+}, {
+    "mot": "dupliquer",
+    "forum": {
+        "produire": 0.1420000046491623,
+        "consommer": 0.1599999964237213
+    },
+    "générique": {
+        "produire": 0.33000001311302185,
+        "consommer": 0.2240000069141388
+    }
+}, {
+    "mot": "lire",
+    "forum": {
+        "produire": 0.27399998903274536,
+        "consommer": 0.19099999964237213
+    },
+    "générique": {
+        "produire": 0.29499998688697815,
+        "consommer": 0.3529999852180481
+    }
+}, {
+    "mot": "recevoir",
+    "forum": {
+        "produire": 0.21299999952316284,
+        "consommer": 0.07199999690055847
+    },
+    "générique": {
+        "produire": 0.3970000147819519,
+        "consommer": 0.3449999988079071
+    }
+}, {
+    "mot": "figurer",
+    "forum": {
+        "produire": 0.10400000214576721,
+        "consommer": 0.0860000029206276
+    },
+    "générique": {
+        "produire": 0.3140000104904175,
+        "consommer": 0.21699999272823334
+    }
+}, {
+    "mot": "déléguer",
+    "forum": {
+        "produire": 0.30000001192092896,
+        "consommer": 0.33899998664855957
+    },
+    "générique": {
+        "produire": 0.1340000033378601,
+        "consommer": 0.09300000220537186
+    }
+}, {
+    "mot": "rédiger",
+    "forum": {
+        "produire": 0.3199999928474426,
+        "consommer": -0.03700000047683716
+    },
+    "générique": {
+        "produire": 0.3490000069141388,
+        "consommer": 0.20800000429153442
+    }
+}, {
+    "mot": "acheter",
+    "forum": {
+        "produire": 0.3050000071525574,
+        "consommer": 0.35899999737739563
+    },
+    "générique": {
+        "produire": 0.40400001406669617,
+        "consommer": 0.5559999942779541
+    }
+}, {
+    "mot": "représenter",
+    "forum": {
+        "produire": 0.5960000157356262,
+        "consommer": 0.3440000116825104
+    },
+    "générique": {
+        "produire": 0.5640000104904175,
+        "consommer": 0.37599998712539673
+    }
+}, {
+    "mot": "déplacer",
+    "forum": {
+        "produire": 0.09099999815225601,
+        "consommer": 0.12999999523162842
+    },
+    "générique": {
+        "produire": 0.48399999737739563,
+        "consommer": 0.3109999895095825
+    }
+}, {
+    "mot": "penser",
+    "forum": {
+        "produire": 0.17800000309944153,
+        "consommer": 0.12399999797344208
+    },
+    "générique": {
+        "produire": 0.20999999344348907,
+        "consommer": 0.28200000524520874
+    }
+}, {
+    "mot": "allouer",
+    "forum": {
+        "produire": 0.31299999356269836,
+        "consommer": 0.3479999899864197
+    },
+    "générique": {
+        "produire": 0.3070000112056732,
+        "consommer": 0.2669999897480011
+    }
+}, {
+    "mot": "ralentir",
+    "forum": {
+        "produire": 0.25999999046325684,
+        "consommer": 0.17800000309944153
+    },
+    "générique": {
+        "produire": 0.375,
+        "consommer": 0.3700000047683716
+    }
+}, {
+    "mot": "visualiser",
+    "forum": {
+        "produire": 0.29899999499320984,
+        "consommer": 0.19499999284744263
+    },
+    "générique": {
+        "produire": 0.36899998784065247,
+        "consommer": 0.2160000056028366
+    }
+}, {
+    "mot": "offrir",
+    "forum": {
+        "produire": 0.382999986410141,
+        "consommer": 0.2240000069141388
+    },
+    "générique": {
+        "produire": 0.4740000069141388,
+        "consommer": 0.2750000059604645
+    }
+}, {
+    "mot": "citer",
+    "forum": {
+        "produire": 0.16099999845027924,
+        "consommer": 0.11299999803304672
+    },
+    "générique": {
+        "produire": 0.40400001406669617,
+        "consommer": 0.2939999997615814
+    }
+}, {
+    "mot": "gérer",
+    "forum": {
+        "produire": 0.3230000138282776,
+        "consommer": 0.2529999911785126
+    },
+    "générique": {
+        "produire": 0.3959999978542328,
+        "consommer": 0.30000001192092896
+    }
+}, {
+    "mot": "inventer",
+    "forum": {
+        "produire": 0.3330000042915344,
+        "consommer": 0.2409999966621399
+    },
+    "générique": {
+        "produire": 0.4169999957084656,
+        "consommer": 0.3149999976158142
+    }
+}, {
+    "mot": "voir",
+    "forum": {
+        "produire": 0.2930000126361847,
+        "consommer": 0.20600000023841858
+    },
+    "générique": {
+        "produire": 0.43700000643730164,
+        "consommer": 0.3400000035762787
+    }
+}, {
+    "mot": "plagier",
+    "forum": {
+        "produire": 0.37599998712539673,
+        "consommer": 0.1469999998807907
+    },
+    "générique": {
+        "produire": 0.21199999749660492,
+        "consommer": 0.22599999606609344
+    }
+}, {
+    "mot": "couper",
+    "forum": {
+        "produire": 0.14900000393390656,
+        "consommer": 0.0430000014603138
+    },
+    "générique": {
+        "produire": 0.32100000977516174,
+        "consommer": 0.36000001430511475
+    }
+}, {
+    "mot": "enregistrer",
+    "forum": {
+        "produire": 0.26899999380111694,
+        "consommer": 0.25999999046325684
+    },
+    "générique": {
+        "produire": 0.5419999957084656,
+        "consommer": 0.31299999356269836
+    }
+}, {
+    "mot": "fabriquer",
+    "forum": {
+        "produire": 0.5910000205039978,
+        "consommer": 0.4490000009536743
+    },
+    "générique": {
+        "produire": 0.6299999952316284,
+        "consommer": 0.5180000066757202
+    }
+}, {
+    "mot": "exécuter",
+    "forum": {
+        "produire": 0.23800000548362732,
+        "consommer": 0.3700000047683716
+    },
+    "générique": {
+        "produire": 0.36399999260902405,
+        "consommer": 0.125
+    }
+}, {
+    "mot": "procurer",
+    "forum": {
+        "produire": 0.460999995470047,
+        "consommer": 0.23600000143051147
+    },
+    "générique": {
+        "produire": 0.6480000019073486,
+        "consommer": 0.39899998903274536
+    }
+}, {
+    "mot": "programmer",
+    "forum": {
+        "produire": 0.27300000190734863,
+        "consommer": 0.21899999678134918
+    },
+    "générique": {
+        "produire": 0.4169999957084656,
+        "consommer": 0.26499998569488525
+    }
+}, {
+    "mot": "troquer",
+    "forum": {
+        "produire": -0.02800000086426735,
+        "consommer": 0.08399999886751175
+    },
+    "générique": {
+        "produire": 0.2759999930858612,
+        "consommer": 0.30000001192092896
+    }
+}, {
+    "mot": "travailler",
+    "forum": {
+        "produire": 0.29100000858306885,
+        "consommer": 0.26100000739097595
+    },
+    "générique": {
+        "produire": 0.34700000286102295,
+        "consommer": 0.34299999475479126
+    }
+}, {
+    "mot": "copier-coller",
+    "forum": {
+        "produire": 0.00800000037997961,
+        "consommer": -0.10400000214576721
+    },
+    "générique": {
+        "produire": 0.16200000047683716,
+        "consommer": 0.11500000208616257
+    }
+}, {
+    "mot": "entendre",
+    "forum": {
+        "produire": 0.20900000631809235,
+        "consommer": 0.11100000143051147
+    },
+    "générique": {
+        "produire": 0.22200000286102295,
+        "consommer": 0.25
+    }
+}, {
+    "mot": "considérer",
+    "forum": {
+        "produire": 0.41499999165534973,
+        "consommer": 0.29600000381469727
+    },
+    "générique": {
+        "produire": 0.4169999957084656,
+        "consommer": 0.3630000054836273
+    }
+}, {
+    "mot": "tendre",
+    "forum": {
+        "produire": 0.07400000095367432,
+        "consommer": 0.08399999886751175
+    },
+    "générique": {
+        "produire": 0.14800000190734863,
+        "consommer": 0.12200000137090683
+    }
+}, {
+    "mot": "produire",
+    "forum": {
+        "produire": 1.0,
+        "consommer": 0.4970000088214874
+    },
+    "générique": {
+        "produire": 1.0,
+        "consommer": 0.6060000061988831
+    }
+}, {
+    "mot": "argumenter",
+    "forum": {
+        "produire": 0.09799999743700027,
+        "consommer": 0.014999999664723873
+    },
+    "générique": {
+        "produire": 0.11800000071525574,
+        "consommer": 0.20100000500679016
+    }
+}]

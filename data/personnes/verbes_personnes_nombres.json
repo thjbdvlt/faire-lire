@@ -1,0 +1,652 @@
+[{
+  "plur": 2790,
+  "sing": 17205,
+  "verb": "interpréter",
+  "first": 5394,
+  "third": 11067,
+  "second": 2046
+}, {
+  "plur": 1860,
+  "sing": 7626,
+  "verb": "balayer",
+  "first": 558,
+  "third": 8370,
+  "second": 93
+}, {
+  "plur": 3069,
+  "sing": 10881,
+  "verb": "manipuler",
+  "first": 1209,
+  "third": 11439,
+  "second": 279
+}, {
+  "plur": 1209,
+  "sing": 5115,
+  "verb": "exécuter",
+  "first": 651,
+  "third": 4743,
+  "second": 186
+}, {
+  "plur": 82212,
+  "sing": 219387,
+  "verb": "recevoir",
+  "first": 61566,
+  "third": 169539,
+  "second": 33015
+}, {
+  "plur": 30039,
+  "sing": 154566,
+  "verb": "décider",
+  "first": 25947,
+  "third": 130014,
+  "second": 15810
+}, {
+  "plur": 1302,
+  "sing": 2883,
+  "verb": "recycler",
+  "first": 1209,
+  "third": 2697,
+  "second": 186
+}, {
+  "plur": 186,
+  "sing": 1488,
+  "verb": "transcrire",
+  "first": 372,
+  "third": 1116,
+  "second": 0
+}, {
+  "plur": 186,
+  "sing": 837,
+  "verb": "agréger",
+  "first": 93,
+  "third": 651,
+  "second": 0
+}, {
+  "plur": 282255,
+  "sing": 2460780,
+  "verb": "penser",
+  "first": 2070831,
+  "third": 370791,
+  "second": 282813
+}, {
+  "plur": 93,
+  "sing": 93,
+  "verb": "allouer",
+  "first": 0,
+  "third": 93,
+  "second": 93
+}, {
+  "plur": 558,
+  "sing": 2790,
+  "verb": "pirater",
+  "first": 465,
+  "third": 2325,
+  "second": 0
+}, {
+  "plur": 42036,
+  "sing": 181536,
+  "verb": "considérer",
+  "first": 67518,
+  "third": 99882,
+  "second": 21669
+}, {
+  "plur": 744,
+  "sing": 3534,
+  "verb": "programmer",
+  "first": 1581,
+  "third": 744,
+  "second": 186
+}, {
+  "plur": 87978,
+  "sing": 324663,
+  "verb": "utiliser",
+  "first": 135222,
+  "third": 193812,
+  "second": 57846
+}, {
+  "plur": 49476,
+  "sing": 188697,
+  "verb": "travailler",
+  "first": 85467,
+  "third": 126108,
+  "second": 18786
+}, {
+  "plur": 2232,
+  "sing": 7626,
+  "verb": "approprier",
+  "first": 1209,
+  "third": 7161,
+  "second": 1023
+}, {
+  "plur": 558,
+  "sing": 1488,
+  "verb": "indexer",
+  "first": 93,
+  "third": 1116,
+  "second": 93
+}, {
+  "plur": 186,
+  "sing": 4185,
+  "verb": "transférer",
+  "first": 1209,
+  "third": 2046,
+  "second": 93
+}, {
+  "plur": 24552,
+  "sing": 74214,
+  "verb": "représenter",
+  "first": 3720,
+  "third": 88350,
+  "second": 1674
+}, {
+  "plur": 13020,
+  "sing": 31992,
+  "verb": "voler",
+  "first": 2790,
+  "third": 38223,
+  "second": 1767
+}, {
+  "plur": 153729,
+  "sing": 1002540,
+  "verb": "parler",
+  "first": 322152,
+  "third": 658533,
+  "second": 159402
+}, {
+  "plur": 18042,
+  "sing": 27714,
+  "verb": "distribuer",
+  "first": 2418,
+  "third": 26226,
+  "second": 2604
+}, {
+  "plur": 744,
+  "sing": 2604,
+  "verb": "déléguer",
+  "first": 372,
+  "third": 2511,
+  "second": 186
+}, {
+  "plur": 36456,
+  "sing": 182745,
+  "verb": "créer",
+  "first": 32085,
+  "third": 143406,
+  "second": 20367
+}, {
+  "plur": 545817,
+  "sing": 3380271,
+  "verb": "dire",
+  "first": 1122975,
+  "third": 2180013,
+  "second": 503781
+}, {
+  "plur": 9393,
+  "sing": 23064,
+  "verb": "critiquer",
+  "first": 9300,
+  "third": 17949,
+  "second": 2697
+}, {
+  "plur": 7161,
+  "sing": 24087,
+  "verb": "commenter",
+  "first": 7998,
+  "third": 18879,
+  "second": 2790
+}, {
+  "plur": 1488,
+  "sing": 6975,
+  "verb": "argumenter",
+  "first": 1395,
+  "third": 3720,
+  "second": 1860
+}, {
+  "plur": 10695,
+  "sing": 34689,
+  "verb": "gérer",
+  "first": 5766,
+  "third": 29760,
+  "second": 6138
+}, {
+  "plur": 227664,
+  "sing": 928326,
+  "verb": "prendre",
+  "first": 224781,
+  "third": 740280,
+  "second": 143778
+}, {
+  "plur": 3627,
+  "sing": 9486,
+  "verb": "examiner",
+  "first": 1209,
+  "third": 9207,
+  "second": 837
+}, {
+  "plur": 39153,
+  "sing": 105834,
+  "verb": "acheter",
+  "first": 38688,
+  "third": 81003,
+  "second": 18228
+}, {
+  "plur": 4092,
+  "sing": 25296,
+  "verb": "effacer",
+  "first": 5208,
+  "third": 20274,
+  "second": 1674
+}, {
+  "plur": 2604,
+  "sing": 39246,
+  "verb": "arranger",
+  "first": 3627,
+  "third": 36735,
+  "second": 930
+}, {
+  "plur": 9114,
+  "sing": 17949,
+  "verb": "figurer",
+  "first": 558,
+  "third": 23064,
+  "second": 3255
+}, {
+  "plur": 15345,
+  "sing": 103044,
+  "verb": "ressentir",
+  "first": 36456,
+  "third": 64542,
+  "second": 15345
+}, {
+  "plur": 230640,
+  "sing": 3995373,
+  "verb": "écrire",
+  "first": 727911,
+  "third": 3087972,
+  "second": 270444
+}, {
+  "plur": 3069,
+  "sing": 8649,
+  "verb": "évaluer",
+  "first": 2697,
+  "third": 7254,
+  "second": 558
+}, {
+  "plur": 279,
+  "sing": 4650,
+  "verb": "copier-coller",
+  "first": 3069,
+  "third": 930,
+  "second": 372
+}, {
+  "plur": 2325,
+  "sing": 12555,
+  "verb": "analyser",
+  "first": 3162,
+  "third": 9207,
+  "second": 1395
+}, {
+  "plur": 41292,
+  "sing": 307365,
+  "verb": "imaginer",
+  "first": 254076,
+  "third": 54684,
+  "second": 38130
+}, {
+  "plur": 10323,
+  "sing": 43524,
+  "verb": "construire",
+  "first": 9579,
+  "third": 29667,
+  "second": 3534
+}, {
+  "plur": 11253,
+  "sing": 103044,
+  "verb": "citer",
+  "first": 55707,
+  "third": 25203,
+  "second": 30132
+}, {
+  "plur": 8928,
+  "sing": 78678,
+  "verb": "coller",
+  "first": 7347,
+  "third": 73656,
+  "second": 2883
+}, {
+  "plur": 93,
+  "sing": 837,
+  "verb": "reconsidérer",
+  "first": 651,
+  "third": 186,
+  "second": 93
+}, {
+  "plur": 7440,
+  "sing": 66216,
+  "verb": "inventer",
+  "first": 15903,
+  "third": 47430,
+  "second": 6045
+}, {
+  "plur": 930,
+  "sing": 1302,
+  "verb": "démolir",
+  "first": 372,
+  "third": 1581,
+  "second": 93
+}, {
+  "plur": 372,
+  "sing": 744,
+  "verb": "coordonner",
+  "first": 0,
+  "third": 651,
+  "second": 186
+}, {
+  "plur": 5766,
+  "sing": 27435,
+  "verb": "récupérer",
+  "first": 5301,
+  "third": 19995,
+  "second": 5022
+}, {
+  "plur": 7068,
+  "sing": 45291,
+  "verb": "justifier",
+  "first": 3069,
+  "third": 41850,
+  "second": 1767
+}, {
+  "plur": 210738,
+  "sing": 820074,
+  "verb": "lire",
+  "first": 370419,
+  "third": 489087,
+  "second": 100533
+}, {
+  "plur": 2232,
+  "sing": 9765,
+  "verb": "accomplir",
+  "first": 930,
+  "third": 9300,
+  "second": 837
+}, {
+  "plur": 93,
+  "sing": 372,
+  "verb": "mimer",
+  "first": 0,
+  "third": 372,
+  "second": 0
+}, {
+  "plur": 11904,
+  "sing": 84351,
+  "verb": "corriger",
+  "first": 29109,
+  "third": 43338,
+  "second": 10602
+}, {
+  "plur": 25668,
+  "sing": 129084,
+  "verb": "apporter",
+  "first": 14136,
+  "third": 129270,
+  "second": 7626
+}, {
+  "plur": 20367,
+  "sing": 59241,
+  "verb": "produire",
+  "first": 5022,
+  "third": 67239,
+  "second": 3534
+}, {
+  "plur": 558,
+  "sing": 3534,
+  "verb": "réutiliser",
+  "first": 1116,
+  "third": 2325,
+  "second": 279
+}, {
+  "plur": 16275,
+  "sing": 58497,
+  "verb": "exprimer",
+  "first": 11625,
+  "third": 52638,
+  "second": 6231
+}, {
+  "plur": 279,
+  "sing": 1116,
+  "verb": "republier",
+  "first": 279,
+  "third": 744,
+  "second": 279
+}, {
+  "plur": 6882,
+  "sing": 33666,
+  "verb": "rédiger",
+  "first": 13857,
+  "third": 15531,
+  "second": 3720
+}, {
+  "plur": 160239,
+  "sing": 316200,
+  "verb": "publier",
+  "first": 57753,
+  "third": 313968,
+  "second": 23994
+}, {
+  "plur": 186,
+  "sing": 558,
+  "verb": "troquer",
+  "first": 93,
+  "third": 558,
+  "second": 93
+}, {
+  "plur": 11067,
+  "sing": 11532,
+  "verb": "consommer",
+  "first": 2139,
+  "third": 13578,
+  "second": 558
+}, {
+  "plur": 16089,
+  "sing": 104718,
+  "verb": "relire",
+  "first": 59520,
+  "third": 25575,
+  "second": 26598
+}, {
+  "plur": 250449,
+  "sing": 1983969,
+  "verb": "voir",
+  "first": 844068,
+  "third": 928140,
+  "second": 309039
+}, {
+  "plur": 13578,
+  "sing": 29388,
+  "verb": "imprimer",
+  "first": 6324,
+  "third": 25668,
+  "second": 3906
+}, {
+  "plur": 5394,
+  "sing": 42501,
+  "verb": "déplacer",
+  "first": 21948,
+  "third": 20367,
+  "second": 1302
+}, {
+  "plur": 25017,
+  "sing": 72075,
+  "verb": "réaliser",
+  "first": 17763,
+  "third": 52638,
+  "second": 16554
+}, {
+  "plur": 930,
+  "sing": 6231,
+  "verb": "improviser",
+  "first": 1674,
+  "third": 5115,
+  "second": 0
+}, {
+  "plur": 3162,
+  "sing": 10788,
+  "verb": "ralentir",
+  "first": 1395,
+  "third": 11811,
+  "second": 372
+}, {
+  "plur": 372,
+  "sing": 1953,
+  "verb": "compiler",
+  "first": 930,
+  "third": 837,
+  "second": 0
+}, {
+  "plur": 12090,
+  "sing": 63519,
+  "verb": "tendre",
+  "first": 7068,
+  "third": 64356,
+  "second": 2325
+}, {
+  "plur": 7719,
+  "sing": 38874,
+  "verb": "couper",
+  "first": 6324,
+  "third": 33201,
+  "second": 3255
+}, {
+  "plur": 2325,
+  "sing": 11160,
+  "verb": "transporter",
+  "first": 1302,
+  "third": 9765,
+  "second": 558
+}, {
+  "plur": 744,
+  "sing": 16740,
+  "verb": "retranscrire",
+  "first": 6324,
+  "third": 6696,
+  "second": 2418
+}, {
+  "plur": 3627,
+  "sing": 5859,
+  "verb": "financer",
+  "first": 279,
+  "third": 7905,
+  "second": 279
+}, {
+  "plur": 4278,
+  "sing": 9486,
+  "verb": "fabriquer",
+  "first": 1302,
+  "third": 9114,
+  "second": 1395
+}, {
+  "plur": 38967,
+  "sing": 315456,
+  "verb": "entendre",
+  "first": 124248,
+  "third": 156426,
+  "second": 44826
+}, {
+  "plur": 23529,
+  "sing": 170934,
+  "verb": "raconter",
+  "first": 29574,
+  "third": 134199,
+  "second": 24645
+}, {
+  "plur": 1116,
+  "sing": 5673,
+  "verb": "plagier",
+  "first": 837,
+  "third": 4557,
+  "second": 837
+}, {
+  "plur": 1209,
+  "sing": 13113,
+  "verb": "procurer",
+  "first": 1395,
+  "third": 12462,
+  "second": 93
+}, {
+  "plur": 1953,
+  "sing": 9114,
+  "verb": "enregistrer",
+  "first": 3162,
+  "third": 5208,
+  "second": 1209
+}, {
+  "plur": 140709,
+  "sing": 890940,
+  "verb": "donner",
+  "first": 120249,
+  "third": 774504,
+  "second": 83049
+}, {
+  "plur": 93,
+  "sing": 279,
+  "verb": "dupliquer",
+  "first": 186,
+  "third": 186,
+  "second": 0
+}, {
+  "plur": 6975,
+  "sing": 42408,
+  "verb": "traduire",
+  "first": 5673,
+  "third": 34503,
+  "second": 2511
+}, {
+  "plur": 930,
+  "sing": 12276,
+  "verb": "visualiser",
+  "first": 7161,
+  "third": 4557,
+  "second": 1488
+}, {
+  "plur": 93,
+  "sing": 6417,
+  "verb": "recopier",
+  "first": 4371,
+  "third": 1488,
+  "second": 651
+}, {
+  "plur": 93,
+  "sing": 1395,
+  "verb": "coder",
+  "first": 93,
+  "third": 651,
+  "second": 279
+}, {
+  "plur": 1860,
+  "sing": 10230,
+  "verb": "découper",
+  "first": 2511,
+  "third": 7161,
+  "second": 744
+}, {
+  "plur": 25668,
+  "sing": 87699,
+  "verb": "offrir",
+  "first": 11253,
+  "third": 93558,
+  "second": 4371
+}, {
+  "plur": 93,
+  "sing": 279,
+  "verb": "coopérer",
+  "first": 93,
+  "third": 279,
+  "second": 0
+}, {
+  "plur": 0,
+  "sing": 279,
+  "verb": "photocopier",
+  "first": 0,
+  "third": 186,
+  "second": 93
+}]
