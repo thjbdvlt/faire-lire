@@ -3,6 +3,17 @@ faire lire
 
 Explorer, à l'aide de la librairie [d3.js](https://d3js.org/), les données issues d'un forum d'entraide consacré à la littérature, et essayer de voir ce que ces données peuvent apporter à une conception de la littérature comme _réseau d'activités_.
 
+Ce dépôt, réalisé dans le cadre d'un enseignement dispensé à l'université de Lausanne par Isaac Pante et intitulé [_Visualisation de données_](https://github.com/ipante/ressources_visualisation_de_donnees), aborde les nombreuses activités et les nombreuses personnes qui prennent part à l'écriture ou à la lecture littéraire. Mais à n'importe quelle activité d'écriture, ou presque, contribuent de multiples acteur·rices, et c'est le cas de l'écriture de dépôt:
+
+- Les fichiers HTML ont été générés à l'aide de [Pandoc](https://pandoc.org/) à partir de fichier Markdown, d'un [template](./pandoc/template.html) HTML et d'une bibliographie au format CSL-JSON (tout est dans le dépôt, y compris la [commande utilisée](./generer-html.sh)).
+- Les fichiers `.js` sont mis en forme à l'aide du programme [js-beautify](https://github.com/beautifier/js-beautify). Le fichier de configuration est [./.jsbeautifyrc](./.jsbeautifyrc)).
+- Tous les fichiers ont été édités à l'aide de l'éditeur [Neovim](https://neovim.io/) en utilisant le _Language Server Protocol_ pour javascript [quick-lint-js](https://quick-lint-js.com/docs/lsp/).
+
+documentation
+-------------
+
+La documentation (qui porte sur la production des données et des visualisations) est intégrée aux fichiers HTML.
+
 usage
 -----
 
@@ -21,26 +32,7 @@ cd faire-lire
 live-server --entry-file=home.html --browser=firefox
 ```
 
-documentation
--------------
-
-La documentation (qui porte sur la production des données et des visualisations) est intégrée aux fichiers HTML.
-
-Les fichiers HTML eux-mêmes ont été générés à l'aide de [Pandoc](https://pandoc.org/) à partir de fichier Markdown, d'un [template](./pandoc/template.html) HTML et d'une bibliographie au format CSL-JSON, qui sont également dans le dépôt.
-
-contexte
---------
-
-Ce dépôt présente un travail réalisé dans le cadre d'un enseignement dispensé à l'université de Lausanne par Isaac Pante et intitulé [_Visualisation de données_](https://github.com/ipante/ressources_visualisation_de_donnees).
-
 navigateur
 ----------
 
-(Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).)
-
-code
-----
-
-Les fichiers `.js` sont mis en forme à l'aide du programme [js-beautify](https://github.com/beautifier/js-beautify). Le fichier de configuration est dans le dépôt ([./.jsbeautifyrc](./.jsbeautifyrc))).
-
-Tous les fichiers ont été édités à l'aide de l'éditeur [Neovim](https://neovim.io/) en utilisant un _Language Server Protocol_ pour javascript: [quick-lint-js](https://quick-lint-js.com/docs/lsp/).
+Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).
