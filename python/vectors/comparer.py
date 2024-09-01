@@ -9,7 +9,7 @@ fp_forum = "../../models/vectors_forum.bin"
 vec = KeyedVectors.load_word2vec_format(fp, binary=True)
 vec_forum = KeyedVectors.load_word2vec_format(fp_forum, binary=True)
 
-path_data = "../liste-verbes/ALL"
+path_data = "../../data/liste-verbes/ALL.txt"
 with open(path_data, 'r') as f:
     verbes = f.readlines()
 
