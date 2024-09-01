@@ -36,7 +36,7 @@ for (let word of ["lire", "ecrire"]) {
        * */
       let td = tr.append("td")
       td.text(i.verbe)
-      td.attr('class', groups.mot)
+      // td.attr('class', groups.mot)
 
       td = tr.append("td")
       td.text(i.cooccurrence)
