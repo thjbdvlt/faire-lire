@@ -6,7 +6,7 @@
 
 d=./pandoc/
 
-pandoc -i activites.md -o activites.html \
+pandoc -i home.md -o home.html \
     --citeproc --bibliography=${d}bibliography.json \
     --csl=${d}unige-ll-fr-mod.csl \
     --standalone --css=css/style.css --template=${d}template.html \
