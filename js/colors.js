@@ -6,6 +6,6 @@ export const color = {
   axis: "#448",
   selected: 'red',
   fg: '#000',
-    // link: '#0087d7',
-link: '#888',
+  // link: '#0087d7',
+  link: '#888',
 };

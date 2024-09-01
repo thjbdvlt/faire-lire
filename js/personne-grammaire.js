@@ -42,7 +42,8 @@ var y = d3.scaleLinear()
   .range([height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y).ticks(0, null))
-  .attr("transform", "translate(" + width / 2 + ",0)").style('opacity', 0.2);
+  .attr("transform", "translate(" + width / 2 + ",0)").style('opacity',
+    0.2);
 
 /* ajouter les titres des axes (de chaque côté) */
 const labels = [{
@@ -78,7 +79,8 @@ const labels = [{
 ]
 for (let i of labels) {
   svg.append('text').attr('x', x(i.x) + i.xplus).attr('y', y(i.y) + i
-    .yplus).text(i.label).style('fill', color.axis).style('font-size', '90%')
+    .yplus).text(i.label).style('fill', color.axis).style('font-size',
+    '90%')
 }
 
 

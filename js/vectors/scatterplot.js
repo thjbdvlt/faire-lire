@@ -119,7 +119,8 @@ function make_scatterplot_embeddings(datapath, corpora, mots, id) {
     /* un element <g> pour contenir l'infobox dans laquelle je vais
      * placer un rectangle et du texte. */
     const info = svg.append('g')
-    const rect = info.append('rect').style('stroke', color.axis).style('stroke-width', 0)
+    const rect = info.append('rect').style('stroke', color.axis)
+      .style('stroke-width', 0)
       .attr(
         'width', 100).attr('height', 80).attr('x', 10).attr('y',
         10)
