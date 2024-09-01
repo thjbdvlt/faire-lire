@@ -36,3 +36,14 @@ navigateur
 ----------
 
 Le dépôt a été conçu en utilisant le navigateur [Firefox](https://www.mozilla.org/en-US/firefox/115.0/releasenotes/) (version `115.14.0esr`).
+
+screenshots
+-----------
+
+![./img/20240901-154910.png]
+
+![./img/20240901-154951.png]
+
+![./img/20240901-154959.png]
+
+![./img/20240901-155022.png]
