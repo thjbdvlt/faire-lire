@@ -3,7 +3,7 @@ faire lire
 
 Explorer, à l'aide de la librairie [d3.js](https://d3js.org/), les données issues d'un forum d'entraide consacré à la littérature, et essayer de voir ce que ces données peuvent apporter à une conception de la littérature comme _réseau d'activités_.
 
-Ce dépôt, réalisé dans le cadre d'un enseignement dispensé à l'université de Lausanne par Isaac Pante et intitulé [_Visualisation de données_](https://github.com/ipante/ressources_visualisation_de_donnees), aborde les nombreuses activités et les nombreuses personnes qui prennent part à l'écriture ou à la lecture littéraire. Mais à n'importe quelle activité d'écriture, ou presque, contribuent de multiples acteur·rices, et c'est le cas de l'écriture de ce dépôt:
+Ce dépôt, réalisé dans le cadre de l'enseignement [_Visualisation de données_](https://github.com/ipante/ressources_visualisation_de_donnees) dispensé à l'université de Lausanne par Isaac Pante, aborde les nombreuses activités et les nombreuses personnes qui prennent part à l'écriture ou à la lecture littéraire. Mais à n'importe quelle activité d'écriture, ou presque, contribuent de multiples acteur·rices, et c'est le cas de l'écriture de ce dépôt:
 
 - Les fichiers HTML ont été générés à l'aide de [Pandoc](https://pandoc.org/) à partir de fichier Markdown, d'un [template](./pandoc/template.html) HTML et d'une bibliographie au format CSL-JSON (tout est dans le dépôt, y compris la [commande utilisée](./generer-html.sh)).
 - Les fichiers `.js` sont mis en forme à l'aide du programme [js-beautify](https://github.com/beautifier/js-beautify). Le fichier de configuration est [./.jsbeautifyrc](./.jsbeautifyrc)).
