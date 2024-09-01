@@ -1,3 +1,4 @@
+/* quelques variables */
 :root {
     --bg: #fffcfa;
     --fg: #000;
@@ -11,13 +12,12 @@
     --code: #d40;
 }
 
+/* les propriétés générales du document */
 html { }
-
 body {
     background: var(--bg);
     font-family: arial, sans-serif;
 }
-
 div#centered-page {
     color: var(--fg);
     background-color: var(--bg);
@@ -29,6 +29,8 @@ div#centered-page {
     margin-right: auto;
 }
 
+/* les paragraphes, et les paragraphes pour les informations sur la
+ * production des visualisations et des données. */
 p {
     text-align: justify;
     max-width: 600px;
@@ -41,61 +43,32 @@ p {
     max-width: 500px;
 }
 
+/* les titres */
 h1 {
     margin-top:0px;
     padding-top:0px;
     color: var(--title);
-    /* text-align: right; */
 }
-
 h2 {
     margin:0;
     margin-top: 40px;
     margin-bottom: 20px;
     padding:0;
     color: var(--title);
-    /* text-align: right; */
 }
 
-table {
-    display: inline-block;
-    margin: 4px;
-    padding: 0;
-  border-collapse: collapse;
-
-}
-
-td {
-margin: 0;
-padding: 2px;
-  /* border-style: solid; */
-  /* border-width: 1px; */
-  /* border-color: var(--axis); */
-}
-
-th {
-    margin: 0;
-    padding: 0;
-}
-
-tr {
-    border-top: 1px solid var(--axis);
-    border-bottom: 1px solid var(--axis);
-}
-
-q {
-    color: var(--fg-q);
-}
-
+/* les liens: sans soulignement */
 a {
     color: var(--fg-a);
     text-decoration: none;
 }
 
+/* emphases est coloré */
 em {
     color: #d08;
 }
 
+/* le code, mis en évidence (couleur) */
 code {
     color: var(--code);
     font-family: monospace;
@@ -104,7 +77,10 @@ code {
     text-align: center;
 }
 
-
+/* quotes */
+q {
+    color: var(--fg-q);
+}
 blockquote {
     color: var(--fg-q);
     max-width: 500px;
@@ -112,15 +88,13 @@ blockquote {
     font-size: 95%;
 }
 
+/* les classes que j'utilise dans les fichiers .js */
 .mot {
     color: var(--fg-q);
 }
-
-
 .nombre {
     color: var(--axis);
 }
-
 .tooltip {
   position: absolute;
   pointer-events: none;
@@ -132,50 +106,56 @@ blockquote {
   border-width: 1px;
   border-color: var(--axis);
 }
-
 .centered {
     max-width: 400px;
     margin: 0 auto;
     padding: 0;
 }
 
-/* pour le formattage des appels de notes comme ceci: [1], j'ai utilisé un snippet trouvé ici:
- * https://stackoverflow.com/questions/40213184/how-can-i-alter-the-formatting-of-pandoc-footnote-marks
- *
- * (uniquement pour l'ajout avant/après de crochets).
- * et ici pour les positionner plus bas (et éviter les changements d'interligne):
- * https://stackoverflow.com/questions/1530685/how-can-i-keep-consistent-line-height-with-superscript-elements
- * */
+
+/* citations et notes de bas de pages */
+.csl-entry {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.csl-entry em {
+    color: var(--fg);
+}
+#footnotes ol li em {
+    color: var(--fg);
+}
+#footnotes {
+    font-size: 90%;
+}
+
+/* pour le formattage des appels de notes comme ceci: [1], j'ai
+ * utilisé un snippet trouvé ici:
+ * https://stackoverflow.com/questions/40213184/how-can-i-alter-the-formatting-of-pandoc-footnote-marks */
 sup:before {
   content: '[';
 }
 sup:after {
   content: ']';
 }
-sup {
-    vertical-align: top;
-}
+ /* it ici pour les positionner plus bas (et éviter les changements d'interligne):
+  * https://stackoverflow.com/questions/1530685/how-can-i-keep-consistent-line-height-with-superscript-elements
+  * */
+ sup {
+   vertical - align: top;
+ }
 
-.csl-entry {
-    margin-top: 12px;
-    margin-bottom: 12px;
+/* les tableaux du début */
+table {
+    display: inline-block;
+    margin: 20px;
+    border-collapse: collapse;
 }
-
-.csl-entry em {
-    color: var(--fg);
+th {
+    color: var(--axis);
 }
-
-#footnotes ol li em {
-    color: var(--fg);
-}
-
-#footnotes {
-    font-size: 90%;
-}
-
 td {
-    padding: 2px;
+    padding: 4px;
     padding-left: 6px;
-    padding-right: 6px;
+    padding-right: 10px;
     font-size: 90%;
 }
